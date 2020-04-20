@@ -1,0 +1,34 @@
+/*BARRA DE NAVEGACION*/
+
+.navbar {
+    opacity: 0.9;
+}
+
+body header .navbar-brand {
+    margin-left: 15px;
+    width: 50px;
+    font-family: ZCOOL KuaiLe;
+    float: left;
+    margin-right: 120px;
+    font-size: 40px;
+}
+
+.ndropdown-menu .dropdown-item {
+    box-sizing: border-box;
+    width: 60px;
+}
+
+ul li a {
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+    padding: 15px 20px;
+    color: black;
+    font-size: 15px;
+    font-family: 'Press Start 2P';
+    text-decoration: none;
+}
+
+ul li a:hover {
+    color: #CE7D35;
+}

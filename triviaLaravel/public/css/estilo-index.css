@@ -1,0 +1,58 @@
+.jumbotron .container {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 5em;
+    border: 1px bold black;
+}
+
+body .jumbotron .container h2 {
+    font-size: 30px;
+    width: 100%;
+    text-align: center;
+    font-family: ZCOOL KuaiLe;
+}
+
+body .jumbotron .container button {
+    font-family: 'Press Start 2P';
+    cursor: pointer;
+}
+
+body {
+    font-family: monospace;
+    background: #dac300;
+}
+
+.contenedor {
+    box-sizing: border-box;
+    margin: 0 auto;
+    display: table;
+}
+
+h2 {
+    padding: 0;
+    position: relative;
+    float: left;
+    background: #dac300;
+    color: #fff;
+}
+
+h2 span {
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    width: 0;
+    background: #dac300;
+    animation: escribir 1s steps(100);
+}
+
+@keyframes escribir {
+    from {
+        width: 100%
+    }
+    to {
+        width: 0
+    }
+}

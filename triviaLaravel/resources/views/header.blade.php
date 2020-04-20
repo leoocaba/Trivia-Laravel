@@ -12,24 +12,12 @@
     <link rel="stylesheet" href="/css/estilo-botonera.css">
     <link href="https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
-
-    <style>
-        body {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    padding: 0;
-    position: relative;
-    margin: 0 auto;
-    background-image: url(../img/Background.jpg);
-        }
-    </style>
 </head>
 
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #dac300!important;">
-            <a class="navbar-brand" href=" {{ url('/index') }} ">Trivia</a>
+            <a class="navbar-brand" href="index.php">Trivia</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>

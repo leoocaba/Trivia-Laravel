@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title></title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
@@ -12,24 +12,23 @@
     <link rel="stylesheet" href="/css/estilo-botonera.css">
     <link href="https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
-
-    <style>
-        body {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    padding: 0;
-    position: relative;
-    margin: 0 auto;
-    background-image: url(../img/Background.jpg);
-        }
-    </style>
 </head>
 
 <body>
+
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            padding: 0;
+            background-image: url(../img/Background.jpg);
+        }
+    </style>
+
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #dac300!important;">
-            <a class="navbar-brand" href=" {{ url('/index') }} ">Trivia</a>
+            <a class="navbar-brand" href=" {{ url('/') }} ">Trivia</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -63,39 +62,40 @@
 
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Búsqueda" aria-label="Search">
+                    @csrf
+                    <input class="form-control mr-sm-2" type="search" name="search" placeholder="Búsqueda" aria-label="Search">
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">BUSCAR</button>
                 </form>
             </div>
         </nav>
     </header>
 
-
-    <section style="flex-grow: 1;">
-        @yield('content')
-    </section>
-    
+    <main style="flex-grow: 1;">
+        <section>
+            @yield('content')
+        </section>
+    </main>
 
     <!-- Site footer -->
 
     <footer class="section bg-footer">
         <div class="container">
             <div class="row">
-                <div class="col-lg-3">
+                <div class="col-s-12 col-lg-3">
                     <div class="">
                         <h6 class="footer-heading text-uppercase text-white">Mas Información</h6>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                     </div>
                 </div>
 
-                <div class="col-lg-3">
+                <div class="col-s-12 col-lg-3">
                     <div class="">
                         <h6 class="footer-heading text-uppercase text-white">Acerca de nosotros</h6>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                     </div>
                 </div>
 
-                <div class="col-lg-2">
+                <div class="col-s-12 col-lg-2">
                     <div class="">
                         <h6 class="footer-heading text-uppercase text-white">cuenta</h6>
                         <ul class="list-unstyled footer-link mt-4">
@@ -108,7 +108,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4">
+                <div class="col-s-12 col-lg-4">
                     <div class="">
                         <h6 class="footer-heading text-uppercase text-white">redes sociales</h6>
                         <p class="contact-info mt-4">Para más información no dude en contactarnos.</p>

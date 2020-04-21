@@ -54,7 +54,7 @@
                     <li class="nav-item alert alert-success" style="text-align: center;">Bienvenido/a {{ auth()->user()->name }} </li>
                     <li class="nat-item btn-outline-danger btn-sm">
                         <a href="#" onclick="event.preventDefault();
-                        document.getElementById('logout-form').submit();">Cerrar Sesión</a>
+                        document.getElementById('logout-form').submit();" style="text-decoration: none;">Cerrar Sesión</a>
                     </li>
                     @else
                     <li class="nav-item">

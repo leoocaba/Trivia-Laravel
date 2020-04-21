@@ -36,30 +36,34 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="home.php">Inicio<span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="{{ url('/welcome')}}">Inicio<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="jugar.php">Jugar!</a>
+                        <a class="nav-link" href="#">Jugar!</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="ranking.php">Ranking</a>
+                        <a class="nav-link" href="#">Ranking</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="FAQ.php">FAQ</a>
+                        <a class="nav-link" href="#">FAQ</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contacto.php">Contacto</a>
+                        <a class="nav-link" href="#">Contacto</a>
                     </li>
                     @if (Route::has('login')) @auth
-                    <a href="{{ url('/home') }}">Home</a> @else
+                    <li class="nav-item alert alert-success" style="text-align: center;">Bienvenido/a {{ auth()->user()->name }} </li>
+                    <li class="nat-item btn-outline-danger btn-sm">
+                        <a href="#" onclick="event.preventDefault();
+                        document.getElementById('logout-form').submit();">Cerrar Sesión</a>
+                    </li>
+                    @else
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('login') }}">Ingresar</a> @if (Route::has('register'))
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('register') }}">Registrarme</a> @endif @endauth
-                    </li>
-                    @endif
-
+                    </li>          
+                    @endauth
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
                     @csrf
@@ -68,6 +72,9 @@
                 </form>
             </div>
         </nav>
+        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+            @csrf
+        </form>
     </header>
 
     <main style="flex-grow: 1;">

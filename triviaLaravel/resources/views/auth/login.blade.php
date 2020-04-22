@@ -1,13 +1,13 @@
 @extends('welcome')
 
 @section('content')
-<div class="container">
+<div class="container py-3 px-4">
     <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Ingresar') }}</div>
+        <div class="col-12 col-sm-10 col-lg-10">
+            <div class="card text-white bg-dark justify-content-center py-3 px-4">
+                <div class="card-header"><h3 class="display-5">{{ __('Ingresar') }}</h3></div>
 
-                <div class="card-body">
+                <div class="card-body color-black">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
@@ -52,15 +52,17 @@
                         </div>
 
                         <div class="form-group row mb-0">
-                            <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                            <div class="col-md-6 offset-md-4 justify-content-center">
+                                <button type="submit" class="btn btn-primary btn-md btn-block">
                                     {{ __('Ingresar') }}
                                 </button>
 
                                 @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
+                               
+                                    <a class="py-auto text-md-left btn btn-link" href="{{ route('password.request') }}">
                                         {{ __('Olvidaste tu contraseña?') }}
                                     </a>
+                              
                                 @endif
                             </div>
                         </div>

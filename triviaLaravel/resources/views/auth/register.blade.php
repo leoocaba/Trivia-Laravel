@@ -1,11 +1,11 @@
 @extends('welcome')
 
 @section('content')
-<div class="container">
+<div class="container py-3 px-4">
     <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Registrarme') }}</div>
+        <div class="col-12 col-sm-10 col-lg-10">
+            <div class="card text-white bg-dark shadow rounded py-3 px-4">
+                <div class="card-header"><h3 class="display-5">{{ __('Registrarme') }}</h3></div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
@@ -62,8 +62,8 @@
                         </div>
 
                         <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                            <div class="col-md-6 offset-md-4 justify-content-center">
+                                <button type="submit" class="btn btn-primary btn-md btn-block">
                                     {{ __('Registrarme') }}
                                 </button>
                             </div>

@@ -1,4 +1,7 @@
 @extends('welcome')
+@section('title')
+    Inicio de
+@endsection
 @section('content')
 <div class="jumbotron jumbotron-fluid" style="background-image: url(../img/Background.jpg)!important; margin: 0!important;">
     <div class="container">

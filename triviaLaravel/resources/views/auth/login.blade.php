@@ -1,5 +1,7 @@
 @extends('welcome')
-
+@section('title')
+    Ingresar en
+@endsection
 @section('content')
 <div class="container py-3 px-4">
     <div class="row justify-content-center">

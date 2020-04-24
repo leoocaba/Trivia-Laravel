@@ -5,7 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title></title>
+    <title>@yield('title') Trivia</title>
+    <link rel="shortcut icon" href="/img/t.png">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/estilo-header.css">
     <link rel="stylesheet" href="/css/estilo-footer.css">
@@ -52,7 +53,7 @@
                     </li>
                     @if (Route::has('login')) @auth
                     <li class="nav-item alert alert-success" style="text-align: center;">Bienvenido/a {{ auth()->user()->name }} </li>
-                    <li class="nat-item btn-outline-danger btn-sm">
+                    <li class="nav item btn-outline-danger btn-sm">
                         <a href="#" onclick="event.preventDefault();
                         document.getElementById('logout-form').submit();" style="text-decoration: none;">Cerrar Sesión</a>
                     </li>
@@ -143,7 +144,7 @@
         </div>
 
         <div class="text-center mt-5">
-            <p class="footer-alt mb-0 f-14">2020 Copyright © Todos los derechos reservados.</p>
+        <p class="footer-alt mb-0 f-14">{{date('Y')}} Copyright © Todos los derechos reservados.</p>
         </div>
     </footer>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

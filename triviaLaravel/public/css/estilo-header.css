@@ -1,9 +1,5 @@
 /*BARRA DE NAVEGACION*/
 
-.navbar {
-    opacity: 0.9;
-}
-
 body header .navbar-brand {
     margin-left: 15px;
     width: 50px;

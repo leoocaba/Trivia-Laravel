@@ -19,4 +19,8 @@ Route::get('/welcome', function () {
     return view('botoneraWelcome');
 });
 
+Route::get('/crear/pregunta', function () {
+    return view('crearPregunta');
+});
+
 Auth::routes();

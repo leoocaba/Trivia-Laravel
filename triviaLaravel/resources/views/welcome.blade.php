@@ -52,10 +52,14 @@
                         <a class="nav-link" href="#">Contacto</a>
                     </li>
                     @if (Route::has('login')) @auth
-                    <li class="nav-item alert alert-success" style="text-align: center;">Bienvenido/a {{ auth()->user()->name }} </li>
-                    <li class="nav item btn-outline-danger btn-sm">
-                        <a href="#" onclick="event.preventDefault();
-                        document.getElementById('logout-form').submit();" style="text-decoration: none;">Cerrar Sesión</a>
+                    <li class="nav-item active pb-2"><button type="button" class="btn btn-dark container d-flex justify-content-center" 
+                        style="color: beige;"> Bienvenido/a {{ auth()->user()->name }} </button><span class="sr-only">Mi nombre</span></li>
+
+                    <li class="nav-item active">
+                    <a href="" onclick="event.preventDefault();
+                        document.getElementById('logout-form').submit();" class="btn btn-danger container d-flex justify-content-center" style="text-decoration: none;">
+                    Cerrar Sesión<span class="sr-only">Cerrar Sesión</span>
+                    </a>
                     </li>
                     @else
                     <li class="nav-item">
@@ -68,8 +72,8 @@
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
                     @csrf
-                    <input class="form-control mr-sm-2" type="search" name="search" placeholder="Búsqueda" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">BUSCAR</button>
+                    <input class="form-control mr-sm-2  d-flex justify-content-center" type="search" name="search" placeholder="Búsqueda" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0  d-flex justify-content-center" type="submit">BUSCAR</button>
                 </form>
             </div>
         </nav>
@@ -107,10 +111,8 @@
                     <div class="">
                         <h6 class="footer-heading text-uppercase text-white">cuenta</h6>
                         <ul class="list-unstyled footer-link mt-4">
-                            <li onclick="location.href = 'login.php'" style="cursor: pointer" ;>Ingresar</li>
-                            <li onclick="location.href = 'login.php'" style="cursor: pointer" ;>Registrarme</li>
-                            <li> </li>
-                            <li></li>
+                            <a href="{{ url('/login') }}" class="" style="text-decoration: none;"><li style="cursor: pointer"; class="m-0">INGRESAR</li></a>
+                            <a href="{{ url('/register') }}" class="" style="text-decoration: none;"><li style="cursor: pointer"; class="m-0">REGISTRARME</li></a>
                         </ul>
 
                     </div>
@@ -124,16 +126,16 @@
                         <div class="mt-5">
                             <ul class="list-inline">
                                 <li class="list-inline-item">
-                                    <a href="#"><img src="img/facebook.png" alt=""></a>
+                                    <a href="#" target="_blanck"><img src="/img/facebook.png" alt=""></a>
                                 </li>
                                 <li class="list-inline-item">
-                                    <a href="#"><img src="img/twitter.png" alt=""></a>
+                                    <a href="#" target="_blanck"><img src="/img/twitter.png" alt=""></a>
                                 </li>
                                 <li class="list-inline-item">
-                                    <a href="#"><img src="img/Instagram.png" alt=""></a>
+                                    <a href="#" target="_blanck"><img src="/img/Instagram.png" alt=""></a>
                                 </li>
                                 <li class="list-inline-item">
-                                    <a href="#"><img src="img/linkedin.png" alt=""></a>
+                                    <a href="#" target="_blanck"><img src="/img/linkedin.png" alt=""></a>
                                 </li>
                             </ul>
                         </div>

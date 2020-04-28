@@ -1,5 +1,10 @@
 body .jumbotron .container .btn {
     font-family: 'Press Start 2P';
     background-color: #30B77E;
+    cursor: pointer;
     box-sizing: border-box;
+}
+
+body .jumbotron .container .btn:hover {
+    color: rgb(80, 100, 92);
 }

@@ -6,7 +6,7 @@
 <div class="container py-3 px-4">
     <div class="row justify-content-center">
         <div class="col-12 col-sm-10 col-lg-10">
-            <div class="card text-white bg-dark justify-content-center py-3 px-4">
+            <div class="card text-white bg-dark justify-content-center">
                 <div class="card-header"><h3 class="display-5">{{ __('Ingresar') }}</h3></div>
 
                 <div class="card-body color-black">

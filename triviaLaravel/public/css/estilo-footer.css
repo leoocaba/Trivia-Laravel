@@ -81,3 +81,7 @@ footer {
     display: block;
     border-bottom: 1px solid #1bbc9b;
 }
+
+.bg-footer .container ul li:hover {
+    color: #55acee;
+}

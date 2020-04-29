@@ -23,4 +23,8 @@ Route::get('/crear/pregunta', function () {
     return view('crearPregunta');
 });
 
+Route::get('/agregar/pregunta', function () {
+    return view('agregarPregunta');
+});
+
 Auth::routes();

@@ -9,10 +9,10 @@ use App\Category;
 class QuestionsController extends Controller
 {
     
-    public function allCategories() {
-        $categorias = Category::all();
+    public function categories() {
+        $categorias = Question::all();
+        dd($categorias);
         $vac = compact('categorias');
-        dd($vac);
         return view('agregarPregunta', $vac);
     }
 

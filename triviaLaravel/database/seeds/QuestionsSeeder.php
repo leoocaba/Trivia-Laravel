@@ -21,7 +21,7 @@ class QuestionsSeeder extends Seeder
 
                 "option_2" => "José Luis 'Caldera' Calderón",
 
-                "option_3" => "Juan Sebastián 'La Brujita', Verón",
+                "option_3" => "Juan Sebastián 'La Brujita' Verón",
 
                 "option_4" => "Mariano 'El Tanque' Pavone",
 

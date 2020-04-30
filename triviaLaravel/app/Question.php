@@ -9,7 +9,7 @@ class Question extends Model
     protected $guarded = [];
     public $timestamps = true;
 
-    public function category() {
-        return $this->belongsTo('App\Category', 'category_id');
+    public function categories() {
+        return $this->belongsTo('App\Category');
     }
 }

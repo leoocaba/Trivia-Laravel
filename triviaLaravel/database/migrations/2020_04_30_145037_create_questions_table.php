@@ -20,7 +20,7 @@ class CreateQuestionsTable extends Migration
             $table->string('option_2');
             $table->string('option_3');
             $table->string('option_4');
-            $table->unsignedBigInteger('category_id');
+            $table->unsignedBigInteger('category_id')->default(1);
             $table->string('image');
             $table->timestamps();
 

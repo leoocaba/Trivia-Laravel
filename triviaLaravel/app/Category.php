@@ -9,7 +9,7 @@ class Category extends Model
     protected $guarded = [];
     public $timestamps = true;
 
-    public function question() {
-        return $this->belongsTo('App\Question', 'category_id');
+    public function questions() {
+        return $this->hasMany('App\Question', 'category_id')->withPivot();
     }
 }

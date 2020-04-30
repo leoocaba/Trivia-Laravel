@@ -27,4 +27,6 @@ Route::get('/agregar/pregunta', function () {
     return view('agregarPregunta');
 });
 
+Route::post('/agregar/pregunta', 'QuestionsController@createQuestion');
+
 Auth::routes();

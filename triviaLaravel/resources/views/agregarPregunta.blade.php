@@ -22,9 +22,9 @@
                             <label for="__input-categoria" class="text-center col-12 mt-3 badge badge-pill badge-warning">SELECCIONE UNA CATEGORÍA</label>
                             <select class="form-control col-12 mt-3" name="category_id" id="__input-categoria" required autofocus>
                                 <option value="">Elegir categoría...</option>
-                                    @foreach  ($categorias as $categoria)
-                                    <option value="{{ $categorias->id }}">{{ $categorias->name }}</option>
-                                    @endforeach 
+                             @foreach    ($categorias as $categoria) 
+                                    <option value="{{ $categoria->id }}">{{ $categoria->name }}</option>
+                            @endforeach 
                             </select>
                         </div>
                     </div>

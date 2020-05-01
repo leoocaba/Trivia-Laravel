@@ -10,6 +10,6 @@ class Category extends Model
     public $timestamps = true;
 
     public function questions() {
-        return $this->hasMany('App\Question')->withPivot();
+        return $this->hasMany('App\Question', 'category_id')->withPivot();
     }
 }

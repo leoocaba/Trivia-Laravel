@@ -23,7 +23,7 @@ Route::get('/crear/pregunta', function () {
     return view('crearPregunta');
 });
 
-Route::get('/agregar/pregunta', 'QuestionsController@allCategories');
+Route::get('/agregar/pregunta', 'QuestionsController@formSelectCategories');
 
 Route::post('/agregar/pregunta', 'QuestionsController@createQuestion');
 

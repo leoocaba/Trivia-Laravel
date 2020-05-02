@@ -11,6 +11,8 @@
 |
 */
 
+use App\Http\Controllers\QuestionsController;
+
 Route::get('/', function () {
     return view('index');
 });
@@ -23,8 +25,14 @@ Route::get('/crear/pregunta', function () {
     return view('crearPregunta');
 });
 
-Route::get('/agregar/pregunta', 'QuestionsController@formSelectCategories');
+Route::get('/agregar/preguntas', 'QuestionsController@formSelectCategories');
 
-Route::post('/agregar/pregunta', 'QuestionsController@createQuestion');
+Route::post('/agregar/preguntas', 'QuestionsController@createQuestion');
+
+Route::get('/modificar/preguntas', 'QuestionsController@listQuestion');
+
+Route::POST('/modificarla', 'QuestionsController@edit');
+
+Route::get('modificar/la/pregunta/{id}', 'QuestionsController@editForm');
 
 Auth::routes();

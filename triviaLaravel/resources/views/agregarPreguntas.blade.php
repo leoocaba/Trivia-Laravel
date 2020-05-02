@@ -1,5 +1,5 @@
 @extends('welcome') @section('title') Agregar Pregunta en @endsection @section('content')
-<div class="container container-fluid">
+<div class="container">
     <div class="row d-flex justify-content-center">
 
         <div class="col-12 col-lg-8 m-auto pt-3 pb-3">

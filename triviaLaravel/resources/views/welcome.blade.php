@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="/css/estilo-header.css">
     <link rel="stylesheet" href="/css/estilo-footer.css">
     <link rel="stylesheet" href="/css/estilo-botonera.css">
+    @yield('style')
     <link href="https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
@@ -82,7 +83,7 @@
         </form>
     </header>
 
-    <main style="flex-grow: 1;">
+    <main style="flex-grow: 1; background-image: url(../img/Background.jpg);">
         <section>
             @yield('content')
         </section>

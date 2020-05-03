@@ -16,7 +16,7 @@
                       <tbody style="margin-top: 10px;">
                         @forelse ($listadoPreguntas as $pregunta)
                           <tr style="margin-top: 10px;">
-                            <td class="item p-3" style="border-bottom-left-radius: 30px; border-top-left-radius: 30px;"> <p>{{$pregunta->question}}</p><br><h6>Categoría:</h6> {{$pregunta->categories->name}} </td>
+                            <td class="item p-3" style="border-bottom-left-radius: 30px; border-top-left-radius: 30px;"> <p>{{$pregunta->question}}</p><hr><h5>Categoría:</h5> {{$pregunta->categories->name}}</td>
                             <td class="editar item p-3" style="border-bottom-right-radius: 30px; border-top-right-radius: 30px;"><a href="/modificar/la/pregunta/ {{$pregunta->id}} " style=" font-family: 'Press Start 2P'; font-size:12px;" class="btn btn-primary btn-md badge-pill badge-warning text-nowrap">Editar</a></td>
                         </tr>
                           @empty
@@ -40,13 +40,13 @@
                   <table style="border-bottom-radius: 30px;">
                     <thead>
                       <tr>
-                        <th class="text-nowrap col-8" style="border-bottom-left-radius: 30px; border-radius: 30px;" id="titulo-menu">Pregunta</th>
+                        <th class="text-nowrap col-12 p-3" style="border-bottom-left-radius: 30px; border-radius: 30px;" id="titulo-menu">Pregunta</th>
                       </tr>
                     </thead>
-                    <tbody style="margin-top: 10px;">
+                    <tbody>
                       @forelse ($listadoPreguntas as $pregunta)
-                        <tr style="margin-top: 10px;">
-                          <td class="item p-3" style="border-bottom-left-radius: 30px; border-radius: 30px;"> <p>{{$pregunta->question}}</p> <hr> <h6>Categoría:</h6> {{$pregunta->categories->name}} <hr>  <a href="/modificar/la/pregunta/ {{$pregunta->id}} " style=" font-family: 'Press Start 2P'; font-size:12px;" 
+                        <tr>
+                          <td class="item p-3 col-12" style="border-bottom-left-radius: 30px; border-radius: 30px;"> <p>{{$pregunta->question}}</p> <hr> <h5>Categoría:</h5> {{$pregunta->categories->name}} <hr>  <a href="/modificar/la/pregunta/ {{$pregunta->id}} " style=" font-family: 'Press Start 2P'; font-size:12px;" 
                             class="btn btn-primary btn-md badge-pill badge-warning text-nowrap">Editar</a> </td>
                            </td>
                       </tr>

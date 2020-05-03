@@ -83,8 +83,8 @@
         </form>
     </header>
 
-    <main style="flex-grow: 1; background-image: url(../img/Background.jpg);">
-        <section>
+    <main>
+        <section style="flex-grow: 1; background-image: url(../img/Background.jpg);">
             @yield('content')
         </section>
     </main>

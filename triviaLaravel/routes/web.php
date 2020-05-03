@@ -31,7 +31,7 @@ Route::post('/agregar/preguntas', 'QuestionsController@createQuestion');
 
 Route::get('/modificar/preguntas', 'QuestionsController@listQuestion');
 
-Route::POST('/modificarla', 'QuestionsController@edit');
+Route::post('/modificarla/{id}', 'QuestionsController@edit');
 
 Route::get('modificar/la/pregunta/{id}', 'QuestionsController@editForm');
 

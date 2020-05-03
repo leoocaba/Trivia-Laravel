@@ -14,7 +14,6 @@ table {
     box-sizing: border-box;
     border-collapse: collapse;
     width: 100%;
-    background: #fff;
 }
 
 tr th {
@@ -31,7 +30,6 @@ tr th {
 
 td,
 th {
-    border-bottom: solid 1px black;
     padding: 0;
     text-align: center;
 }
@@ -48,26 +46,15 @@ tbody th {
     background-color: #2ea879;
 }
 
-tbody tr:nth-child(2n-1) {
-    background-color: #f5f5f5;
-    transition: all .125s ease-in-out;
-}
-
-tbody tr:hover {
-    background-color: rgba(229, 234, 240, 0.3);
-}
-
 tbody tr {
-    border-radius: 40px;
-    margin-top: 10px;
+    border-radius: 30px!important;
 }
 
 .editar:hover {
-    background-color: #2ea879;
+    background-color: #007bff;
 }
 
 td.item {
-    border-bottom: solid 1px black;
     background-color: #212529;
     font-weight: bold;
     color: #fff;

@@ -12,7 +12,7 @@
 
                     <div class="bg-dark text-white mb-2 col-12" style="border-radius: 30px;">
                         <div class="form-group">
-                            <label style="font-family: ZCOOL KuaiLe; font-weight: bold;" class="col-12 text-center pt-3" for=""><h5>INGRESE NUEVA PREGUNTA</h5></label>
+                            <label style="font-family: ZCOOL KuaiLe; font-weight: bold;" class="col-12 text-center pt-3" for=""><h5 class="text-success">INGRESE NUEVA PREGUNTA</h5></label>
                             <textarea class="col-12 px-3 rounded" name="question" for="question" placeholder="Máximo 300 caracteres" maxlength="300" required autofocus></textarea>
                         </div>
                     </div>

@@ -53,9 +53,9 @@ class QuestionsController extends Controller
         return view('editarPregunta', $vac);
     }
 
-    public function edit(Request $request) {
+    public function edit(Request $request, $id) {
 
-        $pregunta = Question::find($request['id']);
+        $pregunta = Question::find($id);
         $pregunta->question = $request['question'];
         $pregunta->option_1 = $request['option_1'];
         $pregunta->option_2 = $request['option_2'];

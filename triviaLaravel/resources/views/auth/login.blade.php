@@ -3,11 +3,11 @@
     Ingresar en
 @endsection
 @section('content')
-<div class="container py-2 px-4">
+<div class="container py-2 px-3">
     <div class="row justify-content-center">
         <div class="col-sm-12 col-md-6 col-lg-5">
             <div class="card text-white bg-dark justify-content-center">
-                <div class="py-3 col-md-12 d-flex justify-content-center"
+                <div class="py-3 col-md-12 d-flex justify-content-center my-1"
                ><svg  style=" -webkit-border-radius: 61px; -moz-border-radius: 61px; border-radius: 61px; border:1px solid #aaaaaa;
                width:112px; height:112px;" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="user" class="svg-inline--fa fa-user fa-w-14 d-flex justify-content-center p-2 bg-info" 
                 width="50px" height="50px" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" 
@@ -15,14 +15,14 @@
                     16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 
                     48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z"></path></svg>
                 </div>
-                <div class="card-header"><h3 class=" text-center">{{ __('Iniciar Sesión') }}</h3></div>
+                <div class="card-header my-1"><h3 class=" text-center">{{ __('Iniciar Sesión') }}</h3></div>
 
                 <div class="card-body color-black">
                     
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
-                        <div class="form-group d-flex justify-content-center">
+                        <div class="form-group my-1 d-flex justify-content-center">
 
                             <div class="col-md-12 ">
                                 <label for="email" class="col-md-12 col-form-label">{{ __('Usuario') }}</label>
@@ -36,7 +36,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group d-flex justify-content-center">
+                        <div class="form-group my-1 d-flex justify-content-center">
                             <div class="col-md-12">
                                 <label for="password" class="col-md-12 col-form-label">{{ __('Contraseña') }}</label>
                                 <input id="password" style="border-radius: 40px!important;" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
@@ -49,7 +49,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group row">
+                        <div class="form-group my-4 row">
                             <div class="col-md-12 ml-4">
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
@@ -61,7 +61,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group d-flex justify-content-center">
+                        <div class="form-group my-1 d-flex justify-content-center">
                             <div class="col-md-12 justify-content-center">
                                 <button type="submit" class="btn btn-info btn-md btn-block" style="border-radius: 40px!important;">
                                     {{ __('Ingresar') }}
@@ -77,7 +77,7 @@
                             </div>
                         </div>
                         <hr>
-                        <div class="form-group d-flex justify-content-center">
+                        <div class="form-group my-0 d-flex justify-content-center">
                             <h4 style="font-family: ZCOOL KuaiLe; font-weight: bold;">
                                 Trivia
                             </h4>

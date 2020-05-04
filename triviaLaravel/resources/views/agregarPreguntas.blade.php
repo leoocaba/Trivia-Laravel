@@ -32,26 +32,26 @@
                     <div style="border-radius: 30px;" class="bg-dark mb-2 col-12 row">
                         <div class="form-group col-md-6">
                             <label class="text-success mt-2" for="formGroupExampleInput">OPCIÓN 1</label>
-                            <input type="text" name="option_1" class="form-control" id="formGroupExampleInput" placeholder="Aquí la respuesta CORRECTA" required autofocus>
+                            <input type="text" style="border-radius: 30px;" name="option_1" class="form-control" id="formGroupExampleInput" placeholder="Aquí la respuesta CORRECTA" required autofocus>
                         </div>
 
 
                         <div class="form-group col-md-6 mt-2">
                             <label class="text-danger" for="formGroupExampleInput">OPCIÓN 2</label>
-                            <input type="text" name="option_2" class="form-control" id="formGroupExampleInput" placeholder="Aquí la respuesta INCORRECTA" required autofocus>
+                            <input type="text" style="border-radius: 30px;" name="option_2" class="form-control" id="formGroupExampleInput" placeholder="Aquí la respuesta INCORRECTA" required autofocus>
                         </div>
 
 
 
                         <div class="form-group col-md-6">
                             <label class="text-danger" for="formGroupExampleInput2">OPCIÓN 3</label>
-                            <input type="text" name="option_3" class="form-control" id="formGroupExampleInput2" placeholder="Aquí la respuesta INCORRECTA" required autofocus>
+                            <input type="text" style="border-radius: 30px;" name="option_3" class="form-control" id="formGroupExampleInput2" placeholder="Aquí la respuesta INCORRECTA" required autofocus>
                         </div>
 
 
                         <div class="form-group col-md-6">
                             <label class="text-danger" for="formGroupExampleInput2">OPCIÓN 4</label>
-                            <input type="text" name="option_4" class="form-control" id="formGroupExampleInput2" placeholder="Aquí la respuesta INCORRECTA" required autofocus>
+                            <input type="text" style="border-radius: 30px;" name="option_4" class="form-control" id="formGroupExampleInput2" placeholder="Aquí la respuesta INCORRECTA" required autofocus>
                         </div>
                     </div>
 
@@ -62,9 +62,9 @@
                         </div>
                     </div>
 
-                    <div style="border-radius: 30px;" class="bg-dark col-12">
+                    <div style="border-radius: 30px!important;" class="bg-dark col-12">
                         <div class="form-group">
-                            <button type="submit" style=" font-family: 'Press Start 2P';" class="btn btn-success btn-md btn-block mt-3 d-flex justify-content-center">PUBLICAR</button>
+                            <button type="submit" style="border-radius: 30px!important; font-family: 'Press Start 2P';" class="btn btn-success btn-md btn-block mt-3 d-flex justify-content-center">PUBLICAR</button>
                         </div>
 
                     </div>

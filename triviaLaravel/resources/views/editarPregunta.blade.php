@@ -35,26 +35,26 @@
                 <div style="border-radius: 30px;" class="bg-dark mb-2 col-12 row">
                     <div class="form-group col-md-6">
                         <label class="text-success mt-2" for="formGroupExampleInput">OPCIÓN 1</label>
-                        <input type="text" name="option_1" class="form-control" id="formGroupExampleInput" value="{{$pregunta->option_1}}" placeholder="Aquí la Opción CORRECTA" required autofocus>
+                        <input style="border-radius: 30px!important;" type="text" name="option_1" class="form-control" id="formGroupExampleInput" value="{{$pregunta->option_1}}" placeholder="Aquí la Opción CORRECTA" required autofocus>
                     </div>
 
 
                     <div class="form-group col-md-6 mt-2">
                         <label class="text-danger" for="formGroupExampleInput">OPCIÓN 2</label>
-                        <input type="text" name="option_2" class="form-control" id="formGroupExampleInput" value="{{$pregunta->option_2}}" placeholder="Aquí la Opción INCORRECTA" required autofocus>
+                        <input style="border-radius: 30px!important;" type="text" name="option_2" class="form-control" id="formGroupExampleInput" value="{{$pregunta->option_2}}" placeholder="Aquí la Opción INCORRECTA" required autofocus>
                     </div>
 
 
 
                     <div class="form-group col-md-6">
                         <label class="text-danger" for="formGroupExampleInput2">OPCIÓN 3</label>
-                        <input type="text" name="option_3" class="form-control" id="formGroupExampleInput2" value="{{$pregunta->option_3}}" placeholder="Aquí la Opción INCORRECTA" required autofocus>
+                        <input style="border-radius: 30px!important;" type="text" name="option_3" class="form-control" id="formGroupExampleInput2" value="{{$pregunta->option_3}}" placeholder="Aquí la Opción INCORRECTA" required autofocus>
                     </div>
 
 
                     <div class="form-group col-md-6">
                         <label class="text-danger" for="formGroupExampleInput2">OPCIÓN 4</label>
-                        <input type="text" name="option_4" class="form-control" id="formGroupExampleInput2" value="{{$pregunta->option_4}}" placeholder="Aquí la Opción INCORRECTA" required autofocus>
+                        <input style="border-radius: 30px!important;" type="text" name="option_4" class="form-control" id="formGroupExampleInput2" value="{{$pregunta->option_4}}" placeholder="Aquí la Opción INCORRECTA" required autofocus>
                     </div>
                 </div>
 
@@ -67,7 +67,7 @@
 
                 <div style="border-radius: 30px;" class="bg-dark col-12">
                     <div class="form-group">
-                        <button type="submit" style=" font-family: 'Press Start 2P';" class="btn btn-primary btn-md btn-block mt-3 d-flex justify-content-center">EDITAR</button>
+                        <button type="submit" style="border-radius: 30px; font-family: 'Press Start 2P';" class="btn btn-primary btn-md btn-block mt-3 d-flex justify-content-center">EDITAR</button>
                     </div>
 
                 </div>

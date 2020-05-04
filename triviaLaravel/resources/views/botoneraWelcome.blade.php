@@ -28,9 +28,9 @@
 <div class="jumbotron jumbotron-fluid __jumbotron">
     <div class="container">
       <div class="botones">
-      <a href="" class=""><button type="button" class="btn btn-primary btn-sm btn-block mb-2">JUGAR</button></a>
-      <a href="" class=""><button type="button" class="btn btn-primary btn-sm btn-block mb-2">RANKING</button></a>
-      <a href=" {{url('/crear/pregunta')}} " class=""><button type="button" class="btn btn-primary btn-sm btn-block mb-2">CREÁ UNA PREGUNTA</button></a>
+      <a href=""><button type="button" style="border-radius: 30px;" class="btn btn-primary btn-sm btn-block mb-2">JUGAR</button></a>
+      <a href=""><button type="button" style="border-radius: 30px;" class="btn btn-primary btn-sm btn-block mb-2">RANKING</button></a>
+      <a href=" {{url('/crear/pregunta')}} "><button type="button" style="border-radius: 30px;" class="btn btn-primary btn-sm btn-block mb-2">CREÁ UNA PREGUNTA</button></a>
       </div>
     </div>
   </div>   

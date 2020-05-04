@@ -3,12 +3,12 @@
     Ingresar en
 @endsection
 @section('content')
-<div class="container py-2 px-3">
+<div class="container py-3 px-3">
     <div class="row justify-content-center">
         <div class="col-sm-12 col-md-6 col-lg-5">
             <div class="card text-white bg-dark justify-content-center">
                 <div class="py-3 col-md-12 d-flex justify-content-center my-1"
-               ><svg  style=" -webkit-border-radius: 61px; -moz-border-radius: 61px; border-radius: 61px; border:1px solid #aaaaaa;
+               ><svg  style=" -webkit-border-radius: 61px; -moz-border-radius: 61px; border-radius: 61px; border:5px solid #aaaaaa;
                width:112px; height:112px;" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="user" class="svg-inline--fa fa-user fa-w-14 d-flex justify-content-center p-2 bg-info" 
                 width="50px" height="50px" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" 
                     d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 
@@ -24,8 +24,8 @@
 
                         <div class="form-group my-1 d-flex justify-content-center">
 
-                            <div class="col-md-12 ">
-                                <label for="email" class="col-md-12 col-form-label">{{ __('Usuario') }}</label>
+                            <div class="col-12 ">
+                                <label for="email" class="col-12 col-form-label">{{ __('Usuario') }}</label>
                                 <input id="email" style="border-radius: 40px!important;" type="email" class="form-control radius @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
 
                                 @error('email')
@@ -37,8 +37,8 @@
                         </div>
 
                         <div class="form-group my-1 d-flex justify-content-center">
-                            <div class="col-md-12">
-                                <label for="password" class="col-md-12 col-form-label">{{ __('Contraseña') }}</label>
+                            <div class="col-12">
+                                <label for="password" class="col-12 col-form-label">{{ __('Contraseña') }}</label>
                                 <input id="password" style="border-radius: 40px!important;" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
 
                                 @error('password')
@@ -50,7 +50,7 @@
                         </div>
 
                         <div class="form-group my-4 row">
-                            <div class="col-md-12 ml-4">
+                            <div class="col-12 ml-4">
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 
@@ -62,14 +62,14 @@
                         </div>
 
                         <div class="form-group my-1 d-flex justify-content-center">
-                            <div class="col-md-12 justify-content-center">
-                                <button type="submit" class="btn btn-info btn-md btn-block" style="border-radius: 40px!important;">
+                            <div class="col-12 justify-content-center">
+                                <button type="submit" class="btn btn-info btn-md btn-block" style="font-family:'Press Start 2P'; border-radius: 40px!important;">
                                     {{ __('Ingresar') }}
                                 </button>
 
                                 @if (Route::has('password.request'))
                                
-                                    <a class="py-auto text-center col-md-12 btn btn-link" href="{{ route('password.request') }}">
+                                    <a class="py-auto text-center col-12 btn btn-link" href="{{ route('password.request') }}">
                                         {{ __('Restablecer contraseña') }}
                                     </a>
                               
@@ -78,9 +78,9 @@
                         </div>
                         <hr>
                         <div class="form-group my-0 d-flex justify-content-center">
-                            <h4 style="font-family: ZCOOL KuaiLe; font-weight: bold;">
+                            <h3 style="font-family: ZCOOL KuaiLe; font-weight: bold;">
                                 Trivia
-                            </h4>
+                            </h3>
                         </div>
                         <hr>
                     </form>

@@ -11,17 +11,17 @@
                     <h2 class="card-title text-nowrap d-flex justify-content-center" style="font-family: ZCOOL KuaiLe;"> {{$user->alias}} </h2>
                     <hr>
                     <div class="justify-content-center" style="font-size: 14px;">
-                        <div class="text-nowrap justify-content-center">
-                            <p style="font-family: 'Press Start 2P';"><strong style="color: #30B77E;">Nombre: </strong>{{ $user->name }}</p>
+                        <div class="justify-content-center">
+                            <p class="text-nowrap" style="font-family: 'Press Start 2P';"><strong style="color: #30B77E;">Nombre: </strong>{{ $user->name }}</p>
                         </div>
                         <div class="text-nowrap justify-content-center">
-                            <p style="font-family: 'Press Start 2P';"><strong style="color: #30B77E;">Apellido: </strong>{{ $user->surname }}</p>
+                            <p class="text-nowrap" style="font-family: 'Press Start 2P';"><strong style="color: #30B77E;">Apellido: </strong>{{ $user->surname }}</p>
                         </div>
                         <div class="text-nowrap justify-content-center">
-                            <p style="font-family: 'Press Start 2P';"><strong style="color: #30B77E;">Puesto: </strong>{{ $user->id }}</p>
+                            <p class="text-nowrap" style="font-family: 'Press Start 2P';"><strong style="color: #30B77E;">Puesto: </strong>{{ $user->id }}</p>
                         </div>
                         <div class="text-nowrap justify-content-center">
-                            <p style="font-family: 'Press Start 2P';"><strong style="color: #30B77E;">Puntos: </strong>{{ $user->id }}</p>
+                            <p class="text-nowrap" style="font-family: 'Press Start 2P';"><strong style="color: #30B77E;">Puntos: </strong>{{ $user->id }}</p>
                         </div>
                         <hr>
                         <div>

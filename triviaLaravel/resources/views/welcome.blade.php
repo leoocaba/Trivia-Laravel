@@ -37,7 +37,7 @@
       </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
+                <ul class="navbar-nav ">
                     <li class="nav-item active">
                     <a class="nav-link" href="{{ url('/welcome')}}">Inicio<span class="sr-only">(current)</span></a>
                     </li>
@@ -54,15 +54,14 @@
                         <a class="nav-link" href="#">Contacto</a>
                     </li>
                     @if (Route::has('login')) @auth
-
-                    <div class="btn-group">
+                    <div class="dropdown m-auto">
                         <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Bienvenido/a {{ auth()->user()->alias }}
                         </button>
-                        <div class="dropdown-menu bg-light">
-                          <a class="dropdown-item" href="/perfil" style="color: royalblue"> Mi Perfil</a>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item btn btn-link" href="/perfil" style="color: royalblue; text-align: center; font-size:15px;"> Mi Perfil</a>
                           <div class="dropdown-divider"></div>
-                          <a class="dropdown-item" style="color: red" href=""onclick="event.preventDefault();
+                          <a class="dropdown-item btn btn-link" style="color: red; text-align: center; font-size:15px;" href=""onclick="event.preventDefault();
                           document.getElementById('logout-form').submit();">Cerrar Sesión</a>
                         </div>
                       </div>
@@ -75,10 +74,12 @@
                     </li>          
                     @endauth
                 </ul>
-                <form class="form-inline my-2 my-lg-0">
+                <form class="ml-auto d-flex justify-content-center">
                     @csrf
-                    <input class="form-control mr-sm-2  d-flex justify-content-center" type="search" name="search" placeholder="Búsqueda" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0  d-flex justify-content-center" type="submit">BUSCAR</button>
+                    <input class="form-control p-1 m-1 border border-success" type="search" name="search" placeholder="Búsqueda" aria-label="Search">
+                    <div class="m-1 p-1">
+                        <button class="btn btn-outline-success d-block btn-block" type="submit">BUSCAR</button>
+                    </div>
                 </form>
             </div>
         </nav>

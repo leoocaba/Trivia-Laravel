@@ -25,6 +25,11 @@ Route::get('/crear/pregunta', function () {
     return view('crearPregunta');
 });
 
+Route::get('/editar/perfil', 'UserController@editProfile');
+Route::post('/editar/perfil', 'UserController@updateProfile');
+
+Route::get('/perfil', 'UserController@profile');
+
 Route::get('/agregar/preguntas', 'QuestionsController@formSelectCategories');
 
 Route::post('/agregar/preguntas', 'QuestionsController@createQuestion');

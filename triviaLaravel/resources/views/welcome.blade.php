@@ -14,6 +14,7 @@
     @yield('style')
     <link href="https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Static/Css/font-awesome.min.css">
 </head>
 
 <body>
@@ -53,15 +54,18 @@
                         <a class="nav-link" href="#">Contacto</a>
                     </li>
                     @if (Route::has('login')) @auth
-                    <li class="nav-item active pb-2"><button type="button" class="btn btn-dark container d-flex justify-content-center" 
-                        style="color: beige;"> Bienvenido/a {{ auth()->user()->name }} </button><span class="sr-only">Mi nombre</span></li>
 
-                    <li class="nav-item active">
-                    <a href="" onclick="event.preventDefault();
-                        document.getElementById('logout-form').submit();" class="btn btn-danger container d-flex justify-content-center" style="text-decoration: none;">
-                    Cerrar Sesión<span class="sr-only">Cerrar Sesión</span>
-                    </a>
-                    </li>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Bienvenido/a {{ auth()->user()->alias }}
+                        </button>
+                        <div class="dropdown-menu bg-light">
+                          <a class="dropdown-item" href="/perfil" style="color: royalblue"> Mi Perfil</a>
+                          <div class="dropdown-divider"></div>
+                          <a class="dropdown-item" style="color: red" href=""onclick="event.preventDefault();
+                          document.getElementById('logout-form').submit();">Cerrar Sesión</a>
+                        </div>
+                      </div>
                     @else
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('login') }}">Ingresar</a> @if (Route::has('register'))

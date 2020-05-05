@@ -29,7 +29,7 @@
                         </div>
                     </div>
 
-                    <div style="border-radius: 30px;" class="bg-dark mb-2 col-12 row">
+                    <div style="border-radius: 30px;" class="bg-dark col-12 row">
                         <div class="form-group col-md-6">
                             <label class="text-success mt-2" for="formGroupExampleInput">OPCIÓN 1</label>
                             <input type="text" style="border-radius: 30px;" name="option_1" class="form-control" id="formGroupExampleInput" placeholder="Aquí la respuesta CORRECTA" required autofocus>

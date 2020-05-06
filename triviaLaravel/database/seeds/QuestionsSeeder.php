@@ -132,7 +132,7 @@ class QuestionsSeeder extends Seeder
 
                 "image" => "sarsCoV2.jpg",
 
-                "category_id" => 8
+                "category_id" => 2
             ]
 
         ]);

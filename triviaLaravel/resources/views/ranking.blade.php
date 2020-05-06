@@ -1,108 +1,43 @@
-@extends('welcome') @section('title') Jugar @endsection @section('content')
+@extends('welcome') @section('title') Ranking de @endsection @section('content')
 
-<style>
-    .card-img-top {
-        width: 90px;
-        height: 90px;
-        object-fit: cover;
-    }
+@section('style')
+    <link rel="stylesheet" href="/css/estilo-ranking.css">
+@endsection
 
-    a {
-        font-family: 'Press Start 2P';
-    }
-
-    h4 {
-        font-family: ZCOOL KuaiLe;
-    }
-</style>
-<html lang="en" dir="ltr">
-<head>
-<meta charset="utf-8">
-<title></title>
-<link href="https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" >
-</head>
-<body>
 <div class="container">
-<table class="table w-auto" style="background-color: white">
+    <div class="row d-flex justify-content-center">
+        <div class="col-12 col-lg-10 m-auto pt-3 pb-3">
 
-  <!--Table head-->
-  <thead>
-    <tr>
-      <th>#</th>
-      <th>Puesto</th>
-      <th>img</th>
-      <th>Nombre de usuario</th>
-      <th>Puntuación</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr class="table-info">
-      <th scope="row">1</th>
-      <td>1</td>
-      <td></td>
-      <td>Pedro </td>
-      <td>100</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>2</td>
-      <td></td>
-      <td>Pedro </td>
-      <td>99</td>
-    </tr>
-    <tr class="table-info">
-      <th scope="row">3</th>
-      <td>3</td>
-      <td></td>
-      <td>Pedro </td>
-      <td>98</td>
-    </tr>
-    <tr>
-      <th scope="row">4</th>
-     <td>4</td>
-     <td></td>
-      <td>Pedro </td>
-      <td>97</td>
-    </tr>
-    <tr class="table-info">
-      <th scope="row">5</th>
-     <td>5</td>
-     <td></td>
-      <td>Pedro </td>
-      <td>96</td>
-    </tr>
-    <tr>
-      <th scope="row">6</th>
-      <td>6</td>
-      <td></td>
-      <td>Pedro </td>
-      <td>90</td>
-    </tr>
-    <tr class="table-info">
-      <th scope="row">7</th>
-      <<td>7</td>
-      <td></td>
-      <td>Pedro </td>
-      <td>80</td>
-    </tr>
-    <tr>
-      <th scope="row">8</th>
-      <td>8</td>
-      <td></td>
-      <td>Pedro </td>
-      <td>50</td>
-    </tr>
-    <tr class="table-info">
-      <th scope="row">9</th>
-      <td>9</td>
-      <td></td>
-      <td>Pedro </td>
-      <td>10</td>
-    </tr>
-  </tbody>
-</table>
+            <div clas="table-responsive p-0">
+                    <div class="wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th id="letraNegra"></th>
+                                    <th id="letraNegra">Player</th>
+                                    <th id="letraBlanca">Puesto</th>
+                                    <th id="letraBlanca">Puntos</th>
+                                </tr>
+                            </thead>
+                            @forelse ($usuarios as $usuario)
+                            <tbody>
+                              <tr>
+                                  <td><img style="border-radius: 50%;" class="p-1" src="/uploads/avatars/{{$usuario->image}}" alt="perfil" width="55px" height="55px"/></td>
+                                  <td class="team">{{$usuario->alias}}</td>
+                                  <td class="rank">{{$usuario->ranking}}</td>
+                                  <td class="points">{{$usuario->ranking}}</td>
+                              </tr>
+                          </tbody>
+                            @empty
+                               <div class="bg-dark text-white h-50 w-100 "><h2 class="my-0 p-3" style="text-align: center; margi: 0 auto; font-size: 16px;">El Ranking aún está vacío! :(</h2><br><br></div> 
+                            @endforelse
+                            
+                        </table>
+                    </div>
+                    <br>
+                </div>
+        </div>
+    </div>
 </div>
-</body>
+
 @endsection

@@ -66,4 +66,6 @@ class QuestionsController extends Controller
         $pregunta->save();
         return redirect('/welcome');
     }
+
+    
 }

@@ -26,6 +26,7 @@ Route::get('/crear/pregunta', function () {
 });
 
 Route::get('/editar/perfil', 'UserController@editProfile');
+
 Route::post('/editar/perfil', 'UserController@updateProfile');
 
 Route::get('/perfil', 'UserController@profile');
@@ -40,13 +41,10 @@ Route::post('/modificarla/{id}', 'QuestionsController@edit');
 
 Route::get('modificar/la/pregunta/{id}', 'QuestionsController@editForm');
 
-Route::get('/play', function() {
-  return view('play');
-});
+Route::get('/play', function() {return view('play');});
 
-Route::get('/ranking', function() {
-  return view('ranking');
-});
+Route::get('/ranking', 'UserController@listRanking');
+
 Route::get('contact-us', 'ContactController@getContact');
 
 Route::post('contact-us', 'ContactController@saveContact');

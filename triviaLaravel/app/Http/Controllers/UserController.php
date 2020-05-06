@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use Illuminate\Support\Facades\Auth;
 use Image;
+use App\User;
 
 class UserController extends Controller
 {
@@ -28,5 +29,12 @@ class UserController extends Controller
 
     public function profile(){
         return view('perfil', array('user' => Auth::user()) );
+    }
+
+    public function listRanking(){
+        $usuarios = User::orderBy('ranking', 'desc')->get();
+        $vac = compact('usuarios');
+        return view('ranking', $vac);
+
     }
 }

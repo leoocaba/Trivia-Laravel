@@ -38,20 +38,20 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ">
-                    <li class="nav-item active">
-                    <a class="nav-link" href="{{ url('/welcome')}}">Inicio<span class="sr-only">(current)</span></a>
+                    <li class="nav-item ">
+                    <a class="nav-link active" href="{{ url('/welcome')}}">Inicio<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link  text-success" href="{{ url('/play')}}">Jugar!</a>
+                        <a class="nav-link active text-danger" href="{{ url('/play')}}">Jugar!</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('/ranking')}}">Ranking</a>
+                        <a class="nav-link active text-dark" href="{{ url('/ranking')}}">Ranking</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('/faq')}}">FAQ</a>
+                        <a class="nav-link active text-dark" href="{{ url('/faq')}}">FAQ</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('/contact-us')}}">Contacto<span class="sr-only">(current)</span></a>
+                        <a class="nav-link active text-dark" href="{{ url('/contact-us')}}">Contacto<span class="sr-only">(current)</span></a>
                     </li>
                     @if (Route::has('login')) @auth
                     <div class="dropdown m-auto">
@@ -67,10 +67,10 @@
                       </div>
                     @else
                     <li class="nav-item">
-                        <a class="nav-link text-secondary" href="{{ route('login') }}">Ingresar</a> @if (Route::has('register'))
+                        <a class="nav-link active" href="{{ route('login') }}">Ingresar</a> @if (Route::has('register'))
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-danger" href="{{ route('register') }}">Registrarme</a> @endif @endauth
+                        <a class="nav-link active" href="{{ route('register') }}">Registrarme</a> @endif @endauth
                     </li>
                     @endauth
                 </ul>

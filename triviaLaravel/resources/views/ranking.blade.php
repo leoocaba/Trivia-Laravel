@@ -24,8 +24,8 @@
                               <tr>
                                   <td><img style="border-radius: 50%;" class="p-1" src="/uploads/avatars/{{$usuario->image}}" alt="perfil" width="55px" height="55px"/></td>
                                   <td class="team">{{$usuario->alias}}</td>
-                                  <td class="rank">{{$usuario->ranking}}</td>
-                                  <td class="points">{{$usuario->ranking}}</td>
+                                  <td class="rank">{{$usuario->id}}</td>
+                                  <td class="points">{{$usuario->puntos}}</td>
                               </tr>
                           </tbody>
                             @empty

@@ -32,7 +32,7 @@ class UserController extends Controller
     }
 
     public function listRanking(){
-        $usuarios = User::orderBy('ranking', 'desc')->get();
+        $usuarios = User::orderBy('puntos', 'desc')->get();
         $vac = compact('usuarios');
         return view('ranking', $vac);
 

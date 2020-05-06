@@ -22,11 +22,11 @@
                         </div>
                         <hr>
                         <div class="text-nowrap justify-content-center">
-                            <p style="font-family: 'Press Start 2P';text-align:center;"><strong style="color: #30B77E;">Ranking: </strong>{{ $user->ranking }}</p>
+                            <p style="font-family: 'Press Start 2P';text-align:center;"><strong style="color: #30B77E;">Ranking: </strong>{{ $user->id }}</p>
                         </div>
                         <hr>
                         <div class="text-nowrap justify-content-center">
-                            <p style="font-family: 'Press Start 2P';text-align:center;"><strong style="color: #30B77E;">Puntaje: </strong>{{ $user->ranking }}</p>
+                            <p style="font-family: 'Press Start 2P';text-align:center;"><strong style="color: #30B77E;">Puntaje: </strong>{{ $user->puntos }}</p>
                         </div>
                         <hr>
                         <div>

@@ -55,14 +55,14 @@
                         </div>
                     </div>
 
-                    <div style="border-radius: 30px;" class="bg-dark text-white mb-2 col-12">
+                    <div style="border-radius: 30px;" class="bg-dark text-white mt-2 col-12">
                         <div class="form-group pr-2">
                             <label class=" text-center col-12 mt-3 badge badge-pill badge-warning" for="exampleFormControlFile1">INGRESE UNA IMAGEN</label>
                             <input class="form-control-file mt-3" type="file" name="image" id="exampleFormControlFile1">
                         </div>
                     </div>
 
-                    <div style="border-radius: 30px!important;" class="bg-dark col-12">
+                    <div style="border-radius: 30px!important;" class="bg-dark mt-2 col-12">
                         <div class="form-group">
                             <button type="submit" style="border-radius: 30px!important; font-family: 'Press Start 2P';" class="btn btn-success btn-md btn-block mt-3 d-flex justify-content-center">PUBLICAR</button>
                         </div>

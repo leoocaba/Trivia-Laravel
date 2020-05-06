@@ -6,7 +6,7 @@
 <div class="container py-3 px-3">
     <div class="row justify-content-center">
         <div class="col-12 col-md-8">
-            <div class="card text-white bg-dark shadow rounded py-2 px-2">
+            <div class="card text-white bg-dark py-2 px-2" style="border-radius: 30px;">
                 <div class="form-group my-2 bg-info d-flex justify-content-center" style="margin:0 auto; display: flex;justify-content: center; 
                 align-items: center; text-align: center; margin:0px auto;padding:3% -webkit-border-radius: 61px; -moz-border-radius: 61px;
                 border-radius: 61px; border:5px solid #aaaaaa; width:112px; height:112px; font-family: ZCOOL KuaiLe; font-weight: bold;">

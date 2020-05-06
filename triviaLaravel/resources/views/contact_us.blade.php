@@ -1,6 +1,6 @@
 @extends('welcome')
 @section('title')
-    Contactarse con
+    Comunicate con nosotros
 @endsection
 @section('content')
 <div class="container py-3 px-3">
@@ -14,7 +14,7 @@
                         Trivia
                     </h2>
                 </div>
-                <div class="card-header m-1"><h3 class="text-center">{{ __('Contactarse') }}</h3></div>
+                <div class="card-header m-1"><h3 class="text-center">{{ __('Comunicate con nosotros') }}</h3></div>
 
                 <div class="card-body">
                   @if(Session::has('success'))

@@ -42,16 +42,16 @@
                     <a class="nav-link" href="{{ url('/welcome')}}">Inicio<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Jugar!</a>
+                        <a class="nav-link" href="{{ url('/play')}}">Jugar!</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Ranking</a>
+                        <a class="nav-link" href="{{ url('/ranking')}}">Ranking</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">FAQ</a>
+                        <a class="nav-link" href="{{ url('/faq')}}">FAQ</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contacto</a>
+                        <a class="nav-link" href="{{ url('/contact')}}">Contacto</a>
                     </li>
                     @if (Route::has('login')) @auth
                     <div class="dropdown m-auto">
@@ -71,7 +71,7 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('register') }}">Registrarme</a> @endif @endauth
-                    </li>          
+                    </li>
                     @endauth
                 </ul>
                 <form class="ml-auto d-flex justify-content-center">

@@ -118,8 +118,23 @@ class QuestionsSeeder extends Seeder
                 "image" => "libros.jpg",
 
                 "category_id" => 7
+            ],
+            [
+                "question" => "¿En qué país se originó la pandemia provocada por el virus SARS-CoV2?",
+
+                "option_1" => "Estados Unidos",
+
+                "option_2" => "Chile",
+
+                "option_3" => "China",
+
+                "option_4" => "India",
+
+                "image" => "sarsCoV2.jpg",
+
+                "category_id" => 8
             ]
-           
+
         ]);
     }
 }

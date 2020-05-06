@@ -40,4 +40,12 @@ Route::post('/modificarla/{id}', 'QuestionsController@edit');
 
 Route::get('modificar/la/pregunta/{id}', 'QuestionsController@editForm');
 
+Route::get('/play', function() {
+  return view('play');
+});
+
+Route::get('/ranking', function() {
+  return view('ranking');
+});
+
 Auth::routes();

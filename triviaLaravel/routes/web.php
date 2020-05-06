@@ -40,4 +40,8 @@ Route::post('/modificarla/{id}', 'QuestionsController@edit');
 
 Route::get('modificar/la/pregunta/{id}', 'QuestionsController@editForm');
 
+Route::get('contact-us', 'ContactController@getContact');
+
+Route::post('contact-us', 'ContactController@saveContact');
+
 Auth::routes();

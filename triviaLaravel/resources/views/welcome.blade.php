@@ -51,7 +51,7 @@
                         <a class="nav-link" href="#">FAQ</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contacto</a>
+                        <a class="nav-link" href="{{ url('/contact-us')}}">Contacto<span class="sr-only">(current)</span></a>
                     </li>
                     @if (Route::has('login')) @auth
                     <div class="dropdown m-auto">
@@ -71,7 +71,7 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('register') }}">Registrarme</a> @endif @endauth
-                    </li>          
+                    </li>
                     @endauth
                 </ul>
                 <form class="ml-auto justify-content-center">

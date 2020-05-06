@@ -9,6 +9,7 @@ use Illuminate\Auth\Authenticatable as AuthenticableTrait;
 
 class User extends Authenticatable
 {
+  
     use Notifiable;
 
     /**

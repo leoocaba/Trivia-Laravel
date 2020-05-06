@@ -42,7 +42,7 @@
                     <a class="nav-link" href="{{ url('/welcome')}}">Inicio<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('/play')}}">Jugar!</a>
+                        <a class="nav-link  text-success" href="{{ url('/play')}}">Jugar!</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url('/ranking')}}">Ranking</a>
@@ -67,10 +67,10 @@
                       </div>
                     @else
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('login') }}">Ingresar</a> @if (Route::has('register'))
+                        <a class="nav-link text-secondary" href="{{ route('login') }}">Ingresar</a> @if (Route::has('register'))
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('register') }}">Registrarme</a> @endif @endauth
+                        <a class="nav-link text-danger" href="{{ route('register') }}">Registrarme</a> @endif @endauth
                     </li>
                     @endauth
                 </ul>

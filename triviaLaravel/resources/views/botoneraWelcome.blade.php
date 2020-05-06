@@ -6,7 +6,7 @@
 
 <style>
   .__jumbotron {
-    background-image: url(../img/Background.jpg)!important; 
+    background-image: url(../img/Background.jpg)!important;
     margin: 0!important;
   }
 
@@ -28,10 +28,10 @@
 <div class="jumbotron jumbotron-fluid __jumbotron">
     <div class="container">
       <div class="botones">
-      <a href=""><button type="button" style="border-radius: 30px;" class="btn btn-primary btn-sm btn-block mb-2">JUGAR</button></a>
-      <a href=""><button type="button" style="border-radius: 30px;" class="btn btn-primary btn-sm btn-block mb-2">RANKING</button></a>
-      <a href=" {{url('/crear/pregunta')}} "><button type="button" style="border-radius: 30px;" class="btn btn-primary btn-sm btn-block mb-2">CREÁ UNA PREGUNTA</button></a>
+      <a href="{{url('/play')}}"><button type="button" style="border-radius: 30px;" class="btn btn-primary btn-sm btn-block mb-2">JUGAR</button></a>
+      <a href="{{url('/ranking')}}"><button type="button" style="border-radius: 30px;" class="btn btn-primary btn-sm btn-block mb-2">RANKING</button></a>
+      <a href="{{url('/crear/pregunta')}}"><button type="button" style="border-radius: 30px;" class="btn btn-primary btn-sm btn-block mb-2">CREÁ UNA PREGUNTA</button></a>
       </div>
     </div>
-  </div>   
+  </div>
 @endsection

@@ -3,6 +3,42 @@
 @section('title') Agregar Pregunta en @endsection 
 
 @section('content')
+
+{{-- ESTILO INPUT-FILE --}}
+<style>
+    #texto{
+      text-decoration: underline;
+      font-size: 12px;
+      text-align: center;
+      font-family: 'Press Start 2P';
+    }
+    div#div_file {
+      box-shadow: 0px 3px 0px rgb(12, 180, 110);
+      border-radius: 30px;
+      overflow: hidden;
+      box-sizing: border-box;
+      position: relative;
+      padding: 10px;
+      width: 100%;
+      height: 40px;
+      background-color: #30B77E;
+      color: antiquewhite;
+      
+    }
+    input#btn_enviar{
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      right: 0px;
+      bottom: 0px;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+    }
+  </style>
+  
+  {{-- ********** FIN ********** --}}
+
 <div class="container" style="background-image: url({{ url('/public/img/Backgroung.jpg') }})">
     <div class="row d-flex justify-content-center">
 
@@ -61,7 +97,10 @@
                 <div style="border-radius: 30px;" class="bg-dark text-white mb-2 col-12">
                     <div class="form-group pr-2">
                         <label class=" text-center col-12 mt-3 badge badge-pill badge-warning" for="exampleFormControlFile1">INGRESE UNA IMAGEN</label>
-                        <input class="form-control-file mt-3" type="file" name="image" id="exampleFormControlFile1">
+                        <div class=" text-nowrap d-flex justify-content-center" id="div_file">
+                       <p id="texto" style="cursor: pointer!important;"> <i class="icon-file_open">Elegir imagen</i> </p>   
+                      <input type="file" style="cursor: pointer;" name="image" id="btn_enviar">
+                     </div>
                     </div>
                 </div>
 

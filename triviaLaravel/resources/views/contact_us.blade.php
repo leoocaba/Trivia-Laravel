@@ -1,12 +1,12 @@
 @extends('welcome')
 @section('title')
-    Contactarse Trivia
+    Contactarse con
 @endsection
 @section('content')
 <div class="container py-3 px-3">
     <div class="row justify-content-center">
         <div class="col-sm-12 col-md-6 col-lg-6">
-            <div class="card text-white bg-dark shadow rounded py-2 px-2">
+            <div class="card text-white bg-dark py-2 px-2" style="border-radius: 30px;">
                 <div class="form-group my-2 bg-info d-flex justify-content-center" style="margin:0 auto; display: flex;justify-content: center;
                 align-items: center; text-align: center; margin:0px auto;padding:3% -webkit-border-radius: 61px; -moz-border-radius: 61px;
                 border-radius: 61px; border:5px solid #aaaaaa; width:112px; height:112px; font-family: ZCOOL KuaiLe; font-weight: bold;">
@@ -41,12 +41,6 @@
 
 
                         </div>
-
-
-
-
-
-
 
                         <div class="form-group">
                             <label for="email" class="col-12 col-form-label">{{ __('E-Mail') }}</label>
@@ -90,7 +84,7 @@
                            <div class="col-md-12">
                              <div class="form-group">
                                 <label> Mensaje </label>
-                                <textarea style="border-radius: 30px;" class="form-control textarea @error('message') is-invalid @enderror" placeholder="Ingrese su mensaje" value="{{ old('message') }}" name="message" required autocomplete="message"></textarea>
+                                <textarea style="border-radius: 10px;" class="form-control textarea @error('message') is-invalid @enderror" placeholder="Ingrese su mensaje" value="{{ old('message') }}" name="message" required autocomplete="message"></textarea>
                                 @error('message')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -103,7 +97,7 @@
                         <hr>
                         <div class="form-group my-4 d-flex justify-content-center">
                             <div class="col-12 justify-content-centerr">
-                                <button type="submit" style="border-radius: 30px; font-family: 'Press Start 2P';" class="btn btn-info btn-md btn-block p-1 my-2">
+                                <button type="submit" style="border-radius: 30px; font-family: 'Press Start 2P'; font-size: 12px; overflow: hidden;" class="justify-content-centerr btn btn-info text-nowrap btn-md btn-block my-2">
                                     {{ __('Enviar Consulta') }}
                                 </button>
                             </div>

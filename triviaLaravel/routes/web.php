@@ -47,5 +47,8 @@ Route::get('/play', function() {
 Route::get('/ranking', function() {
   return view('ranking');
 });
+Route::get('contact-us', 'ContactController@getContact');
+
+Route::post('contact-us', 'ContactController@saveContact');
 
 Auth::routes();

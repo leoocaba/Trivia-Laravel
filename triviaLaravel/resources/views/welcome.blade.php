@@ -51,7 +51,7 @@
                         <a class="nav-link" href="{{ url('/faq')}}">FAQ</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('/contact')}}">Contacto</a>
+                        <a class="nav-link" href="{{ url('/contact-us')}}">Contacto<span class="sr-only">(current)</span></a>
                     </li>
                     @if (Route::has('login')) @auth
                     <div class="dropdown m-auto">
@@ -74,11 +74,11 @@
                     </li>
                     @endauth
                 </ul>
-                <form class="ml-auto d-flex justify-content-center">
+                <form class="ml-auto justify-content-center">
                     @csrf
-                    <input class="form-control p-1 m-1 border border-success" type="search" name="search" placeholder="Búsqueda" aria-label="Search">
-                    <div class="m-1 p-1">
-                        <button class="btn btn-outline-success d-block btn-block" type="submit">BUSCAR</button>
+                    <input class="form-control border border-success my-1" type="search" name="search" placeholder="Búsqueda" aria-label="Search">
+                    <div class="my-1">
+                        <button class="btn btn-outline-success d-block btn-block m-0" type="submit">BUSCAR</button>
                     </div>
                 </form>
             </div>

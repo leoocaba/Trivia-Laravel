@@ -6,17 +6,17 @@
 
 <div class="container">
     <div class="row d-flex justify-content-center">
-        <div class="col-12 col-lg-10 m-auto pt-3 pb-3">
+        <div class="col-12 col-lg-10 m-auto py-2 px-3">
 
-            <div clas="table-responsive p-0">
+            <div clas="table-responsive p-0 mr-1">
                     <div class="wrapper">
                         <table>
                             <thead>
                                 <tr>
-                                    <th id="letraNegra"></th>
-                                    <th id="letraNegra">Player</th>
-                                    <th id="letraBlanca">Puesto</th>
-                                    <th id="letraBlanca">Puntos</th>
+                                    <th id="letraBlanca"></th>
+                                    <th id="letraBlanca" style="border-right: 1px solid #000!important; ">Player</th>
+                                    <th id="letraBlanca" style="border-right: 1px solid #000!important; ">Puesto</th>
+                                    <th id="letraBlanca" style="border-right: 1px solid #000!important; ">Puntos</th>
                                 </tr>
                             </thead>
                             @forelse ($usuarios as $usuario)

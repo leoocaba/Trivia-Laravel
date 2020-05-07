@@ -73,12 +73,12 @@
                     @else
 
                     <li class="nav-item">
-                        <a class="nav-link active" href="{{ route('login') }}">Ingresar</a> 
+                        <a class="nav-link active" href="{{ route('login') }}">Ingresar</a>
                     @if (Route::has('register'))
 
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="{{ route('register') }}">Registrarme</a> 
+                        <a class="nav-link active" href="{{ route('register') }}">Registrarme</a>
                         @endif @endauth
                     </li>
                     @endauth
@@ -86,7 +86,7 @@
                 @if (Route::has('login')) @auth
                 <div class="d-none d-lg-block ">
                     <img class="border border-dark mx-2 my-auto" src="{{ url('/uploads/avatars/' . Auth::user()->image) }}" style="width: 60px; height: 60px; border-radius: 50%;">
-                </div> 
+                </div>
                 @endif @endauth
                 <form class="ml-auto justify-content-center">
                     @csrf
@@ -116,14 +116,14 @@
                 <div class="col-s-12 col-lg-3">
                     <div class="">
                         <h6 class="footer-heading text-uppercase text-white">Mas Información</h6>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p>Puedes <a style="color:gray" href="/contact-us">contactarnos</a> para realizar cualquier tipo de sugerencia sobre nuestro proyecto!</p>
                     </div>
                 </div>
 
                 <div class="col-s-12 col-lg-3">
                     <div class="">
                         <h6 class="footer-heading text-uppercase text-white">Acerca de nosotros</h6>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p>Somos un grupo de estudiantes de programación Web, en donde elegimos optar por desarrollar un juego de preguntas y respuestas, donde allí surgió Trivia.</p>
                     </div>
                 </div>
 

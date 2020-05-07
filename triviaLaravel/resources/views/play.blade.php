@@ -4,7 +4,7 @@
 <div class="container mx-auto">
   <div class="row">
     <div class="bg-dark mx-auto justify-content-center mb-3 block-center col-lg-6" id="cajita" style="border-radius: 30px;">
-      <div class=" p-1 my-2 d-flex justify-content-center">
+      <div class="col-12 p-1 my-2 d-flex justify-content-center">
         <img class=" border border-dark" src="/img/7a0.png" alt="" style="width: 70%; height: 35%; border-radius: 20%; border: 1px solid black;">
       </div>  
     <div> 

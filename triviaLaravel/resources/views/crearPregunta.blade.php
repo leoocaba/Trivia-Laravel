@@ -14,7 +14,7 @@
 
 <div class="container py-3 px-4">
     <div class="row justify-content-center">
-        <div class="card col-10 col-md-3 bg-success rounded mx-2 my-2 d-block" style="border-radius: 30px!important;">
+        <div class="card col-10 col-lg-3 bg-success rounded mx-2 my-2 d-block" style="border-radius: 30px!important;">
             <img src="/img/create.png" class="card-img-top bg-success m-auto d-flex justify-content-center" alt="Crear una pregunta.">
             <div class="card-body bg-success">
                 <h4 class="card-title text-center text-light">Agregar una Pregunta</h4>
@@ -23,7 +23,7 @@
             </div>
         </div>
 
-        <div class="card col-10 col-md-3 bg-primary rounded mx-1 my-2 d-block" style="border-radius: 30px!important;">
+        <div class="card col-10 col-lg-3 bg-primary rounded mx-1 my-2 d-block" style="border-radius: 30px!important;">
             <img src="/img/edit.png" class="card-img-top m-auto d-flex justify-content-center" alt="Modificar una pregunta.">
             <div class="card-body bg-primary">
                 <h4 class="card-title text-center text-light">Modificar una Pregunta</h4>
@@ -32,7 +32,7 @@
             </div>
         </div>
 
-        <div class="card col-10 col-md-3 bg-danger rounded mx-2 my-2 d-block" style="border-radius: 30px!important;">
+        <div class="card col-10 col-lg-3 bg-danger rounded mx-2 my-2 d-block" style="border-radius: 30px!important;">
             <img src="/img/delete.png" class="card-img-top m-auto d-flex justify-content-center" alt="Borrar una pregunta.">
             <div class="card-body bg-danger">
                 <h4 class="card-title text-center text-light">Eliminar una Pregunta</h4>

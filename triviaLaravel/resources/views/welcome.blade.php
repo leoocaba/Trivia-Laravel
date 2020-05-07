@@ -54,6 +54,7 @@
                         <a class="nav-link active text-dark" href="{{ url('/contact-us')}}">Contacto<span class="sr-only">(current)</span></a>
                     </li>
                     @if (Route::has('login')) @auth
+
                     <div class="dropdown m-auto">
                         <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Bienvenido/a {{ auth()->user()->alias }}
@@ -65,15 +66,28 @@
                           document.getElementById('logout-form').submit();">Cerrar Sesión</a>
                         </div>
                       </div>
+                      <div class="d-lg-none" style="display: flex; flex-direction: column; align-items: center;">
+                        <img class="border border-dark my-3" src="{{ url('/uploads/avatars/' . Auth::user()->image) }}" style="width: 60px; height: 60px; border-radius: 50%;">
+                    </div>
+
                     @else
+
                     <li class="nav-item">
-                        <a class="nav-link active" href="{{ route('login') }}">Ingresar</a> @if (Route::has('register'))
+                        <a class="nav-link active" href="{{ route('login') }}">Ingresar</a> 
+                    @if (Route::has('register'))
+
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="{{ route('register') }}">Registrarme</a> @endif @endauth
+                        <a class="nav-link active" href="{{ route('register') }}">Registrarme</a> 
+                        @endif @endauth
                     </li>
                     @endauth
                 </ul>
+                @if (Route::has('login')) @auth
+                <div class="d-none d-lg-block ">
+                    <img class="border border-dark mx-2 my-auto" src="{{ url('/uploads/avatars/' . Auth::user()->image) }}" style="width: 60px; height: 60px; border-radius: 50%;">
+                </div> 
+                @endif @endauth
                 <form class="ml-auto justify-content-center">
                     @csrf
                     <input class="form-control border border-success my-1" type="search" name="search" placeholder="Búsqueda" aria-label="Search">

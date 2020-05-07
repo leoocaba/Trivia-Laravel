@@ -13,17 +13,11 @@
 
 use App\Http\Controllers\QuestionsController;
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', function () {return view('index');});
 
-Route::get('/welcome', function () {
-    return view('botoneraWelcome');
-});
+Route::get('/welcome', function () {return view('botoneraWelcome');});
 
-Route::get('/crear/pregunta', function () {
-    return view('crearPregunta');
-});
+Route::get('/crear/pregunta', function () { return view('crearPregunta');});
 
 Route::get('/editar/perfil', 'UserController@editProfile');
 

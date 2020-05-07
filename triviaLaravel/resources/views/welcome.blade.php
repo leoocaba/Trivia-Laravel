@@ -35,8 +35,12 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                @if (Route::has('login')) @auth
+                <div class="d-lg-none mx-0">
+                    <img class="border border-dark my-3 mx-auto" src="{{ url('/uploads/avatars/' . Auth::user()->image) }}" style="display: flex; align-items: center; width: 60px; height: 60px; border-radius: 50%;">
+                </div>
+                @endif @endauth
                 <ul class="navbar-nav ">
                     <li class="nav-item ">
                     <a class="nav-link active" href="{{ url('/welcome')}}">Inicio<span class="sr-only">(current)</span></a>
@@ -66,9 +70,6 @@
                           document.getElementById('logout-form').submit();">Cerrar Sesión</a>
                         </div>
                       </div>
-                      <div class="d-lg-none" style="display: flex; flex-direction: column; align-items: center;">
-                        <img class="border border-dark my-3" src="{{ url('/uploads/avatars/' . Auth::user()->image) }}" style="width: 60px; height: 60px; border-radius: 50%;">
-                    </div>
 
                     @else
 

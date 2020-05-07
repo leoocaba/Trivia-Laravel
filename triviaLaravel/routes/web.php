@@ -43,6 +43,8 @@ Route::get('modificar/la/pregunta/{id}', 'QuestionsController@editForm');
 
 Route::get('/play', function() {return view('play');});
 
+Route::get('/faq', function() {return view('faq');});
+
 Route::get('/ranking', 'UserController@listRanking');
 
 Route::get('contact-us', 'ContactController@getContact');

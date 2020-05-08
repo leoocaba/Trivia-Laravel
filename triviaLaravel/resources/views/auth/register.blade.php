@@ -23,7 +23,7 @@
                             <label for="name" class="col-form-label">{{ __('Nombre') }}</label>
 
                             <div class="">
-                                <input style="border-radius: 30px;" id="name" type="text" class="form-control @error('name') is-invalid @enderror" 
+                                <input style="border-radius: 30px;" id="name" type="text" class="col-12 form-control @error('name') is-invalid @enderror" 
                                 name="name" value="{{ old('name') }}" required autocomplete="name" placeholder="Ingrese su nombre" autofocus>
 
                                 @error('name')

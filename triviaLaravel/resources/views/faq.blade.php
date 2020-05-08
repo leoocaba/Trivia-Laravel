@@ -1,5 +1,9 @@
-@extends('welcome') @section('title') Jugar @endsection @section('content')
-
+@extends('welcome') @section('title') faq @endsection @section('content')
+@section('style')
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+@endsection
 <div class="panel-group" id="accordion">
    <div class="panel panel-primary">
         <div class="panel-heading">
@@ -46,4 +50,6 @@
         </div>
      </div>
  </div>
+
+
 @endsection

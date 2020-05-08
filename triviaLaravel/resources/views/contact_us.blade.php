@@ -16,6 +16,14 @@
                 border-radius: 50%; width:115px; height:115px; font-family: ZCOOL KuaiLe; font-weight: bold;" 
                 class="border border-dark my-3" src="{{ url('/uploads/avatars/' . Auth::user()->image) }}">
                 </div>
+                @else   
+                <div class="form-group my-2 bg-info d-flex justify-content-center" style="margin:0 auto; display: flex;justify-content: center; 
+                align-items: center; text-align: center; margin:0px auto;padding:3% -webkit-border-radius: 61px; -moz-border-radius: 61px;
+                border-radius: 61px; border:5px solid #aaaaaa; width:112px; height:112px; font-family: ZCOOL KuaiLe; font-weight: bold;">
+                    <h2 class="my-2 mx-2">
+                        Trivia
+                    </h2>
+                </div>
                 @endif @endauth
                 <div class="card-header m-1"><h3 class="text-center">{{ __('Comunicate con nosotros') }}</h3></div>
 

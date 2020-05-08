@@ -1,5 +1,17 @@
 @extends('welcome') @section('title') Jugar @endsection @section('content')
 
+
+<style>
+      .__btn:hover{
+    transition: all 0.3s ease-in-out;
+    -webkit-transform:scale(1.06);
+    }
+
+  .botones {
+    overflow:hidden;
+}
+</style>
+
 <div class="mx-3 mt-3 justify-content-center">
 <div class="container mx-auto">
   <div class="row">
@@ -19,10 +31,10 @@
 
 
         <div class="col-12 botones mx-auto btn-group-vertical d-block" id="botones">
-          <button type="button" style="border-radius: 30px; font-size: 14px;" class="btn btn-outline-warning btn-md col-12 mb-4">Pablo 'El Payaso' Luguercio</button>
-          <button type="button" style="border-radius: 30px; font-size: 14px;" class="btn btn-outline-success btn-md col-12 mb-4">Jose Luis 'Caldera' Calderón</button>
-          <button type="button" style="border-radius: 30px; font-size: 14px;" class="btn btn-outline-danger btn-md col-12 mb-4">Juan Sebastian 'La Brujita' Verón</button>
-          <button type="button" style="border-radius: 30px; font-size: 14px;" class="btn btn-outline-primary btn-md col-12 mb-4">Mariano 'El Tanque' Pavone</button>
+          <button type="button" style="border-radius: 30px; font-size: 14px;" class="__btn btn btn-outline-warning btn-md col-12 mb-4">Pablo 'El Payaso' Luguercio</button>
+          <button type="button" style="border-radius: 30px; font-size: 14px;" class="__btn btn btn-outline-success btn-md col-12 mb-4">Jose Luis 'Caldera' Calderón</button>
+          <button type="button" style="border-radius: 30px; font-size: 14px;" class="__btn btn btn-outline-danger btn-md col-12 mb-4">Juan Sebastian 'La Brujita' Verón</button>
+          <button type="button" style="border-radius: 30px; font-size: 14px;" class="__btn btn btn-outline-primary btn-md col-12 mb-4">Mariano 'El Tanque' Pavone</button>
         </div>
       </div>
     </div>

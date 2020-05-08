@@ -27,6 +27,15 @@
             padding: 0;
             background-image: url(../img/Background.jpg);
         }
+
+        .__nav-item:hover{
+            transition: all 0.3s ease-in-out;
+            -webkit-transform:scale(.9);
+        }
+
+        .__navbar-nav {
+        overflow:hidden;
+        }
     </style>
 
     <header>
@@ -35,33 +44,33 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                @if (Route::has('login')) @auth
-                <div class="d-lg-none mx-0">
-                    <img class="border border-dark my-3 mx-auto" src="{{ url('/uploads/avatars/' . Auth::user()->image) }}" style="display: flex; align-items: center; width: 60px; height: 60px; border-radius: 50%;">
-                </div>
-                @endif @endauth
-                <ul class="navbar-nav ">
-                    <li class="nav-item ">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">  
+                <ul class="__navbar-nav navbar-nav ">
+                    <li class="__nav-item nav-item ">
                     <a class="nav-link active" href="{{ url('/welcome')}}">Inicio<span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item">
+                    <li class="__nav-item nav-item">
                         <a class="nav-link active text-danger" href="{{ url('/play')}}">Jugar!</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="__nav-item nav-item">
                         <a class="nav-link active text-dark" href="{{ url('/ranking')}}">Ranking</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="__nav-item nav-item">
                         <a class="nav-link active text-dark" href="{{ url('/faq')}}">FAQ</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="__nav-item nav-item">
                         <a class="nav-link active text-dark" href="{{ url('/contact-us')}}">Contacto<span class="sr-only">(current)</span></a>
                     </li>
-                    @if (Route::has('login')) @auth
-
-                    <div class="dropdown m-auto">
-                        <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Bienvenido/a {{ auth()->user()->alias }}
+                        @if (Route::has('login')) @auth
+                    <div class="dropdown my-auto">
+                        <button type="button" class="btn btn-info dropdown m-auto d-flex justify-content-center" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <div class="d-none d-lg-block d-inline">
+                                <img class="border border-dark my-auto" src="{{ url('/uploads/avatars/' . Auth::user()->image) }}" style="width: 30px; height: 30px; border-radius: 50%;">
+                            </div>
+                           <div class="my-auto mx-2 d-inline">
+                               {{ auth()->user()->alias }}
+                            </div>
+                            <div class="dropdown dropdown-toggle my-auto"></div>
                         </button>
                         <div class="dropdown-menu">
                           <a class="dropdown-item btn btn-link" href="/perfil" style="color: royalblue; text-align: center; font-size:15px;"> Mi Perfil</a>
@@ -70,25 +79,18 @@
                           document.getElementById('logout-form').submit();">Cerrar Sesión</a>
                         </div>
                       </div>
-
                     @else
-
-                    <li class="nav-item">
+                    <li class="__nav-item nav-item">
                         <a class="nav-link active" href="{{ route('login') }}">Ingresar</a>
                     @if (Route::has('register'))
 
                     </li>
-                    <li class="nav-item">
+                    <li class="__nav-item nav-item">
                         <a class="nav-link active" href="{{ route('register') }}">Registrarme</a>
                         @endif @endauth
                     </li>
                     @endauth
                 </ul>
-                @if (Route::has('login')) @auth
-                <div class="d-none d-lg-block ">
-                    <img class="border border-dark mx-2 my-auto" src="{{ url('/uploads/avatars/' . Auth::user()->image) }}" style="width: 60px; height: 60px; border-radius: 50%;">
-                </div>
-                @endif @endauth
                 <form class="ml-auto justify-content-center">
                     @csrf
                     <input class="form-control border border-success my-1" type="search" name="search" placeholder="Búsqueda" aria-label="Search">

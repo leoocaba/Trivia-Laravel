@@ -12,7 +12,7 @@
           </div>
           <div id="collapseOne" class="collapse text-center mx-0" aria-labelledby="headingOne" data-parent="#accordion">
             <div class="card-body">Trivia es un juego de preguntas y respuestas desarollado entre 2019 y 2020 por
-            un grupo de estudiantes de <a class="btn btn-link text-white font-weight-bold px-0" target=”_blank” href="http://digitalhouse.com/ar">digitalHouse</a>.</div>
+            un grupo de estudiantes de <a class="btn btn-link text-white font-weight-bold px-0" target=”_blank” href="http://digitalhouse.com/ar" target="_blank">digitalHouse</a>.</div>
           </div>
         </div>
         <div class="card my-2" style="border-radius:30px; background-color:#FF7F50">

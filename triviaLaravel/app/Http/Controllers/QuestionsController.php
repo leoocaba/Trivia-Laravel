@@ -8,7 +8,7 @@ use App\Category;
 
 class QuestionsController extends Controller
 {
-    
+
     public function formSelectCategories() {
         //Lista las categorías en el 'select de la vista 'agregarPregunta'.
 
@@ -65,5 +65,13 @@ class QuestionsController extends Controller
 
         $pregunta->save();
         return redirect('/welcome');
-    }   
+    }
+
+    public function del($id) {
+        //elimina la pregunta id.
+
+
+    }
+
+
 }

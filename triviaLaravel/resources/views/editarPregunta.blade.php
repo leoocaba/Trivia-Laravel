@@ -1,6 +1,6 @@
 @extends('welcome')
 
-@section('title') Agregar Pregunta en @endsection 
+@section('title') Editar Pregunta en @endsection 
 
 @section('style')
 <link rel="stylesheet" href="/css/estilo-editarPregunta.css">

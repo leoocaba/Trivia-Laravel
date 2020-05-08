@@ -1,4 +1,7 @@
 @extends('welcome') @section('title') Preguntas frecuentes @endsection @section('content')
+
+
+
 <div class="container my-2">
   <div class="mx-2 row d-flex justify-content-center">
       <div class="col-12 col-lg-10 py-2 px-3" id="accordion" style="font-family:ZCOOL KuaiLe; border-radius:30px; background-color:#292b2c">

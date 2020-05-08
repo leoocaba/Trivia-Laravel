@@ -6,7 +6,7 @@
         height: 90px;
         object-fit: cover;
     }
-    
+
     h4 {
         font-family: ZCOOL KuaiLe;
     }

@@ -104,7 +104,7 @@
     </header>
 
     <main>
-        <section style="flex-grow: 1; background-image: url(../img/Background.jpg);">
+        <section style="flex-grow: 1;">
             @yield('content')
         </section>
     </main>

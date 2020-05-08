@@ -69,6 +69,8 @@ class QuestionsController extends Controller
 
     public function del($id) {
         //elimina la pregunta id.
+        $pregunta->delete();
+        return redirect('/welcome');
 
 
     }

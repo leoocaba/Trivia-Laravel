@@ -34,11 +34,10 @@ Route::get('/modificar/preguntas', 'QuestionsController@listQuestion');
 Route::post('/modificarla/{id}', 'QuestionsController@edit');
 
 Route::get('modificar/la/pregunta/{id}', 'QuestionsController@editForm');
-//ver usar para del y edit preguntas el mismo 'QuestionsController@listQuestion'
-Route::get('/eliminar/preguntas', 'QuestionsController@listQuestion');
 
-Route::post('/eliminar/{id}', 'QuestionsController@del');
+Route::get('/eliminar/pregunta/{id}', 'QuestionsController@deleteQuestion');
 
+Route::post('/eliminar/{id}', 'QuestionsController@delete');
 
 Route::get('/play', function() {return view('play');});
 

@@ -32,10 +32,6 @@
             transition: all 0.3s ease-in-out;
             -webkit-transform:scale(.9);
         }
-
-        .__navbar-nav {
-        overflow:hidden;
-        }
     </style>
 
     <header>

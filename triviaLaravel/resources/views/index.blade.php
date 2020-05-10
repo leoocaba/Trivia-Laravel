@@ -24,8 +24,9 @@
        <a href="{{ url('/welcome') }}"> <button type="button" class="btn btn-outline-success">INGRESAR</button></a>
    <br>
    <br>
-  <div class="text-center mt-5">
-      <p class="footer-alt mb-0 f-14"> {{date('Y')}} Copyright © Todos los derechos reservados.</p>
+   <div class="text-center mt-5">
+    <p class="d-inline footer-alt mb-0 f-14 font-weight-bold">{{date('Y')}} Copyright</p> <p class="text-success d-inline footer-alt mb-0 f-14 font-weight-bold" 
+    style="font-family: ZCOOL KuaiLe;">Trivia</p><p class="d-inline footer-alt mb-0 f-14 font-weight-bold"> © Todos los derechos reservados.</p>
     </div>
     </div>
  </div>

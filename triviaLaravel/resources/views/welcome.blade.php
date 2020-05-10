@@ -107,7 +107,7 @@
                     <div class="">
                         <h6 class="footer-heading text-uppercase text-white">Acerca de nosotros</h6>
                         <p class="d-inline">Somos un grupo de estudiantes de programación Web, en donde elegimos optar por desarrollar un juego de preguntas y respuestas, donde allí surgió</p>
-                        <p class="d-inline font-weight-bold" style=" color: #dac300!important; font-family: ZCOOL KuaiLe;">Triva</p>
+                        <p class="d-inline font-weight-bold" style=" color: #dac300!important; font-family: ZCOOL KuaiLe;">Trivia</p>
                     </div>
                 </div>
 
@@ -149,7 +149,7 @@
 
         <div class="text-center mt-5">
         <p class="d-inline footer-alt mb-0 f-14 font-weight-bold">{{date('Y')}} Copyright</p> <p class="d-inline footer-alt mb-0 f-14 font-weight-bold" 
-        style=" color: #dac300!important; font-family: ZCOOL KuaiLe;">Triva</p><p class="d-inline footer-alt mb-0 f-14 font-weight-bold"> © Todos los derechos reservados.</p>
+        style=" color: #dac300!important; font-family: ZCOOL KuaiLe;">Trivia</p><p class="d-inline footer-alt mb-0 f-14 font-weight-bold"> © Todos los derechos reservados.</p>
         </div>
     </footer>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

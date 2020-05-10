@@ -102,7 +102,7 @@
     </header>
 
     <main>
-        <section style="flex-grow: 1;">
+        <section style="">
             @yield('content')
         </section>
     </main>
@@ -115,7 +115,7 @@
                 <div class="col-s-12 col-lg-3">
                     <div class="">
                         <h6 class="footer-heading text-uppercase text-white">Mas Información</h6>
-                        <p>Puedes <a style="color:gray" href="/contact-us">contactarnos</a> para realizar cualquier tipo de sugerencia sobre nuestro proyecto!</p>
+                        <p>Puedes <a style="text-decoration: none;" class="text-success text-decoration-none font-weight-bold"href="/contact-us">Contactarnos</a> para realizar cualquier tipo de sugerencia sobre nuestro proyecto!</p>
                     </div>
                 </div>
 
@@ -130,30 +130,38 @@
                     <div class="">
                         <h6 class="footer-heading text-uppercase text-white">cuenta</h6>
                         <ul class="list-unstyled footer-link mt-4">
-                            <a href="{{ url('/login') }}" class="" style="text-decoration: none;"><li style="cursor: pointer"; class="m-0">INGRESAR</li></a>
-                            <a href="{{ url('/register') }}" class="" style="text-decoration: none;"><li style="cursor: pointer"; class="m-0">REGISTRARME</li></a>
+                            <a href="{{ url('/login') }}" class="text-success font-weight-bold" style="text-decoration: none;"><li style="cursor: pointer"; class="m-0">INGRESAR</li></a>
+                            <a href="{{ url('/register') }}" class="text-success font-weight-bold" style="text-decoration: none;"><li style="cursor: pointer"; class="m-0">REGISTRARME</li></a>
                         </ul>
 
                     </div>
                 </div>
 
+                <style>
+                    .__icon:hover{
+                        transition: all 0.3s ease-in-out;
+                        -webkit-transform:scale(.9);
+                    }
+                    .__list{
+                        overflow: hidden;
+                    }
+                </style>
+
                 <div class="col-s-12 col-lg-4">
                     <div class="">
                         <h6 class="footer-heading text-uppercase text-white">redes sociales</h6>
-                        <p class="contact-info mt-4">Para más información no dude en contactarnos.</p>
-                        <p class="contact-info">+54 221 458-5034</p>
                         <div class="mt-5">
-                            <ul class="list-inline">
-                                <li class="list-inline-item">
+                            <ul class="__list list-inline">
+                                <li class="__icon list-inline-item">
                                     <a href="#" target="_blanck"><img src="/img/facebook.png" alt=""></a>
                                 </li>
-                                <li class="list-inline-item">
+                                <li class="__icon list-inline-item">
                                     <a href="#" target="_blanck"><img src="/img/twitter.png" alt=""></a>
                                 </li>
-                                <li class="list-inline-item">
+                                <li class="__icon list-inline-item">
                                     <a href="#" target="_blanck"><img src="/img/Instagram.png" alt=""></a>
                                 </li>
-                                <li class="list-inline-item">
+                                <li class="__icon list-inline-item">
                                     <a href="#" target="_blanck"><img src="/img/linkedin.png" alt=""></a>
                                 </li>
                             </ul>
@@ -165,7 +173,7 @@
         </div>
 
         <div class="text-center mt-5">
-        <p class="footer-alt mb-0 f-14">{{date('Y')}} Copyright © Todos los derechos reservados.</p>
+        <p class="d-inline footer-alt mb-0 f-14 font-weight-bold">{{date('Y')}} Copyright</p> <p class="d-inline footer-alt mb-0 f-14 font-weight-bold" style=" color: #dac300!important; font-family: ZCOOL KuaiLe;">Triva</p><p class="d-inline footer-alt mb-0 f-14 font-weight-bold"> © Todos los derechos reservados.</p>
         </div>
     </footer>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

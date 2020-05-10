@@ -1,16 +1,14 @@
-@extends('welcome') @section('style')
-
 @extends('welcome')
 
 @section('title') Eliminar Pregunta en @endsection 
 
 @section('style')
-<link rel="stylesheet" href="/css/estilo-editarPregunta.css">
+<link rel="stylesheet" href="/css/estilo-eliminar.css">
 @endsection
 
 @section('content')
 
-<div id="editarPregunta">
+<div id="eliminarPregunta">
     <div class="container">
         <div class="row d-flex justify-content-center">
             <div class="col-12 col-lg-8 m-auto pt-3 pb-3">
@@ -71,8 +69,5 @@
         </div>
     </div>
 </div>
-
-
-
 
 @endsection

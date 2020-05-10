@@ -8,9 +8,9 @@
     <title>@yield('title') Trivia</title>
     <link rel="shortcut icon" href="/img/t.png">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/estilo-welcome.css">
     <link rel="stylesheet" href="/css/estilo-header.css">
     <link rel="stylesheet" href="/css/estilo-footer.css">
-    <link rel="stylesheet" href="/css/estilo-botonera.css">
     @yield('style')
     <link href="https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
@@ -18,24 +18,8 @@
 </head>
 
 <body>
-
-    <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            height: 100vh;
-            padding: 0;
-            background-image: url(../img/Background.jpg);
-        }
-
-        .__nav-item:hover{
-            transition: all 0.3s ease-in-out;
-            -webkit-transform:scale(.9);
-        }
-    </style>
-
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #dac300!important;">
+        <nav class="__navbar navbar navbar-expand-lg navbar-light bg-light" style="background-color: #dac300!important;">
             <a class="navbar-brand" href=" {{ url('/') }} ">Trivia</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -102,7 +86,7 @@
     </header>
 
     <main>
-        <section style="">
+        <section style="flex-grow: 1;">
             @yield('content')
         </section>
     </main>
@@ -136,16 +120,6 @@
 
                     </div>
                 </div>
-
-                <style>
-                    .__icon:hover{
-                        transition: all 0.3s ease-in-out;
-                        -webkit-transform:scale(.9);
-                    }
-                    .__list{
-                        overflow: hidden;
-                    }
-                </style>
 
                 <div class="col-s-12 col-lg-4">
                     <div class="">

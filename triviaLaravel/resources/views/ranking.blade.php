@@ -14,8 +14,8 @@
                             <thead>
                                 <tr>
                                     <th id="letraBlanca"></th>
-                                    <th id="letraBlanca" style="border-right: 1px solid #000!important; ">Player</th>
                                     <th id="letraBlanca" style="border-right: 1px solid #000!important; ">Puesto</th>
+                                    <th id="letraBlanca" style="border-right: 1px solid #000!important; ">Player</th>
                                     <th id="letraBlanca" style="border-right: 1px solid #000!important; ">Puntos</th>
                                 </tr>
                             </thead>
@@ -23,8 +23,8 @@
                             <tbody>
                               <tr>
                                   <td><img style="border-radius: 50%;" class="p-1" src="/uploads/avatars/{{$usuario->image}}" alt="perfil" width="55px" height="55px"/></td>
+                                  <td class="rank"> @for ($i = 0; $i < $usuarios->count('id'); $i++) {{$i}} @endfor</td>
                                   <td class="team">{{$usuario->alias}}</td>
-                                  <td class="rank">{{$usuario->id}}</td>
                                   <td class="points">{{$usuario->puntos}}</td>
                               </tr>
                           </tbody>
@@ -34,7 +34,9 @@
                             
                         </table>
                     </div>
-                    <br>
+                    <div class="pagination justify-content-center">
+                        {{ $usuarios->links('vendor.pagination.simple-bootstrap-4') }}
+                    </div>
                 </div>
         </div>
     </div>

@@ -49,7 +49,7 @@
             <div class="card-body bg-danger">
                 <h4 class="card-title text-center text-light">Eliminar una Pregunta</h4>
                 <p class="card-text text-light"></p>
-                <a href=" {{url('/eliminar/preguntas')}} " style=" font-family: 'Press Start 2P';" class="btn btn-dark btn-sm btn-block px-1 d-flex justify-content-center badge badge-pill badge-warning">ELIMINAR</a>
+                <a href="#" style=" font-family: 'Press Start 2P';" class="btn btn-dark btn-sm btn-block px-1 d-flex justify-content-center badge badge-pill badge-warning">ELIMINAR</a>
             </div>
         </div>
     </div>

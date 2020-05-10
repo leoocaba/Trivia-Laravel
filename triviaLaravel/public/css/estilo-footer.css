@@ -1,6 +1,6 @@
 footer {
     width: 100%;
-    background: #101010;
+    background: #000;
     color: white;
     bottom: 0;
     margin: 0 auto;
@@ -84,4 +84,13 @@ footer {
 
 .bg-footer .container ul li:hover {
     color: #55acee;
+}
+
+.__icon:hover {
+    transition: all 0.3s ease-in-out;
+    -webkit-transform: scale(.9);
+}
+
+.__list {
+    overflow: hidden;
 }

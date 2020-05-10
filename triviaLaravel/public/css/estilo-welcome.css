@@ -1,0 +1,12 @@
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding: 0;
+    background-image: url(../img/Background.jpg);
+}
+
+.__nav-item:hover {
+    transition: all 0.3s ease-in-out;
+    -webkit-transform: scale(.9);
+}

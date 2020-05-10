@@ -32,3 +32,8 @@ ul li a {
 ul li a:hover {
     color: #CE7D35;
 }
+
+header .__navbar {
+    z-index: 999;
+    opacity: .97;
+}

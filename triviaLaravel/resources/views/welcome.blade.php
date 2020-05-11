@@ -18,9 +18,10 @@
 </head>
 
 <body>
+    
     <header>
         <nav class="__navbar navbar navbar-expand-lg navbar-light bg-light" style="background-color: #dac300!important;">
-            <a class="navbar-brand" href=" {{ url('/') }} ">Trivia</a>
+            <a style="text-decoration: none" href="/"><h2>Trivia</h2></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -33,13 +34,13 @@
                         <a class="nav-link active text-danger" href="{{ url('/play')}}">Jugar!</a>
                     </li>
                     <li class="__nav-item nav-item">
-                        <a class="nav-link active text-dark" href="{{ url('/ranking')}}">Ranking</a>
+                        <a class="nav-link active" href="{{ url('/ranking')}}">Ranking</a>
                     </li>
                     <li class="__nav-item nav-item">
-                        <a class="nav-link active text-dark" href="{{ url('/faq')}}">FAQ</a>
+                        <a class="nav-link active" href="{{ url('/faq')}}">FAQ</a>
                     </li>
                     <li class="__nav-item nav-item">
-                        <a class="nav-link active text-dark" href="{{ url('/contact-us')}}">Contacto<span class="sr-only">(current)</span></a>
+                        <a class="nav-link active" href="{{ url('/contact-us')}}">Contacto<span class="sr-only">(current)</span></a>
                     </li>
                         @if (Route::has('login')) @auth
                     <div class="dropdown my-auto">
@@ -84,6 +85,15 @@
             @csrf
         </form>
     </header>
+    <h1>
+        <div class="deconstructed">
+            Diviértete en Trivia
+            <div>Diviértete en Trivia</div>
+            <div>Diviértete en Trivia</div>
+            <div>Diviértete en Trivia</div>
+            <div>Diviértete en Trivia</div>
+          </div>
+    </h1>
 
     <main>
         <section style="flex-grow: 1;">
@@ -125,7 +135,7 @@
                 <div class="col-s-12 col-lg-4">
                     <div class="">
                         <h6 class="footer-heading text-uppercase text-white">redes sociales</h6>
-                        <div class="mt-5">
+                        <div class="">
                             <ul class="__list list-inline">
                                 <li class="__icon list-inline-item">
                                     <a href="#" target="_blanck"><img src="/img/facebook.png" alt=""></a>
@@ -147,7 +157,7 @@
             </div>
         </div>
 
-        <div class="text-center mt-5">
+        <div class="text-center">
         <p class="d-inline footer-alt mb-0 f-14 font-weight-bold">{{date('Y')}} Copyright</p> <p class="d-inline footer-alt mb-0 f-14 font-weight-bold" 
         style=" color: #dac300!important; font-family: ZCOOL KuaiLe;">Trivia</p><p class="d-inline footer-alt mb-0 f-14 font-weight-bold"> © Todos los derechos reservados.</p>
         </div>

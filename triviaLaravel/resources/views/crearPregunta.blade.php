@@ -1,28 +1,8 @@
 @extends('welcome') @section('title') Crear pregunta en @endsection @section('content')
 
-<style>
-    .card-img-top {
-        width: 90px;
-        height: 90px;
-        object-fit: cover;
-    }
-
-    .card, .card-body {
-        border-radius: 30px!important;
-    }
-    .__card:hover{
-    transition: all 0.3s ease-in-out;
-    -webkit-transform:scale(1.1);
-    }
-
-  .container {
-    overflow:hidden;
-}
-
-    h4 {
-        font-family: ZCOOL KuaiLe;
-    }
-</style>
+@section('style')
+    <link rel="stylesheet" href="/css/estilo-crearPregunta.css">
+@endsection
 
 <div class="container py-3 px-4">
     <div class="row justify-content-center">
@@ -49,7 +29,7 @@
             <div class="card-body bg-danger">
                 <h4 class="card-title text-center text-light">Eliminar una Pregunta</h4>
                 <p class="card-text text-light"></p>
-                <a href=" {{url('/eliminar/preguntas')}} " style=" font-family: 'Press Start 2P';" class="btn btn-dark btn-sm btn-block px-1 d-flex justify-content-center badge badge-pill badge-warning">ELIMINAR</a>
+                <a href="#" style=" font-family: 'Press Start 2P';" class="btn btn-dark btn-sm btn-block px-1 d-flex justify-content-center badge badge-pill badge-warning">ELIMINAR</a>
             </div>
         </div>
     </div>

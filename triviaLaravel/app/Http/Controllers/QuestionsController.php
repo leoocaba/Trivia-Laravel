@@ -17,8 +17,27 @@ class QuestionsController extends Controller
         return view('agregarPreguntas', $vac);
     }
 
-    public function createQuestion(Request $request) {
+    public function createQuestion(Request $request) 
         //Recibe el form 'agregarPreguntas'.
+    {
+        $reglas = [
+        'question' => 'required|max:300|min:1',
+        'option_1' => 'required|min:1|max:50',
+        'option_2' => 'required|min:1|max:50',
+        'option_3' => 'required|min:1|max:50',
+        'option_4' => 'required|min:1|max:50',
+        'category_id' => 'required',
+        'image' => 'image',
+        ];
+
+        $mensajes = [
+        'required' => 'El campo :attribute es obligatorio',
+        'min' => 'El campo :attribute debe tener al menos 1 caracter',
+        'max' => 'El campo :attribute puede tener como máximo :max',
+        'image' => 'Debe seleccionar una imagen tipo .jpg o .png' 
+        ];
+
+        $this->validate($request, $reglas, $mensajes);
 
         $ruta = $request->file('image')->store('public/images');
         $nombreArchivo = basename($ruta);
@@ -55,6 +74,25 @@ class QuestionsController extends Controller
 
     public function edit(Request $request, $id) {
 
+        $reglas = [
+        'question' => 'required|max:300|min:1',
+        'option_1' => 'required|min:1|max:50',
+        'option_2' => 'required|min:1|max:50',
+        'option_3' => 'required|min:1|max:50',
+        'option_4' => 'required|min:1|max:50',
+        'category_id' => 'required',
+        'image' => 'image',
+        ];
+
+        $mensajes = [
+        'required' => 'El campo :attribute es obligatorio',
+        'min' => 'El campo :attribute debe tener al menos 1 caracter',
+        'max' => 'El campo :attribute puede tener como máximo :max',
+        'image' => 'Debe seleccionar una imagen tipo .jpg o .png' 
+        ];
+
+        $this->validate($request, $reglas, $mensajes);
+
         $pregunta = Question::find($id);
         $pregunta->question = $request['question'];
         $pregunta->option_1 = $request['option_1'];
@@ -67,13 +105,18 @@ class QuestionsController extends Controller
         return redirect('/welcome');
     }
 
-    public function del($id) {
-        //elimina la pregunta id.
-        $pregunta->delete();
-        return redirect('/welcome');
-
+    public function deleteQuestion($id) {
+        $pregunta = Question::find($id);
+        $vac = compact('pregunta');
+        return view('eliminarPreguntas', $vac);
 
     }
 
+    public function delete(Request $request){
+        $id = $request['id'];
+        $pregunta = Question::find($id);
+        $pregunta->delete();
+        return redirect('/modificar/preguntas');
+    }
 
 }

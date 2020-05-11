@@ -39,7 +39,7 @@
 <div class="container py-3 px-4">
     <div class="row justify-content-center">
         <div class="col-md-4">
-            <div class="card d-flex justify-content-center bg-dark text-white" style="border-radius: 30px;">
+            <div class="card d-flex justify-content-center text-white" style="border-radius: 30px; background-color: #000;">
               <div class="d-flex justify-content-center">
                 <img class="p-3" src="{{ url('/uploads/avatars/' . $user->image) }}" alt="" 
               style="width: 200px; height: 200px; border-radius: 50%;">

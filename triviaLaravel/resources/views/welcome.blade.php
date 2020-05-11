@@ -8,9 +8,9 @@
     <title>@yield('title') Trivia</title>
     <link rel="shortcut icon" href="/img/t.png">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/estilo-welcome.css">
     <link rel="stylesheet" href="/css/estilo-header.css">
     <link rel="stylesheet" href="/css/estilo-footer.css">
-    <link rel="stylesheet" href="/css/estilo-botonera.css">
     @yield('style')
     <link href="https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
@@ -18,29 +18,10 @@
 </head>
 
 <body>
-
-    <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            height: 100vh;
-            padding: 0;
-            background-image: url(../img/Background.jpg);
-        }
-
-        .__nav-item:hover{
-            transition: all 0.3s ease-in-out;
-            -webkit-transform:scale(.9);
-        }
-
-        .__navbar-nav {
-        overflow:hidden;
-        }
-    </style>
-
+    
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #dac300!important;">
-            <a class="navbar-brand" href=" {{ url('/') }} ">Trivia</a>
+        <nav class="__navbar navbar navbar-expand-lg navbar-light bg-light" style="background-color: #dac300!important;">
+            <a style="text-decoration: none" href="/"><h2>Trivia</h2></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -50,16 +31,16 @@
                     <a class="nav-link active" href="{{ url('/welcome')}}">Inicio<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="__nav-item nav-item">
-                        <a class="nav-link active text-danger" href="{{ url('/play')}}">Jugar!</a>
+                        <a class="__jugar nav-link active text-danger" href="{{ url('/play')}}">Jugar!</a>
                     </li>
                     <li class="__nav-item nav-item">
-                        <a class="nav-link active text-dark" href="{{ url('/ranking')}}">Ranking</a>
+                        <a class="nav-link active" href="{{ url('/ranking')}}">Ranking</a>
                     </li>
                     <li class="__nav-item nav-item">
-                        <a class="nav-link active text-dark" href="{{ url('/faq')}}">FAQ</a>
+                        <a class="nav-link active" href="{{ url('/faq')}}">FAQ</a>
                     </li>
                     <li class="__nav-item nav-item">
-                        <a class="nav-link active text-dark" href="{{ url('/contact-us')}}">Contacto<span class="sr-only">(current)</span></a>
+                        <a class="nav-link active" href="{{ url('/contact-us')}}">Contacto<span class="sr-only">(current)</span></a>
                     </li>
                         @if (Route::has('login')) @auth
                     <div class="dropdown my-auto">
@@ -104,6 +85,15 @@
             @csrf
         </form>
     </header>
+    <h1>
+        <div class="deconstructed">
+            Divertite en Trivia
+            <div>Divertite en Trivia</div>
+            <div>Divertite en Trivia</div>
+            <div>Divertite en Trivia</div>
+            <div>Divertite en Trivia</div>
+          </div>
+    </h1>
 
     <main>
         <section style="flex-grow: 1;">
@@ -119,14 +109,15 @@
                 <div class="col-s-12 col-lg-3">
                     <div class="">
                         <h6 class="footer-heading text-uppercase text-white">Mas Información</h6>
-                        <p>Puedes <a style="color:gray" href="/contact-us">contactarnos</a> para realizar cualquier tipo de sugerencia sobre nuestro proyecto!</p>
+                        <p>Puedes <a style="text-decoration: none;" class="text-success text-decoration-none font-weight-bold"href="/contact-us">Contactarnos</a> para realizar cualquier tipo de sugerencia sobre nuestro proyecto!</p>
                     </div>
                 </div>
 
                 <div class="col-s-12 col-lg-3">
                     <div class="">
                         <h6 class="footer-heading text-uppercase text-white">Acerca de nosotros</h6>
-                        <p>Somos un grupo de estudiantes de programación Web, en donde elegimos optar por desarrollar un juego de preguntas y respuestas, donde allí surgió Trivia.</p>
+                        <p class="d-inline">Somos un grupo de estudiantes de programación Web, en donde elegimos optar por desarrollar un juego de preguntas y respuestas, donde allí surgió</p>
+                        <p class="d-inline font-weight-bold" style=" color: #dac300!important; font-family: ZCOOL KuaiLe;">Trivia</p>
                     </div>
                 </div>
 
@@ -134,8 +125,8 @@
                     <div class="">
                         <h6 class="footer-heading text-uppercase text-white">cuenta</h6>
                         <ul class="list-unstyled footer-link mt-4">
-                            <a href="{{ url('/login') }}" class="" style="text-decoration: none;"><li style="cursor: pointer"; class="m-0">INGRESAR</li></a>
-                            <a href="{{ url('/register') }}" class="" style="text-decoration: none;"><li style="cursor: pointer"; class="m-0">REGISTRARME</li></a>
+                            <a href="{{ url('/login') }}" class="text-success font-weight-bold" style="text-decoration: none;"><li style="cursor: pointer"; class="m-0">INGRESAR</li></a>
+                            <a href="{{ url('/register') }}" class="text-success font-weight-bold" style="text-decoration: none;"><li style="cursor: pointer"; class="m-0">REGISTRARME</li></a>
                         </ul>
 
                     </div>
@@ -144,20 +135,18 @@
                 <div class="col-s-12 col-lg-4">
                     <div class="">
                         <h6 class="footer-heading text-uppercase text-white">redes sociales</h6>
-                        <p class="contact-info mt-4">Para más información no dude en contactarnos.</p>
-                        <p class="contact-info">+54 221 458-5034</p>
-                        <div class="mt-5">
-                            <ul class="list-inline">
-                                <li class="list-inline-item">
+                        <div class="">
+                            <ul class="__list list-inline">
+                                <li class="__icon list-inline-item">
                                     <a href="#" target="_blanck"><img src="/img/facebook.png" alt=""></a>
                                 </li>
-                                <li class="list-inline-item">
+                                <li class="__icon list-inline-item">
                                     <a href="#" target="_blanck"><img src="/img/twitter.png" alt=""></a>
                                 </li>
-                                <li class="list-inline-item">
+                                <li class="__icon list-inline-item">
                                     <a href="#" target="_blanck"><img src="/img/Instagram.png" alt=""></a>
                                 </li>
-                                <li class="list-inline-item">
+                                <li class="__icon list-inline-item">
                                     <a href="#" target="_blanck"><img src="/img/linkedin.png" alt=""></a>
                                 </li>
                             </ul>
@@ -168,8 +157,9 @@
             </div>
         </div>
 
-        <div class="text-center mt-5">
-        <p class="footer-alt mb-0 f-14">{{date('Y')}} Copyright © Todos los derechos reservados.</p>
+        <div class="text-center">
+        <p class="d-inline footer-alt mb-0 f-14 font-weight-bold">{{date('Y')}} Copyright</p> <p class="d-inline footer-alt mb-0 f-14 font-weight-bold" 
+        style=" color: #dac300!important; font-family: ZCOOL KuaiLe;">Trivia</p><p class="d-inline footer-alt mb-0 f-14 font-weight-bold"> © Todos los derechos reservados.</p>
         </div>
     </footer>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

@@ -2,7 +2,7 @@
     <ul class="pagination" role="navigation">
         {{-- Previous Page Link --}} @if ($paginator->onFirstPage())
         <li class="page-item disabled" aria-disabled="true">
-            <span class="page-link bg-dark btn btn-sm" style="font-size: 10px; font-family: 'Press Start 2P';">@lang('pagination.previous')</span>
+            <strong class="page-link bg-dark btn btn-sm" style="font-size: 10px; font-family: 'Press Start 2P';">@lang('pagination.previous')</strong>
         </li>
         @else
         <li class="page-item">
@@ -14,7 +14,7 @@
         </li>
         @else
         <li class="page-item disabled" aria-disabled="true">
-            <span class="page-link bg-dark btn btn-sm" style="font-size: 10px; font-family: 'Press Start 2P'">@lang('pagination.next')</span>
+            <strong class="page-link bg-dark btn btn-sm" style="font-size: 10px; font-family: 'Press Start 2P'">@lang('pagination.next')</strong>
         </li>
         @endif
     </ul>

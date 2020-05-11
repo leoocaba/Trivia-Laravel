@@ -36,7 +36,6 @@ h2 {
     position: relative;
     float: left;
     background: #dac300;
-    color: #fff;
 }
 
 h2 span {
@@ -44,7 +43,7 @@ h2 span {
     position: absolute;
     right: 0;
     width: 0;
-    background: #dac300;
+    background-color: #dac300;
     animation: escribir 1s steps(100);
 }
 

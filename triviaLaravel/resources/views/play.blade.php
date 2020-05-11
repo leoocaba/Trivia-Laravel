@@ -1,21 +1,13 @@
 @extends('welcome') @section('title') Jugar @endsection @section('content')
 
-
-<style>
-      .__btn:hover{
-    transition: all 0.3s ease-in-out;
-    -webkit-transform:scale(1.06);
-    }
-
-  .botones {
-    overflow:hidden;
-}
-</style>
+@section('style')
+  <link rel="stylesheet" href="/css/estilo-jugar.css">    
+@endsection
 
 <div class="mx-3 mt-3 justify-content-center">
-<div class="container mx-auto">
+<div class="__container container mx-auto">
   <div class="row">
-    <div class="bg-dark mx-auto justify-content-center mb-3 block-center col-lg-6" id="cajita" style="border-radius: 30px;">
+    <div class="mx-auto justify-content-center mb-3 block-center col-lg-6" id="cajita" style="border-radius: 30px; background-color: #000">
       <div class="col-12 p-1 my-2 d-flex justify-content-center">
         <img class=" border border-dark" src="/img/7a0.png" alt="" style="width: 70%; height: 35%; border-radius: 20%; border: 1px solid black;">
       </div>  

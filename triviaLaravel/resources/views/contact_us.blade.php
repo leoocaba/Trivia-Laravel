@@ -6,7 +6,7 @@
 <div class="container py-3 px-3">
     <div class="row justify-content-center">
         <div class="col-sm-12 col-lg-6">
-            <div class="card text-white bg-dark py-2 px-2" style="border-radius: 30px;">
+            <div class="card text-white py-2 px-2" style="border-radius: 30px; background-color: #000">
                 @if (Route::has('login')) @auth
                 <div class="form-group my-2 d-flex justify-content-center" style="margin:0 auto; display: flex; justify-content: center;
                 align-items: center; text-align: center; margin:0px auto; -webkit-border-radius: 50%; -moz-border-radius: 50%;

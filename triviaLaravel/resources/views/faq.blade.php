@@ -14,11 +14,11 @@
 
 <div class="container my-2">
   <div class="mx-2 row d-flex justify-content-center">
-      <div class="__container col-12 col-lg-10 py-2 px-3" id="accordion" style="font-family:ZCOOL KuaiLe; border-radius:30px; background-color:#292b2c">
+      <div class="__container col-12 col-lg-10 py-2 px-3" id="accordion" style="font-family:ZCOOL KuaiLe; border-radius:30px; background-color:#000">
         <div class="__card card my-2" style="border-radius:30px; background-color:#FF4848">
           <div class="card-header mx-auto" id="headingOne">
             <h6 class="mb-0">
-              <p class="collapsed text-center text-dark font-weight-bold my-auto" style="cursor: pointer;" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" >
+              <p class="collapsed text-center font-weight-bold my-auto" style="cursor: pointer; color: #000;" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" >
                 ¿Qué es Trivia?
               </p>
             </h6>
@@ -31,7 +31,7 @@
         <div class="__card card my-2" style="border-radius:30px; background-color:#FF7F50">
           <div class="card-header mx-auto" id="headingTwo">
             <h6 class="mb-0">
-              <p class="collapsed text-center text-dark font-weight-bold my-auto" style="cursor: pointer;" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              <p class="collapsed text-center font-weight-bold my-auto" style="cursor: pointer; color: #000;" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                 Quiero jugar... ¿Qué debo hacer?
               </p>
             </h6>
@@ -43,7 +43,7 @@
         <div class="__card card my-2" style="border-radius:30px; background-color:#F4A460">
           <div class="card-header mx-auto" id="headingThree">
             <h6 class="mb-0">
-              <p class="collapsed text-center text-dark font-weight-bold my-auto" style="cursor: pointer;" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              <p class="collapsed text-center font-weight-bold my-auto" style="cursor: pointer; color: #000;" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                 No estoy conforme con mi posición en el ranking... ¿Cómo mejoro la puntuación?
               </p>
             </h6>
@@ -55,7 +55,7 @@
         <div class="__card card my-2" style="border-radius:30px; background-color:#FFFF84">
           <div class="card-header mx-auto" id="headingFour">
             <h6 class="mb-0">
-              <p class="collapsed text-center text-dark font-weight-bold my-auto" style="cursor: pointer;" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+              <p class="collapsed text-center font-weight-bold my-auto" style="cursor: pointer; color: #000;" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
                 No recuerdo mi contraseña... ¿Qué hago?
               </p>
             </h6>
@@ -67,7 +67,7 @@
         <div class="__card card my-2" style="border-radius:30px; background-color:#F5DEB3">
           <div class="card-header mx-auto" id="headingFive">
             <h6 class="mb-0">
-              <p class="collapsed text-center text-dark font-weight-bold my-auto" style="cursor: pointer;" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+              <p class="collapsed text-center font-weight-bold my-auto" style="cursor: pointer; color: #000;" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
                 ¡Me robaron mi cuenta!
               </p>
             </h6>
@@ -79,7 +79,7 @@
         <div class="__card card my-2" style="border-radius:30px; background-color:#98FB98">
           <div class="card-header mx-auto" id="headingSix">
             <h6 class="mb-0">
-              <p class="collapsed text-center text-dark font-weight-bold my-auto" style="cursor: pointer;" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+              <p class="collapsed text-center font-weight-bold my-auto" style="cursor: pointer; color: #000;" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
                 ¡Quiero reportar a un jugador!
               </p>
             </h6>
@@ -91,7 +91,7 @@
         <div class="__card card my-2" style="border-radius:30px; background-color:#1FFEF3">
           <div class="card-header mx-auto" id="headingSeven">
             <h6 class="mb-0">
-              <p class="collapsed text-center text-dark font-weight-bold my-auto" style="cursor: pointer;" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+              <p class="collapsed text-center font-weight-bold my-auto" style="cursor: pointer; color: #000;" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
                 Encontré un error en el sitio... ¿Qué debo hacer?
               </p>
             </h6>

@@ -11,6 +11,28 @@ body {
     -webkit-transform: scale(.9);
 }
 
+.__nav-item .__jugar {
+    -webkit-animation: tiembla 2s infinite;
+}
+
+@-webkit-keyframes tiembla {
+    0% {
+        -webkit-transform: rotateZ(-10deg);
+    }
+    25% {
+        -webkit-transform: rotateZ(-5deg);
+    }
+    50% {
+        -webkit-transform: rotateZ( 0deg) scale(.10);
+    }
+    75% {
+        -webkit-transform: rotateZ(5deg);
+    }
+    100% {
+        -webkit-transform: rotateZ( 10deg);
+    }
+}
+
 @import url(https://fonts.googleapis.com/css?family=Varela+Round);
 .__navbar h2 {
     margin-right: 10px;

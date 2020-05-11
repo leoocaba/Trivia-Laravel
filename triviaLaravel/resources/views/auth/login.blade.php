@@ -6,7 +6,7 @@
 <div class="container py-3 px-3">
     <div class="row justify-content-center">
         <div class="col-sm-12 col-md-6 col-lg-5">
-            <div class="card text-white bg-dark justify-content-center" style="border-radius: 30px;">
+            <div class="card text-white justify-content-center" style="border-radius: 30px; background-color: #000;">
                 <div class="py-3 col-md-12 d-flex justify-content-center my-1"
                ><svg  style=" -webkit-border-radius: 61px; -moz-border-radius: 61px; border-radius: 61px; border:5px solid #aaaaaa;
                width:112px; height:112px;" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="user" class="svg-inline--fa fa-user fa-w-14 d-flex justify-content-center bg-info p-2" 

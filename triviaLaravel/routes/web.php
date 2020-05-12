@@ -39,7 +39,7 @@ Route::get('/eliminar/pregunta/{id}', 'QuestionsController@deleteQuestion');
 
 Route::post('/eliminar/{id}', 'QuestionsController@delete');
 
-Route::get('/play', function() {return view('play');});
+Route::get('/play', function() {return view('play')/*->middleware('game')*/;});
 
 Route::get('/faq', function() {return view('faq');});
 

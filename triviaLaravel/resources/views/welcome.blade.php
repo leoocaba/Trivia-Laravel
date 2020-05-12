@@ -106,14 +106,14 @@
     <footer class="section bg-footer">
         <div class="container">
             <div class="row">
-                <div class="col-s-12 col-lg-3">
+                <div class="col-s-12 col-lg-3 d-none d-md-block">
                     <div class="">
                         <h6 class="footer-heading text-uppercase text-white">Mas Información</h6>
                         <p>Puedes <a style="text-decoration: none;" class="text-success text-decoration-none font-weight-bold"href="/contact-us">Contactarnos</a> para realizar cualquier tipo de sugerencia sobre nuestro proyecto!</p>
                     </div>
                 </div>
 
-                <div class="col-s-12 col-lg-3">
+                <div class="col-s-12 col-lg-3 d-none d-md-block">
                     <div class="">
                         <h6 class="footer-heading text-uppercase text-white">Acerca de nosotros</h6>
                         <p class="d-inline">Somos un grupo de estudiantes de programación Web, en donde elegimos optar por desarrollar un juego de preguntas y respuestas, donde allí surgió</p>

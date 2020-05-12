@@ -9,7 +9,7 @@ class PlayController extends Controller
 //armando borrador del jugar
 
 
-/* pasar
+/* pasar código
 jugar(unJugador) ó jugar()
 inicializarPuntaje(unPuntaje) ó inicializarPuntaje(unPuntaje,unJugador)
 dameListadoDePreguntas(unasPreguntas)

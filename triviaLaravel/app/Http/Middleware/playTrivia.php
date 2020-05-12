@@ -13,11 +13,12 @@ class playTrivia
      * @param  \Closure  $next
      * @return mixed
      */
+     
      public function handle($request, Closure $next)
      {
          if ($this->auth->guest()) {
                  return redirect('/login');
-            } 
+            }
         }
          return $next($request);
      }

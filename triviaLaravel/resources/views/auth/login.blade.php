@@ -76,6 +76,7 @@
                                 @endif
                             </div>
                         </div>
+                        <hr>
                         <div class="fb-login-button justify-content-center d-flex" data-size="large" data-button-type="continue_with" data-layout="rounded" data-auto-logout-link="false" data-use-continue-as="false" data-width=""></div>
                         <hr>
                         <div class="form-group my-0 d-flex justify-content-center">

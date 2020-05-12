@@ -17,7 +17,7 @@ class QuestionsController extends Controller
         return view('agregarPreguntas', $vac);
     }
 
-    public function createQuestion(Request $request) 
+    public function createQuestion(Request $request)
         //Recibe el form 'agregarPreguntas'.
     {
         $reglas = [
@@ -34,7 +34,7 @@ class QuestionsController extends Controller
         'required' => 'El campo :attribute es obligatorio',
         'min' => 'El campo :attribute debe tener al menos 1 caracter',
         'max' => 'El campo :attribute puede tener como máximo :max',
-        'image' => 'Debe seleccionar una imagen tipo .jpg o .png' 
+        'image' => 'Debe seleccionar una imagen tipo .jpg o .png'
         ];
 
         $this->validate($request, $reglas, $mensajes);
@@ -57,7 +57,8 @@ class QuestionsController extends Controller
 
     public  function listQuestion() {
         //Lista las preguntas con sus categorías en la vista 'modificarPreguntas'.
-
+        //SI aca desdoblamos en dos funciones? una sólo envíe la lista ??
+        // y la segunta tome la vista y muestre en la vista 'modificarPreguntas'??
         $listadoPreguntas = Question::paginate(2);
         $vac = compact('listadoPreguntas');
         return view('modificarPreguntas', $vac);
@@ -88,7 +89,7 @@ class QuestionsController extends Controller
         'required' => 'El campo :attribute es obligatorio',
         'min' => 'El campo :attribute debe tener al menos 1 caracter',
         'max' => 'El campo :attribute puede tener como máximo :max',
-        'image' => 'Debe seleccionar una imagen tipo .jpg o .png' 
+        'image' => 'Debe seleccionar una imagen tipo .jpg o .png'
         ];
 
         $this->validate($request, $reglas, $mensajes);

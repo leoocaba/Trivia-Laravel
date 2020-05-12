@@ -6,17 +6,40 @@ use Illuminate\Http\Request;
 
 class PlayController extends Controller
 {
-//armando borrador del jugar
-/* public function jugar(ver param) {
-      inicializarPuntaje()
-      preguntas =damePreguntas()
-      iniciar juego()
-         mientras hayaPreguntas(preguntas) ând (vieneAcertando) and (tiempoOk)
-          preguntasAResponder(preguntas)
-          actualizarPuntaje()
 
-      ActualizarRanking
-      return
+  public  function jugar() {
+
+  }
+
+
+
+//armando borrador del jugar
+
+
+/* pasar código
+jugar(unJugador) ó jugar()
+inicializarPuntaje(unPuntaje) ó inicializarPuntaje(unPuntaje,unJugador)
+dameListadoDePreguntas(unasPreguntas)
+iniciarJuego(unJugador,unasPreguntas)
+  {
+while (hayPreguntas(unasPreguntas)and (estoyGanando()and(tiempoOk())  )
+  {
+     preguntaAResponder(unaPregunta)
+     if verificarRespuesta(unaPreguntas,unaRespuesta)
+        {
+        actualizarPuntajeGanador(unPuntaje) o (unPuntaje,unJugador)
+        preguntaAResponder(unaPregunta)
+      }else {
+       actualizarPuntajePerdedor(unPuntaje) o (unPuntaje,unJugador)
+       finDeJuego() o (unPuntaje,unJugador)
+      }
+}
+
+ActualizarRanking(unPuntaje,unJugador)
+}
+  return
+
+
 
 
   }*/

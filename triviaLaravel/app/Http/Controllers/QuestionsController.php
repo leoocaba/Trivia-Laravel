@@ -54,15 +54,29 @@ class QuestionsController extends Controller
         $nuevaPregunta->save();
         return redirect('/welcome');
     }
+//modificando listadoPreguntas
+    public  function listQuestion2() {
+        //Lista las preguntas con sus categorías 
+        $listadoPreguntas = Question::paginate(2);
+        $vac = compact('listadoPreguntas');
+        return  $vac;
+    }
 
     public  function listQuestion() {
+          //Lista las preguntas con sus categorías en la vista 'modificarPreguntas'.
+        return view('modificarPreguntas', $this->listQuestion2());
+    }
+
+  /*  public  function listQuestion() {
         //Lista las preguntas con sus categorías en la vista 'modificarPreguntas'.
         //SI aca desdoblamos en dos funciones? una sólo envíe la lista ??
         // y la segunta tome la vista y muestre en la vista 'modificarPreguntas'??
         $listadoPreguntas = Question::paginate(2);
         $vac = compact('listadoPreguntas');
         return view('modificarPreguntas', $vac);
-    }
+    }*/
+
+// fin modificando listadoPreguntas
 
     public function editForm($id) {
         //Devuelve la pregunta buscada por 'id' para editarla.

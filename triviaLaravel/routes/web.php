@@ -15,6 +15,7 @@ use App\Http\Controllers\QuestionsController;
 
 Route::get('/', function () {return view('index');});
 
+
 Route::get('/welcome', function () {return view('botoneraWelcome');});
 
 Route::get('/editar/perfil', 'UserController@editProfile');

@@ -17,23 +17,22 @@ iniciarJuego(unJugador,unasPreguntas)
   {
   while (hayPreguntas(unasPreguntas)and (estoyGanando())and(tiempoOk())  )
   {
-     preguntaAResponder(unaPreguntas)
+     preguntaAResponder(unaPregunta)
      if verificarRespuesta(unaPreguntas,unaRespuesta)
-        actualizarPuntajeGanador()
+        {
+        actualizarPuntajeGanador(unPuntaje) o (unPuntaje,unJugador)
+        preguntaAResponder(unaPregunta)
+      }else {
+       actualizarPuntajePerdedor(unPuntaje) o (unPuntaje,unJugador)
+       finDeJuego() o (unPuntaje,unJugador)
+      }
 }
+
+ActualizarRanking(unPuntaje,unJugador)
 }
+  return
 
 
- public function jugar(ver param) {
-      inicializarPuntaje()
-      preguntas =damePreguntas()
-      iniciar juego()
-         mientras hayaPreguntas(preguntas) ând (vieneAcertando) and (tiempoOk)
-          preguntasAResponder(preguntas)
-          actualizarPuntaje()
-
-      ActualizarRanking
-      return
 
 
   }*/

@@ -76,7 +76,7 @@
                                 @endif
                             </div>
                         </div>
-                        <hr>
+                        <hr> // Botón Sign-Up Facebook
                         <div class="fb-login-button justify-content-center d-flex" data-size="large" data-button-type="continue_with" data-layout="rounded" data-auto-logout-link="false" data-use-continue-as="false" data-width=""></div>
                         <hr>
                         <div class="form-group my-0 d-flex justify-content-center">
@@ -92,5 +92,5 @@
     </div>
 </div>
 <div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v7.0&appId=2528750544055772&autoLogAppEvents=1"></script>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v7.0&appId=2528750544055772&autoLogAppEvents=1"></script> // Script Facebook
 @endsection

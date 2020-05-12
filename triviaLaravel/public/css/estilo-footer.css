@@ -16,9 +16,9 @@ footer {
 }
 
 .footer-link a {
+    margin: 0;
     font-family: sans-serif;
     color: #acacac;
-    line-height: 40px;
     font-size: 14px;
     transition: all 0.5s;
 }

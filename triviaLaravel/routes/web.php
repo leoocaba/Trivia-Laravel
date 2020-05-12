@@ -17,8 +17,6 @@ Route::get('/', function () {return view('index');});
 
 Route::get('/welcome', function () {return view('botoneraWelcome');});
 
-Route::get('/crear/pregunta', function () { return view('crearPregunta');});
-
 Route::get('/editar/perfil', 'UserController@editProfile');
 
 Route::post('/editar/perfil', 'UserController@updateProfile');
@@ -39,8 +37,6 @@ Route::get('/eliminar/pregunta/{id}', 'QuestionsController@deleteQuestion');
 
 Route::post('/eliminar/{id}', 'QuestionsController@delete');
 
-Route::get('/play', function() {return view('play')/*->middleware('game')*/;});
-
 Route::get('/faq', function() {return view('faq');});
 
 Route::get('/ranking', 'UserController@listRanking');
@@ -48,5 +44,10 @@ Route::get('/ranking', 'UserController@listRanking');
 Route::get('contact-us', 'ContactController@getContact');
 
 Route::post('contact-us', 'ContactController@saveContact');
+
+Route::group(['middleware' => 'auth'], function()) {
+  Route::get('/crear/pregunta', function () { return view('crearPregunta');});
+  Route::get('/play', function() {return view('play')/*->middleware('game')*/;});
+});
 
 Auth::routes();

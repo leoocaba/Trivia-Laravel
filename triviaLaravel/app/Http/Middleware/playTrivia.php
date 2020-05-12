@@ -4,7 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 
-class playMiddleware
+class playTrivia
 {
     /**
      * Handle an incoming request.
@@ -13,9 +13,11 @@ class playMiddleware
      * @param  \Closure  $next
      * @return mixed
      */
-    public function handle($request, Closure $next)
-    {
-        echo "pruebaprueba";
-        return $next($request);
-    }
-}
+     public function handle($request, Closure $next)
+     {
+         if ($this->auth->guest()) {
+                 return redirect('/login');
+            } 
+        }
+         return $next($request);
+     }

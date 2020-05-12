@@ -6,6 +6,13 @@ use Illuminate\Http\Request;
 
 class PlayController extends Controller
 {
+
+  public  function jugar() {
+
+  }
+
+
+
 //armando borrador del jugar
 
 
@@ -15,7 +22,7 @@ inicializarPuntaje(unPuntaje) ó inicializarPuntaje(unPuntaje,unJugador)
 dameListadoDePreguntas(unasPreguntas)
 iniciarJuego(unJugador,unasPreguntas)
   {
-  while (hayPreguntas(unasPreguntas)and (estoyGanando())and(tiempoOk())  )
+while (hayPreguntas(unasPreguntas)and (estoyGanando()and(tiempoOk())  )
   {
      preguntaAResponder(unaPregunta)
      if verificarRespuesta(unaPreguntas,unaRespuesta)

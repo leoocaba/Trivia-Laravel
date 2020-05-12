@@ -76,8 +76,9 @@
                                 @endif
                             </div>
                         </div>
-                        <hr> // Botón Sign-Up Facebook
-                        <div class="fb-login-button justify-content-center d-flex" data-size="large" data-button-type="continue_with" data-layout="rounded" data-auto-logout-link="false" data-use-continue-as="false" data-width=""></div>
+                        <hr>
+                        {{-- Botón Sign-Up Facebook --}}
+                        <div class="col-12 fb-login-button btn btn-md btn-block justify-content-center d-flex" data-size="large" data-button-type="continue_with" data-layout="rounded" data-auto-logout-link="false" data-use-continue-as="false" data-width=""></div>
                         <hr>
                         <div class="form-group my-0 d-flex justify-content-center">
                             <h3 style="font-family: ZCOOL KuaiLe; font-weight: bold;">
@@ -92,5 +93,6 @@
     </div>
 </div>
 <div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v7.0&appId=2528750544055772&autoLogAppEvents=1"></script> // Script Facebook
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v7.0&appId=2528750544055772&autoLogAppEvents=1"></script> 
+{{-- Script Facebook --}}
 @endsection

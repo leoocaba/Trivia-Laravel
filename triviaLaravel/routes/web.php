@@ -15,40 +15,32 @@ use App\Http\Controllers\QuestionsController;
 
 Route::get('/', function () {return view('index');});
 
-
 Route::get('/welcome', function () {return view('botoneraWelcome');});
-
-Route::get('/editar/perfil', 'UserController@editProfile');
-
-Route::post('/editar/perfil', 'UserController@updateProfile');
-
-Route::get('/perfil', 'UserController@profile');
-
-Route::get('/agregar/preguntas', 'QuestionsController@formSelectCategories');
 
 Route::post('/agregar/preguntas', 'QuestionsController@createQuestion');
 
-Route::get('/modificar/preguntas', 'QuestionsController@listQuestion');
-
-Route::post('/modificarla/{id}', 'QuestionsController@edit');
-
-Route::get('modificar/la/pregunta/{id}', 'QuestionsController@editForm');
-
-Route::get('/eliminar/pregunta/{id}', 'QuestionsController@deleteQuestion');
-
-Route::post('/eliminar/{id}', 'QuestionsController@delete');
-
 Route::get('/faq', function() {return view('faq');});
 
-Route::get('/ranking', 'UserController@listRanking');
+Route::get('/crear/pregunta', function () { return view('crearPregunta');});
 
 Route::get('contact-us', 'ContactController@getContact');
 
 Route::post('contact-us', 'ContactController@saveContact');
 
 Route::group(['middleware' => 'auth'], function() {
-  Route::get('/crear/pregunta', function () { return view('crearPregunta');});
+
+  Route::get('/agregar/preguntas', 'QuestionsController@formSelectCategories');
+  Route::post('/modificarla/{id}', 'QuestionsController@edit');
+  Route::get('modificar/la/pregunta/{id}', 'QuestionsController@editForm');
+  Route::get('/eliminar/pregunta/{id}', 'QuestionsController@deleteQuestion');
+  Route::post('/eliminar/{id}', 'QuestionsController@delete');
+  Route::get('/modificar/preguntas', 'QuestionsController@listQuestion');
   Route::get('/play', function() {return view('play')/*->middleware('game')*/;});
+  Route::get('/ranking', 'UserController@listRanking');
+  Route::get('/editar/perfil', 'UserController@editProfile');
+  Route::post('/editar/perfil', 'UserController@updateProfile');
+  Route::get('/perfil', 'UserController@profile');
+  
 });
 
 Auth::routes();

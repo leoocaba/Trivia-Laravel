@@ -30,7 +30,7 @@
                     <li class="__nav-item nav-item ">
                     <a class="nav-link active" href="{{ url('/welcome')}}">Inicio<span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="__nav-item nav-item">
+                    <li class="nav-item">
                         <a class="__jugar nav-link active text-danger" href="{{ url('/play')}}">Jugar!</a>
                     </li>
                     <li class="__nav-item nav-item">
@@ -87,11 +87,11 @@
     </header>
     <h1>
         <div class="deconstructed">
-            Divertite en Trivia
-            <div>Divertite en Trivia</div>
-            <div>Divertite en Trivia</div>
-            <div>Divertite en Trivia</div>
-            <div>Divertite en Trivia</div>
+            ¡Divertite en Trivia!
+            <div>¡Divertite en Trivia!</div>
+            <div>¡Divertite en Trivia!</div>
+            <div>¡Divertite en Trivia!</div>
+            <div>¡Divertite en Trivia!</div>
           </div>
     </h1>
 

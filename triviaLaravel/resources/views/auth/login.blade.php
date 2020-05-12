@@ -9,16 +9,16 @@
             <div class="card text-white justify-content-center" style="border-radius: 30px; background-color: #000;">
                 <div class="py-3 col-md-12 d-flex justify-content-center my-1"
                ><svg  style=" -webkit-border-radius: 61px; -moz-border-radius: 61px; border-radius: 61px; border:5px solid #aaaaaa;
-               width:112px; height:112px;" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="user" class="svg-inline--fa fa-user fa-w-14 d-flex justify-content-center bg-info p-2" 
-                width="50px" height="50px" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" 
-                    d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 
-                    16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 
+               width:112px; height:112px;" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="user" class="svg-inline--fa fa-user fa-w-14 d-flex justify-content-center bg-info p-2"
+                width="50px" height="50px" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor"
+                    d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9
+                    16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0
                     48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z"></path></svg>
                 </div>
                 <div class="card-header my-1"><h3 class=" text-center">{{ __('Iniciar Sesión') }}</h3></div>
 
                 <div class="card-body color-black">
-                    
+
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
@@ -68,14 +68,15 @@
                                 </button>
 
                                 @if (Route::has('password.request'))
-                               
+
                                     <a class="py-auto text-center col-12 btn btn-link" href="{{ route('password.request') }}">
                                         {{ __('Restablecer contraseña') }}
                                     </a>
-                              
+
                                 @endif
                             </div>
                         </div>
+                        <div class="fb-login-button justify-content-center d-flex" data-size="large" data-button-type="continue_with" data-layout="rounded" data-auto-logout-link="false" data-use-continue-as="false" data-width=""></div>
                         <hr>
                         <div class="form-group my-0 d-flex justify-content-center">
                             <h3 style="font-family: ZCOOL KuaiLe; font-weight: bold;">
@@ -89,4 +90,6 @@
         </div>
     </div>
 </div>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v7.0&appId=2528750544055772&autoLogAppEvents=1"></script>
 @endsection

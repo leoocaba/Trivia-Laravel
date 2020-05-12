@@ -45,7 +45,7 @@ Route::get('contact-us', 'ContactController@getContact');
 
 Route::post('contact-us', 'ContactController@saveContact');
 
-Route::group(['middleware' => 'auth'], function()) {
+Route::group(['middleware' => 'auth'], function() {
   Route::get('/crear/pregunta', function () { return view('crearPregunta');});
   Route::get('/play', function() {return view('play')/*->middleware('game')*/;});
 });

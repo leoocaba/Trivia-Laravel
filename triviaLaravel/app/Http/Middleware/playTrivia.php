@@ -15,6 +15,7 @@ class playMiddleware
      */
     public function handle($request, Closure $next)
     {
+      if
         echo "pruebaprueba";
         return $next($request);
     }

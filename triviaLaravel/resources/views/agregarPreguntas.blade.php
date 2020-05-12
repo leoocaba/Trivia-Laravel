@@ -55,7 +55,7 @@
 
                     @csrf
 
-                    <div class="bg-dark text-white mb-2 col-12" style="border-radius: 30px;">
+                    <div class="text-white mb-2 col-12" style="background-color: #000; border-radius: 30px;">
                         <div class="form-group">
                             <label style="font-family: ZCOOL KuaiLe; font-weight: bold;" class="col-12 text-center pt-3" for=""><h5 class="text-success">INGRESE NUEVA PREGUNTA</h5></label>
                             <textarea class="col-12 px-3 rounded" name="question" for="question" placeholder="Máximo 300 caracteres" 
@@ -63,7 +63,7 @@
                         </div>
                     </div>
 
-                    <div  style="border-radius: 30px;" class="bg-dark text-white mb-2 col-12">
+                    <div  style="border-radius: 30px; background-color: #000;" class="text-white mb-2 col-12">
                         <div class="form-group">
                             <label for="__input-categoria" class="text-center col-12 mt-3 badge badge-pill badge-warning">SELECCIONE UNA CATEGORÍA</label>
                             <select class="form-control col-12 mt-3" name="category_id" id="__input-categoria" required autofocus>
@@ -75,7 +75,7 @@
                         </div>
                     </div>
 
-                    <div style="border-radius: 30px;" class="bg-dark col-12 row">
+                    <div style="border-radius: 30px; background-color: #000;" class="col-12 row">
                         <div class="form-group col-md-6">
                             <label class="text-success mt-2" for="formGroupExampleInput">OPCIÓN 1</label>
                             <input type="text" style="border-radius: 30px;" name="option_1" class="form-control" id="formGroupExampleInput" value="{{ old('option_1') }}" placeholder="Aquí la respuesta CORRECTA" required autofocus>
@@ -101,7 +101,7 @@
                         </div>
                     </div>
 
-                    <div style="border-radius: 30px;" class="bg-dark text-white mt-2 col-12">
+                    <div style="border-radius: 30px; background-color: #000;" class="text-white mt-2 col-12">
                         <div class="form-group pr-2">
                             <label class=" text-center col-12 mt-3 badge badge-pill badge-warning" for="exampleFormControlFile1">INGRESE UNA IMAGEN</label>
                             <div class=" text-nowrap d-flex justify-content-center" id="div_file">
@@ -111,7 +111,7 @@
                         </div>
                     </div>
 
-                    <div style="border-radius: 30px!important;" class="bg-dark mt-2 col-12">
+                    <div style="border-radius: 30px!important; background-color: #000;" class="mt-2 col-12">
                         <div class="form-group">
                             <button type="submit" style="border-radius: 30px!important; font-family: 'Press Start 2P';" class="btn btn-success btn-md btn-block mt-3 d-flex justify-content-center">PUBLICAR</button>
                         </div>

@@ -16,14 +16,14 @@
     
                     @csrf
     
-                    <div class="bg-dark text-white mb-2 col-12" style="border-radius: 30px;">
+                    <div class="text-white mb-2 col-12" style="border-radius: 30px; background-color: #000;">
                         <div class="form-group">
                             <label style="font-family: ZCOOL KuaiLe; font-weight: bold;" class="col-12 text-center pt-3" for=""><h5 class="text-primary">EDITAR LA PREGUNTA ELEGIDA</h5></label>
                             <textarea class="col-12 px-3 rounded" name="question" for="question" placeholder="Máximo 300 caracteres" value=" {{ $pregunta->question }}" xlength="300" required autofocus>{{ $pregunta->question }}</textarea>
                         </div>
                     </div>
     
-                    <div style="border-radius: 30px;" class="bg-dark text-white mb-2 col-12">
+                    <div style="border-radius: 30px; background-color: #000;" class="text-white mb-2 col-12">
                         <div class="form-group">
                             <label for="__input-categoria" class="text-center col-12 mt-3 badge badge-pill badge-warning">SELECCIONE UNA CATEGORÍA</label>
                             <select class="form-control col-12 mt-3" name="category_id" id="__input-categoria" required autofocus>
@@ -35,7 +35,7 @@
                         </div>
                     </div>
     
-                    <div style="border-radius: 30px;" class="bg-dark mb-2 col-12 row">
+                    <div style="border-radius: 30px; background-color: #000;" class="mb-2 col-12 row">
                         <div class="form-group col-md-6">
                             <label class="text-success mt-2" for="formGroupExampleInput">OPCIÓN 1</label>
                             <input style="border-radius: 30px!important;" type="text" name="option_1" class="form-control" id="formGroupExampleInput" value="{{ $pregunta->option_1 }}" placeholder="Aquí la Opción CORRECTA" required autofocus>
@@ -61,7 +61,7 @@
                         </div>
                     </div>
     
-                    <div style="border-radius: 30px;" class="bg-dark text-white mb-2 col-12">
+                    <div style="border-radius: 30px; background-color: #000;" class="text-white mb-2 col-12">
                         <div class="form-group pr-2">
                             <label class=" text-center col-12 mt-3 badge badge-pill badge-warning" for="exampleFormControlFile1">INGRESE UNA IMAGEN</label>
                             <div class=" text-nowrap d-flex justify-content-center" id="div_file">
@@ -71,7 +71,7 @@
                         </div>
                     </div>
     
-                    <div style="border-radius: 30px;" class="bg-dark col-12">
+                    <div style="border-radius: 30px; background-color: #000;" class="col-12">
                         <div class="form-group">
                             <button type="submit" style="border-radius: 30px; font-family: 'Press Start 2P';" class="btn btn-primary btn-md btn-block mt-3 d-flex justify-content-center">EDITAR</button>
                         </div>

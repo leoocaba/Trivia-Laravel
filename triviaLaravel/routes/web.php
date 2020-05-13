@@ -17,8 +17,6 @@ Route::get('/', function () {return view('index');});
 
 Route::get('/welcome', function () {return view('botoneraWelcome');});
 
-Route::post('/agregar/preguntas', 'QuestionsController@createQuestion');
-
 Route::get('/faq', function() {return view('faq');});
 
 Route::get('/crear/pregunta', function () { return view('crearPregunta');});
@@ -30,6 +28,7 @@ Route::post('contact-us', 'ContactController@saveContact');
 Route::group(['middleware' => 'auth'], function() {
 
   Route::get('/agregar/preguntas', 'QuestionsController@formSelectCategories');
+  Route::post('/agregar/preguntas', 'QuestionsController@createQuestion');
   Route::post('/modificarla/{id}', 'QuestionsController@edit');
   Route::get('modificar/la/pregunta/{id}', 'QuestionsController@editForm');
   Route::get('/eliminar/pregunta/{id}', 'QuestionsController@deleteQuestion');

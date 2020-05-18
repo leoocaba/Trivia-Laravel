@@ -3,6 +3,9 @@
 @section('style')
   <link rel="stylesheet" href="/css/estilo-jugar.css">
 @endsection
+<?php
+$puntos=0
+ ?>
 <div class="mx-3 mt-3 justify-content-center">
 <div class="__container container mx-auto">
   <div class="row">
@@ -15,7 +18,9 @@
 
 
             @foreach ($listadoPreguntas as $pregunta)
-                      <p>mi pregunta {{ $pregunta->question }}</p>
+               <p>Mis Puntos <?php echo($puntos)?> </p>
+               <p>Mi pregunta </p>
+                <p> {{ $pregunta->question }}</p>
 
                    @endforeach
 

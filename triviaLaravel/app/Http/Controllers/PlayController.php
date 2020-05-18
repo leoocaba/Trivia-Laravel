@@ -14,6 +14,41 @@ class PlayController extends QuestionsController
     return view('play', $listadoPreguntas);
   }
 
+  public  function dameListadoDePreguntas() {
+  //verificar funcion
+      $listadoPreguntas = $this->listQuestion2();
+    return  $listadoPreguntas;
+  }
+
+  public  function inicializarPuntaje($unosPuntos) {
+  //verificar funcion
+      $unosPuntos = 0;
+    return $unosPuntos;
+  }
+
+  public  function hayPreguntas($listadoPreguntas) {
+  //verificar funcion
+
+    return ($listadoPreguntas.length>0);
+  }
+
+
+  public  function verificarRespuesta($unaPreguntas,$unaRespuesta) {
+  //verificar funcion
+    return ($unaPreguntas.option_1==$unaRespuesta);
+  }
+
+  public  function preguntaAResponder($listadoPreguntas) {
+
+//  if hayPreguntas($listadoPreguntas)  {
+
+//    return ($unaPregunta);
+//    }
+
+     }
+
+
+
 
 
 //armando borrador del jugar

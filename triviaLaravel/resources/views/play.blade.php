@@ -13,7 +13,7 @@
     <div>
       <h5 class="col-12 question text-center" style="color:#fff!important; font-size: 18px;">
 
-        //aca ver mix controler play preguntaAResponder(unaPregunta)
+
             @foreach ($listadoPreguntas as $pregunta)
                       <p>mi pregunta {{ $pregunta->question }}</p>
 

@@ -4,11 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class PlayController extends Controller
+use App\Http\Controllers\QuestionsController;
+
+class PlayController extends QuestionsController
 {
 
   public  function jugar() {
-
+      $listadoPreguntas = $this->listQuestion2();
+    return view('play', $listadoPreguntas);
   }
 
 

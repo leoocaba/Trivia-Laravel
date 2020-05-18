@@ -2,7 +2,7 @@
 
 @section('style')
   <link rel="stylesheet" href="/css/estilo-jugar.css">
-
+@endsection
 <div class="mx-3 mt-3 justify-content-center">
 <div class="__container container mx-auto">
   <div class="row">
@@ -12,11 +12,12 @@
       </div>
     <div>
       <h5 class="col-12 question text-center" style="color:#fff!important; font-size: 18px;">
-   //aca ver mix controler play preguntaAResponder(unaPregunta)
-        @foreach ($listadoPreguntas as $pregunta)
-                  <p>mi pregunta {{ $pregunta->question }}</p>
 
-               @endforeach
+        //aca ver mix controler play preguntaAResponder(unaPregunta)
+            @foreach ($listadoPreguntas as $pregunta)
+                      <p>mi pregunta {{ $pregunta->question }}</p>
+
+                   @endforeach
 
 
       </h5>

@@ -39,11 +39,11 @@ class PlayController extends QuestionsController
   }
 
   public  function preguntaAResponder($listadoPreguntas) {
+  //verificar funcion
+  if (hayPreguntas($listadoPreguntas))  {
 
-//  if hayPreguntas($listadoPreguntas)  {
-
-//    return ($unaPregunta);
-//    }
+   return (array_pop($listadoPreguntas));
+    }
 
      }
 

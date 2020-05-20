@@ -34,10 +34,10 @@ $puntos=0
 
 
         <div class="col-12 botones mx-auto btn-group-vertical d-block" id="botones">
-          <button type="button" style="border-radius: 30px; font-size: 14px;" class="__btn btn btn-outline-warning btn-md col-12 mb-4">{{ $pregunta->option_1 }}</button>
-          <button type="button" style="border-radius: 30px; font-size: 14px;" class="__btn btn btn-outline-success btn-md col-12 mb-4">{{ $pregunta->option_2 }}</button>
-          <button type="button" style="border-radius: 30px; font-size: 14px;" class="__btn btn btn-outline-danger btn-md col-12 mb-4">{{ $pregunta->option_3 }}</button>
-          <button type="button" style="border-radius: 30px; font-size: 14px;" class="__btn btn btn-outline-primary btn-md col-12 mb-4">{{ $pregunta->option_4 }}</button>
+          <button id="opcion1" type="button" style="border-radius: 30px; font-size: 14px;" class="__btn btn btn-outline-warning btn-md col-12 mb-4">{{ $pregunta->option_1 }}</button>
+          <button id="opcion2" type="button" style="border-radius: 30px; font-size: 14px;" class="__btn btn btn-outline-success btn-md col-12 mb-4">{{ $pregunta->option_2 }}</button>
+          <button id="opcion3" type="button" style="border-radius: 30px; font-size: 14px;" class="__btn btn btn-outline-danger btn-md col-12 mb-4">{{ $pregunta->option_3 }}</button>
+          <button id="opcion4" type="button" style="border-radius: 30px; font-size: 14px;" class="__btn btn btn-outline-primary btn-md col-12 mb-4">{{ $pregunta->option_4 }}</button>
         </div>
       </div>
     </div>

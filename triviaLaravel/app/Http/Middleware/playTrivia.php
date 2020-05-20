@@ -19,6 +19,5 @@ class playTrivia
          if ($this->auth->guest()) {
                  return redirect('/login');
             }
-        }
          return $next($request);
      }

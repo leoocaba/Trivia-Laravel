@@ -5,14 +5,50 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Question;
 
-class PlayController extends Controller
+use App\Http\Controllers\QuestionsController;
+
+class PlayController extends QuestionsController
 {
 
   public  function jugar() {
-    $preguntas = Question::all();
-    $vac = compact('preguntas');
-    return view('jugar', $vac);
+      $listadoPreguntas = $this->listQuestion2();
+    return view('play', $listadoPreguntas);
   }
+
+  public  function dameListadoDePreguntas() {
+  //verificar funcion
+      $listadoPreguntas = $this->listQuestion2();
+    return  $listadoPreguntas;
+  }
+
+  public  function inicializarPuntaje($unosPuntos) {
+  //verificar funcion
+      $unosPuntos = 0;
+    return $unosPuntos;
+  }
+
+  public  function hayPreguntas($listadoPreguntas) {
+  //verificar funcion
+
+    return ($listadoPreguntas.length>0);
+  }
+
+
+  public  function verificarRespuesta($unaPreguntas,$unaRespuesta) {
+  //verificar funcion
+    return ($unaPreguntas.option_1==$unaRespuesta);
+  }
+
+  public  function preguntaAResponder($listadoPreguntas) {
+  //verificar funcion
+  if (hayPreguntas($listadoPreguntas))  {
+
+   return (array_pop($listadoPreguntas));
+    }
+
+     }
+
+
 
 
 

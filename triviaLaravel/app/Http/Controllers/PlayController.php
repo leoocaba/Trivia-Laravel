@@ -3,12 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Question;
 
 class PlayController extends Controller
 {
 
   public  function jugar() {
-
+    $preguntas = Question::all();
+    $vac = compact('preguntas');
+    return view('jugar', $vac);
   }
 
 

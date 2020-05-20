@@ -17,13 +17,13 @@ class QuestionsSeeder extends Seeder
                 "question" => "¿Quien convirtió el séptimo gol en la histórica goleada
                 de Estudiantes 7-0 Gimnasia?",
 
-                "option_1" => "Pablo 'El Payaso' Luguercio",
+                "option_1" => "Pablo El Payaso Luguercio",
 
-                "option_2" => "José Luis 'Caldera' Calderón",
+                "option_2" => "José Luis Caldera Calderón",
 
-                "option_3" => "Juan Sebastián 'La Brujita' Verón",
+                "option_3" => "Juan Sebastián La Brujita Verón",
 
-                "option_4" => "Mariano 'El Tanque' Pavone",
+                "option_4" => "Mariano El Tanque Pavone",
 
                 "image" => "7a0.jpg",
 

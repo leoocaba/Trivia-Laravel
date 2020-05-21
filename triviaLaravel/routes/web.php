@@ -35,7 +35,6 @@ Route::group(['middleware' => 'auth'], function() {
   Route::post('/eliminar/{id}', 'QuestionsController@delete');
   Route::get('/modificar/preguntas', 'QuestionsController@listQuestion');
   Route::get('/play', 'playController@jugar') ;
-
   Route::get('/ranking', 'UserController@listRanking');
   Route::get('/editar/perfil', 'UserController@editProfile');
   Route::post('/editar/perfil', 'UserController@updateProfile');

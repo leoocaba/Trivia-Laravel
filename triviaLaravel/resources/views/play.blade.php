@@ -13,10 +13,20 @@
       </div>
     <div>
       <h5 class="col-12 question text-center" style="color:#fff!important; font-size: 18px;">
- <?php $pregunta=$listadoPreguntas[0];?>
-    <p>Mis Puntos actuales:  </p>
+
+
+        <?php $listadoPreguntas=$data['listadoPreguntas'];
+              
+             var_dump($data['listadoPreguntas']);
+
+        ?>
+
+
+
+
+    <p>Mis Puntos actuales: {{$data['unosPuntos']}}  </p>
      <p>Mi Pregunta es </p>
-     <p> {{$pregunta->question}} </p>
+     <p>    </p>
 
 
       </h5>
@@ -28,10 +38,10 @@
 
 
         <div class="col-12 botones mx-auto btn-group-vertical d-block" id="botones">
-          <button type="button" style="border-radius: 30px; font-size: 14px;" class="__btn btn btn-outline-warning btn-md col-12 mb-4">{{$pregunta->option_1}} </button>
-          <button type="button" style="border-radius: 30px; font-size: 14px;" class="__btn btn btn-outline-success btn-md col-12 mb-4"> {{$pregunta->option_2}} </button>
-          <button type="button" style="border-radius: 30px; font-size: 14px;" class="__btn btn btn-outline-danger btn-md col-12 mb-4"> {{$pregunta->option_3}}  </button>
-          <button type="button" style="border-radius: 30px; font-size: 14px;" class="__btn btn btn-outline-primary btn-md col-12 mb-4"> {{$pregunta->option_4}}  </button>
+          <button type="button" href="/verificar/pregunta/{$pregunta,$pregunta->option_1} "  style="border-radius: 30px; font-size: 14px;" class="__btn btn btn-outline-warning btn-md col-12 mb-4"> </button>
+          <button type="button" href="/verificar/pregunta/{$pregunta,$pregunta->option_2} "  style="border-radius: 30px; font-size: 14px;" class="__btn btn btn-outline-success btn-md col-12 mb-4">  </button>
+          <button type="button" href="/verificar/pregunta/{$pregunta,$pregunta->option_3} "  style="border-radius: 30px; font-size: 14px;" class="__btn btn btn-outline-danger btn-md col-12 mb-4">  </button>
+          <button type="button" href="/verificar/pregunta/{$pregunta,$pregunta->option_4} "  style="border-radius: 30px; font-size: 14px;" class="__btn btn btn-outline-primary btn-md col-12 mb-4">   </button>
         </div>
       </div>
     </div>

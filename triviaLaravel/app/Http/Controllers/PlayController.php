@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Question;
 
 use App\Http\Controllers\QuestionsController;
 
@@ -16,25 +17,32 @@ class PlayController extends QuestionsController
 
 
 
-  public  function jugar3() {
-      $listadoPreguntas = $this->listQuestion2();
-    
-      $puntos=0;
-      $id=0;
-      $vac = compact('pregunta', 'puntos', 'id');
-    return view('play', $vac );
-  }
+
 
   public  function jugar() {
-      $listadoPreguntas = $this->listQuestion2();
-      $puntos=0;
-      $id=0;
+    $listadoPreguntas = $this->dameListadoDePreguntas();
+    $unosPuntos= $this->inicializarPuntaje();
+    if ($this->hayPreguntas($listadoPreguntas)) {
+      //$pregunta=$this->preguntaAResponder($listadoPreguntas);
+      //$listadoPreguntas = Question::orderByRaw('RAND()')->take(1)->get();
+   $data = ['listadoPreguntas' => $listadoPreguntas,'unosPuntos' =>$unosPuntos];
+      return view('/play' )->with('data', $data );;
 
-    return view('play',   $listadoPreguntas );
+
+    } else {
+      //sin preguntas
+      return view('welcome');
+    }
+
+
   }
+
+
+
 
   public  function dameListadoDePreguntas() {
   //verificar funcion
+
       $listadoPreguntas = $this->listQuestion2();
     return  $listadoPreguntas;
   }
@@ -44,7 +52,7 @@ class PlayController extends QuestionsController
   public  function hayPreguntas($listadoPreguntas) {
   //verificar funcion
 
-    return ($listadoPreguntas.length>0);
+    return (count($listadoPreguntas) > 0 );
   }
 
 
@@ -62,12 +70,12 @@ class PlayController extends QuestionsController
 
   public  function preguntaAResponder($listadoPreguntas) {
   //verificar funcion
-  if (hayPreguntas($listadoPreguntas))  {
+  if ($this->hayPreguntas($listadoPreguntas))  {
+    $pregunta=array_pop($listadoPreguntas);
+                   return ($pregunta);
+       }
 
-   return (array_pop($listadoPreguntas));
-    }
-
-     }
+   }
 
 
 
@@ -94,13 +102,8 @@ while (hayPreguntas(unasPreguntas)and (estoyGanando()and(tiempoOk())  ) >>sigue 
        finDeJuego() o (unPuntaje,unJugador)
       }
 }
-
 ActualizarRanking(unPuntaje,unJugador)>>actualiza puntaje del jugador con lo obtenido en el juego
 }
   return >> una vez finalizado retorna
-
-
-
-
   }*/
 }

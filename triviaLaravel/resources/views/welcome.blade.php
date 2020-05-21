@@ -18,14 +18,14 @@
 </head>
 
 <body>
-    
+
     <header>
         <nav class="__navbar navbar navbar-expand-lg navbar-light bg-light" style="background-color: #dac300!important;">
             <a style="text-decoration: none" href="/"><h2>Trivia</h2></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">  
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="__navbar-nav navbar-nav ">
                     <li class="__nav-item nav-item ">
                     <a class="nav-link active" href="{{ url('/welcome')}}">Inicio<span class="sr-only">(current)</span></a>
@@ -158,7 +158,7 @@
         </div>
 
         <div class="text-center">
-        <p class="d-inline footer-alt mb-0 f-14 font-weight-bold">{{date('Y')}} Copyright</p> <p class="d-inline footer-alt mb-0 f-14 font-weight-bold" 
+        <p class="d-inline footer-alt mb-0 f-14 font-weight-bold">{{date('Y')}} Copyright</p> <p class="d-inline footer-alt mb-0 f-14 font-weight-bold"
         style=" color: #dac300!important; font-family: ZCOOL KuaiLe;">Trivia</p><p class="d-inline footer-alt mb-0 f-14 font-weight-bold"> © Todos los derechos reservados.</p>
         </div>
     </footer>

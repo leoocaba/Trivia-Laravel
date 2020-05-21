@@ -118,4 +118,15 @@
         </div>
     </div>
 </div>
+<script>
+// Validación email
+let email = document.getElementById("email");
+email.addEventListener("input", function (event) {
+  if (email.validity.typeMismatch) {
+    email.setCustomValidity("Por favor, ingresa un correo electrónico!");
+  } else {
+    email.setCustomValidity("");
+  }
+});
+    </script>
 @endsection

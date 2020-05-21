@@ -16,7 +16,7 @@ return array(
     |
     */
 
-    'route' => '/uploads/avatars',
+    'route' => '/uploads/avatars', '/images/image',
 
     /*
     |--------------------------------------------------------------------------
@@ -32,6 +32,7 @@ return array(
 
     'paths' => array(
         public_path('app/upload/avatars'),
+        public_path('app/images/image'),
         public_path('images')
     ),
 

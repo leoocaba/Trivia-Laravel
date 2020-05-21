@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Question;
 use App\Category;
-
+use Image;
 class QuestionsController extends Controller
 {
 
@@ -39,8 +39,13 @@ class QuestionsController extends Controller
 
         $this->validate($request, $reglas, $mensajes);
 
-        $ruta = $request->file('image')->store('public/images');
-        $nombreArchivo = basename($ruta);
+        if($request->hasFile('image')){
+            $image = $request->file('image');
+            $filename = time() . '.' . $image->getClientOriginalExtension();
+            $path = public_path('/images/image/'.$filename);
+            Image::make($image->getRealPath())->resize(300, 300)->save($path);
+            
+        }
 
         $nuevaPregunta = new Question();
         $nuevaPregunta->question = $request['question'];
@@ -49,7 +54,7 @@ class QuestionsController extends Controller
         $nuevaPregunta->option_3 = $request['option_3'];
         $nuevaPregunta->option_4 = $request['option_4'];
         $nuevaPregunta->category_id = $request['category_id'];
-        $nuevaPregunta->image = $nombreArchivo;
+        $nuevaPregunta->image = $filename;
 
         $nuevaPregunta->save();
         return redirect('/welcome');
@@ -65,18 +70,12 @@ class QuestionsController extends Controller
     }
 
     public  function listQuestion() {
-          //Lista las preguntas con sus categorías en la vista 'modificarPreguntas'.
-        return view('modificarPreguntas', $this->listQuestion2());
-    }
-
-  /*  public  function listQuestion() {
         //Lista las preguntas con sus categorías en la vista 'modificarPreguntas'.
-        //SI aca desdoblamos en dos funciones? una sólo envíe la lista ??
-        // y la segunta tome la vista y muestre en la vista 'modificarPreguntas'??
+
         $listadoPreguntas = Question::paginate(2);
         $vac = compact('listadoPreguntas');
         return view('modificarPreguntas', $vac);
-    }*/
+    }
 
 // fin modificando listadoPreguntas
 

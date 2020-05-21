@@ -21,7 +21,7 @@ class CreateQuestionsTable extends Migration
             $table->string('option_3');
             $table->string('option_4');
             $table->unsignedBigInteger('category_id')->default(1);
-            $table->string('image');
+            $table->string('image')->default('image-default.jpg');
             $table->timestamps();
 
             $table->foreign('category_id')->references('id')->on('categories');

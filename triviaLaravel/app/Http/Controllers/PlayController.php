@@ -25,12 +25,15 @@ class PlayController extends QuestionsController
     if ($this->hayPreguntas($listadoPreguntas)) {
       //$pregunta=$this->preguntaAResponder($listadoPreguntas);
       //$listadoPreguntas = Question::orderByRaw('RAND()')->take(1)->get();
+  //comentadas
 //   $data = ['listadoPreguntas' => $listadoPreguntas,'unosPuntos' =>$unosPuntos];
-    //  return view('/play' )->with('data', $data );;
+//    return view('/play' )->with('data', $data );;
+//comentadas
+
    return view('/jugar',  $listadoPreguntas );
 
     } else {
-      //sin preguntas
+      //sin preguntas se termina el juego
       return view('welcome');
     }
 
@@ -41,7 +44,7 @@ class PlayController extends QuestionsController
 
 
   public  function dameListadoDePreguntas() {
-  //verificar funcion
+  //obtiene el listado de todas las preguntas de la tabla
 
       $listadoPreguntas = $this->listQuestion2();
     return  $listadoPreguntas;
@@ -50,16 +53,16 @@ class PlayController extends QuestionsController
 
 
   public  function hayPreguntas($listadoPreguntas) {
-  //verificar funcion
+  //verificar si hay preguntas en $listadoPreguntas
 
     return (count($listadoPreguntas) > 0 );
   }
 
 
-  public  function verificarRespuesta($unaPreguntas,$unaRespuesta) {
-  //verificar funcion
+  public  function verificarRespuesta($unaPreguntas,$unaRespuesta,$unosPuntos) {
+  //aca va la lógica, verifica si la respuesta es correcta, actualiza puntajes y continua prox pregunta
 
-  $unosPuntos = 55;
+  $unosPuntos = $unosPuntos+ 55;
   return $unosPuntos;
     return view('play', $unosPuntos);
  //return ($unaPreguntas.option_1==$unaRespuesta);
@@ -68,8 +71,9 @@ class PlayController extends QuestionsController
   //return view('play', $listadoPreguntas);
   }
 
+
   public  function preguntaAResponder($listadoPreguntas) {
-  //verificar funcion
+  //devuelve la siguiente pregunta a responder
   if ($this->hayPreguntas($listadoPreguntas))  {
     $pregunta=array_pop($listadoPreguntas);
                    return ($pregunta);

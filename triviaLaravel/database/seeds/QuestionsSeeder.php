@@ -14,12 +14,11 @@ class QuestionsSeeder extends Seeder
     {
         DB::table('questions')->insert([
             [
-                "question" => "¿Quien convirtió el séptimo gol en la histórica goleada
-                de Estudiantes 7-0 Gimnasia?",
+                "question" => "¿Quien convirtió el séptimo gol en la histórica goleada de Estudiantes 7-0 Gimnasia?",
 
-                "option_1" => "Pablo El Payaso Luguercio",
+                "option_1" => "José Luis Caldera Calderón",
 
-                "option_2" => "José Luis Caldera Calderón",
+                "option_2" => "Pablo El Payaso Luguercio",
 
                 "option_3" => "Juan Sebastián La Brujita Verón",
 
@@ -122,11 +121,11 @@ class QuestionsSeeder extends Seeder
             [
                 "question" => "¿En qué país se originó la pandemia provocada por el virus SARS-CoV2?",
 
-                "option_1" => "Estados Unidos",
+                "option_1" => "China",
 
                 "option_2" => "Chile",
 
-                "option_3" => "China",
+                "option_3" => "Estados Unidos",
 
                 "option_4" => "India",
 

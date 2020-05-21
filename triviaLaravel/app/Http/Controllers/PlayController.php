@@ -8,10 +8,29 @@ use App\Http\Controllers\QuestionsController;
 
 class PlayController extends QuestionsController
 {
+  public  function inicializarPuntaje() {
+  //verificar funcion
+      $unosPuntos = 0;
+    return $unosPuntos;
+  }
+
+
+
+  public  function jugar3() {
+      $listadoPreguntas = $this->listQuestion2();
+    
+      $puntos=0;
+      $id=0;
+      $vac = compact('pregunta', 'puntos', 'id');
+    return view('play', $vac );
+  }
 
   public  function jugar() {
       $listadoPreguntas = $this->listQuestion2();
-    return view('play', $listadoPreguntas);
+      $puntos=0;
+      $id=0;
+
+    return view('play',   $listadoPreguntas );
   }
 
   public  function dameListadoDePreguntas() {
@@ -20,11 +39,7 @@ class PlayController extends QuestionsController
     return  $listadoPreguntas;
   }
 
-  public  function inicializarPuntaje($unosPuntos) {
-  //verificar funcion
-      $unosPuntos = 0;
-    return $unosPuntos;
-  }
+
 
   public  function hayPreguntas($listadoPreguntas) {
   //verificar funcion
@@ -35,7 +50,14 @@ class PlayController extends QuestionsController
 
   public  function verificarRespuesta($unaPreguntas,$unaRespuesta) {
   //verificar funcion
-    return ($unaPreguntas.option_1==$unaRespuesta);
+
+  $unosPuntos = 55;
+  return $unosPuntos;
+    return view('play', $unosPuntos);
+ //return ($unaPreguntas.option_1==$unaRespuesta);
+
+
+  //return view('play', $listadoPreguntas);
   }
 
   public  function preguntaAResponder($listadoPreguntas) {

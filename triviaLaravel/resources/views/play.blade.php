@@ -3,9 +3,7 @@
 @section('style')
   <link rel="stylesheet" href="/css/estilo-jugar.css">
 @endsection
-<?php
-$puntos=0
- ?>
+
 <div class="mx-3 mt-3 justify-content-center">
 <div class="__container container mx-auto">
   <div class="row">
@@ -15,14 +13,10 @@ $puntos=0
       </div>
     <div>
       <h5 class="col-12 question text-center" style="color:#fff!important; font-size: 18px;">
-
-
-            @foreach ($listadoPreguntas as $pregunta)
-               <p>Mis Puntos <?php echo($puntos)?> </p>
-               <p>Mi pregunta </p>
-                <p> {{ $pregunta->question }}</p>
-
-                   @endforeach
+ <?php $pregunta=$listadoPreguntas[0];?>
+    <p>Mis Puntos actuales:  </p>
+     <p>Mi Pregunta es </p>
+     <p> {{$pregunta->question}} </p>
 
 
       </h5>
@@ -34,10 +28,10 @@ $puntos=0
 
 
         <div class="col-12 botones mx-auto btn-group-vertical d-block" id="botones">
-          <button type="button" style="border-radius: 30px; font-size: 14px;" class="__btn btn btn-outline-warning btn-md col-12 mb-4">{{ $pregunta->option_1 }}</button>
-          <button type="button" style="border-radius: 30px; font-size: 14px;" class="__btn btn btn-outline-success btn-md col-12 mb-4">{{ $pregunta->option_2 }}</button>
-          <button type="button" style="border-radius: 30px; font-size: 14px;" class="__btn btn btn-outline-danger btn-md col-12 mb-4">{{ $pregunta->option_3 }}</button>
-          <button type="button" style="border-radius: 30px; font-size: 14px;" class="__btn btn btn-outline-primary btn-md col-12 mb-4">{{ $pregunta->option_4 }}</button>
+          <button type="button" style="border-radius: 30px; font-size: 14px;" class="__btn btn btn-outline-warning btn-md col-12 mb-4">{{$pregunta->option_1}} </button>
+          <button type="button" style="border-radius: 30px; font-size: 14px;" class="__btn btn btn-outline-success btn-md col-12 mb-4"> {{$pregunta->option_2}} </button>
+          <button type="button" style="border-radius: 30px; font-size: 14px;" class="__btn btn btn-outline-danger btn-md col-12 mb-4"> {{$pregunta->option_3}}  </button>
+          <button type="button" style="border-radius: 30px; font-size: 14px;" class="__btn btn btn-outline-primary btn-md col-12 mb-4"> {{$pregunta->option_4}}  </button>
         </div>
       </div>
     </div>

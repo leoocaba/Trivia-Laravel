@@ -8,13 +8,20 @@ $puntos=0
             <div class="row">
                 <div class="mx-auto justify-content-center mb-3 block-center col-lg-6" id="cajita" style="border-radius: 30px; background-color: #000">
                     <div>
-                        @foreach ($listadoPreguntas as $pregunta)
+
+                      <?php
+                   $listadoPreguntas=last($data['listadoPreguntas']);
+                      ?>
+
+
+
+                       @foreach ($listadoPreguntas as $pregunta)
                         <h2 class="col-12 question text-center my-2" style="color:#fff!important; font-family: ZCOOL KuaiLe;"> <strong>{{ $pregunta->categories->name }}</strong></h2>
                         <div class="col-12 p-1 my-2 d-flex justify-content-center mx-auto" style="width: 70%; height: 35%; border-radius: 20%; border: 3px solid white;">
-                            <img class=" border border-dark" src="{{ url('/images/image/' . $pregunta->image) }}"  alt="" style=" border-radius: 20%; border: px solid white;">
+                           <img class=" border border-dark" src="{{ url('/images/image/' . $pregunta->image) }}"  alt="" style=" border-radius: 20%; border: px solid white;">
                         </div>
-                        <h3 class="col-12 question text-center" style="color:#fff!important; font-size: 18px;"> {{ $pregunta->question }}</h3>
-                        @endforeach
+                      <h3 class="col-12 question text-center" style="color:#fff!important; font-size: 18px;"> {{ $pregunta->question }}</h3>
+                      @endforeach
 
                         <div class="my-3 mx-3 progress">
                             <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
@@ -39,17 +46,17 @@ $puntos=0
                         ?>
                         {{-- ***************************************************** --}}
                         <div class="col-12 botones mx-auto btn-group-vertical d-block" id="botones">
-                            <button id="opcion1" type="button" style="border-radius: 30px; font-size: 14px;" 
+                            <button id="opcion1" type="button" style="border-radius: 30px; font-size: 14px;"
                             class="__btn btn btn-outline-warning btn-md col-12 mb-4">{{ $pregunta-> $numA }}</button>
-                            <button id="opcion2" type="button" style="border-radius: 30px; font-size: 14px;" 
+                            <button id="opcion2" type="button" style="border-radius: 30px; font-size: 14px;"
                             class="__btn btn btn-outline-success btn-md col-12 mb-4">{{ $pregunta-> $numB}}</button>
-                            <button id="opcion3" type="button" style="border-radius: 30px; font-size: 14px;" 
+                            <button id="opcion3" type="button" style="border-radius: 30px; font-size: 14px;"
                             class="__btn btn btn-outline-danger btn-md col-12 mb-4">{{ $pregunta-> $numC}}</button>
-                            <button id="opcion4" type="button" style="border-radius: 30px; font-size: 14px;" 
+                            <button id="opcion4" type="button" style="border-radius: 30px; font-size: 14px;"
                             class="__btn btn btn-outline-primary btn-md col-12 mb-4">{{ $pregunta-> $numD}}</button>
                         </div>
                         <p class="col-12 question text-center" style="color:#fff!important; font-size: 14px; font-family: 'Press Start 2P';">
-                          Mis Puntos <?php echo($puntos)?> 
+                          Mis Puntos   <?php echo($data['unosPuntos'])?>
                         </p>
                     </div>
                 </div>

@@ -11,7 +11,7 @@ class PlayController extends QuestionsController
 {
   public  function inicializarPuntaje() {
   //verificar funcion
-      $unosPuntos = 0;
+      $unosPuntos = 100;
     return $unosPuntos;
   }
 
@@ -23,14 +23,16 @@ class PlayController extends QuestionsController
     $listadoPreguntas = $this->dameListadoDePreguntas();
     $unosPuntos= $this->inicializarPuntaje();
     if ($this->hayPreguntas($listadoPreguntas)) {
-      //$pregunta=$this->preguntaAResponder($listadoPreguntas);
+
+
+    //  $pregunta=$this->preguntaAResponder($listadoPreguntas);
       //$listadoPreguntas = Question::orderByRaw('RAND()')->take(1)->get();
   //comentadas
-//   $data = ['listadoPreguntas' => $listadoPreguntas,'unosPuntos' =>$unosPuntos];
-//    return view('/play' )->with('data', $data );;
+ $data = ['listadoPreguntas' => $listadoPreguntas,'unosPuntos' =>$unosPuntos];
+   return view('/jugar' )->with('data', $data );;
 //comentadas
 
-   return view('/jugar',  $listadoPreguntas );
+//   return view('/jugar',  $listadoPreguntas );
 
     } else {
       //sin preguntas se termina el juego

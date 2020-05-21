@@ -51,7 +51,7 @@
 
             <div class="">
 
-                <form class="row m-auto d-flex justify-content-center" style="border-radius: 30px;" method="POST" action="{{ url('/agregar/pregunta') }}" enctype="multipart/form-data">
+                <form class="row m-auto d-flex justify-content-center" style="border-radius: 30px;" method="POST" action="{{ url('/agregar/preguntas') }}" enctype="multipart/form-data">
 
                     @csrf
 

@@ -9,9 +9,9 @@ $puntos=0
                 <div class="mx-auto justify-content-center mb-3 block-center col-lg-6" id="cajita" style="border-radius: 30px; background-color: #000">
                     <div>
                         @foreach ($listadoPreguntas as $pregunta)
-                        <h3 class="col-12 question text-center" style="color:#fff!important; font-size: 18px;"> {{ $pregunta->categories->name }}</h3>
+                        <h3 class="col-12 question text-center my-2" style="color:#fff!important; font-size: 20px;"> {{ $pregunta->categories->name }}</h3>
                         <div class="col-12 p-1 my-2 d-flex justify-content-center">
-                            <img class=" border border-dark" src="{{ url('/public/images/' . $pregunta->image) }}"  alt="" style="width: 70%; height: 35%; border-radius: 20%; border: 1px solid black;">
+                            <img class=" border border-dark" src="{{ url('/images/image/' . $pregunta->image) }}"  alt="" style="width: 70%; height: 35%; border-radius: 20%; border: 1px solid black;">
                         </div>
                         <h3 class="col-12 question text-center" style="color:#fff!important; font-size: 18px;"> {{ $pregunta->question }}</h3>
                         @endforeach

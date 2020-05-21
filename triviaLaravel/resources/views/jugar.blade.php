@@ -1,43 +1,59 @@
-@extends('welcome') @section('title') Jugar @endsection @section('content')
+@extends('welcome') @section('title') Jugar @endsection @section('content') @section('style')
+<link rel="stylesheet" href="/css/estilo-jugar.css"> @endsection
+<?php
+$puntos=0
+ ?>
+    <div class="mx-3 mt-3 justify-content-center">
+        <div class="__container container mx-auto">
+            <div class="row">
+                <div class="mx-auto justify-content-center mb-3 block-center col-lg-6" id="cajita" style="border-radius: 30px; background-color: #000">
+                    <div>
+                        @foreach ($listadoPreguntas as $pregunta)
+                        <h3 class="col-12 question text-center" style="color:#fff!important; font-size: 18px;"> {{ $pregunta->categories->name }}</h3>
+                        <div class="col-12 p-1 my-2 d-flex justify-content-center">
+                            <img class=" border border-dark" src="{{ url('/public/images/' . $pregunta->image) }}"  alt="" style="width: 70%; height: 35%; border-radius: 20%; border: 1px solid black;">
+                        </div>
+                        <h3 class="col-12 question text-center" style="color:#fff!important; font-size: 18px;"> {{ $pregunta->question }}</h3>
+                        @endforeach
 
-<nav class="navbar noutline-avbar-expand-sm bg-dark navbar-dark sticky-top" style="opacity: .9;">
-    <h3 class="text-danger" style="font-family: ZCOOL KuaiLe">Jugar</h3>
-</nav>
-<div class="container mx-auto my-2">
-  <div class="row">
-    <div class="caja jumbotron bg-dark justify-content-center mx-auto block-center col-lg-6" id="cajita" style="border-radius: 30px;">
-      <div class=" p-1 d-flex justify-content-center">
-        <img class=" border border-dark" src="/img/7a0.png" alt="" style="width: 300px; height: 200px; border-radius: 25%;">
-      </div>  
-    <div> 
-      <h4 class="col-12 question text-center" style="color:#fff!important;">
-        ¿Quien convirtió el séptimo gol en la histórica goleada de Estudiantes 7-0 Gimnasia?</h4>
+                        <div class="my-3 mx-3 progress">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+                        </div>
 
-      <hr class="my-4">
 
-      <div class="col-10 mx-auto progress" style="height:30px;">
-
-          <div class="col-6 progress-bar-striped progress-bar-animated bg-warning">
-              <p style="text-align:center;font-size: 15px;color:black;">50%!</p>
-          </div>
-
-          <div class="col-6 progress-bar-striped bg-dark progress-bar-animated">
-              <p style="text-align:center; font-size: 15px;color:lightyellow;">50% restante</p>
-          </div>
-
-      </div>
-
-      <hr class="my-2">
-
-      <div class="col-10 botones mx-auto btn-group-vertical d-block" id="botones">
-          <button type="button" class="btn btn-outline-warning btn-md col-12 mb-4">Pablo 'El Payaso' Luguercio</button>
-          <button type="button" class="btn btn-outline-success btn-md col-12 mb-4">Jose Luis 'Caldera' Calderón</button>
-          <button type="button" class="btn btn-outline-danger btn-md col-12 mb-4">Juan Sebastian 'La Brujita' Verón</button>
-          <button type="button" class="btn btn-outline-primary btn-md col-12 mb-4">Mariano 'El Tanque' Pavone</button>
-      </div>
+                        {{-- NÚMEROS ALEATORIOS PARA QUE LAS RESPUESTAS APAREZCAN DESORDENADAS --}}
+                        <?php
+                        $valores = array();
+                        $x = 0;
+                        while ($x<4) {
+                          $num_aleatorio = rand(1,4);
+                          if (!in_array($num_aleatorio,$valores)) {
+                          array_push($valores,$num_aleatorio);
+                          $x++;
+                            }
+                          }
+                          $numA = "option_$valores[0]";
+                          $numB = "option_$valores[1]";
+                          $numC = "option_$valores[2]";
+                          $numD = "option_$valores[3]";
+                        ?>
+                        {{-- ***************************************************** --}}
+                        <div class="col-12 botones mx-auto btn-group-vertical d-block" id="botones">
+                            <button id="opcion1" type="button" style="border-radius: 30px; font-size: 14px;" 
+                            class="__btn btn btn-outline-warning btn-md col-12 mb-4">{{ $pregunta-> $numA }}</button>
+                            <button id="opcion2" type="button" style="border-radius: 30px; font-size: 14px;" 
+                            class="__btn btn btn-outline-success btn-md col-12 mb-4">{{ $pregunta-> $numB}}</button>
+                            <button id="opcion3" type="button" style="border-radius: 30px; font-size: 14px;" 
+                            class="__btn btn btn-outline-danger btn-md col-12 mb-4">{{ $pregunta-> $numC}}</button>
+                            <button id="opcion4" type="button" style="border-radius: 30px; font-size: 14px;" 
+                            class="__btn btn btn-outline-primary btn-md col-12 mb-4">{{ $pregunta-> $numD}}</button>
+                        </div>
+                        <p class="col-12 question text-center" style="color:#fff!important; font-size: 14px; font-family: 'Press Start 2P';">
+                          Mis Puntos <?php echo($puntos)?> 
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-  </div>
-</div>
-
-@endsection
+    @endsection

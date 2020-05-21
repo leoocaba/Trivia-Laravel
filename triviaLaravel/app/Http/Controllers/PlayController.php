@@ -12,7 +12,7 @@ class PlayController extends QuestionsController
 
   public  function jugar() {
       $listadoPreguntas = $this->listQuestion2();
-    return view('play', $listadoPreguntas);
+    return view('jugar', $listadoPreguntas);
   }
 
   public  function dameListadoDePreguntas() {
@@ -73,13 +73,8 @@ while (hayPreguntas(unasPreguntas)and (estoyGanando()and(tiempoOk())  ) >>sigue 
        finDeJuego() o (unPuntaje,unJugador)
       }
 }
-
 ActualizarRanking(unPuntaje,unJugador)>>actualiza puntaje del jugador con lo obtenido en el juego
 }
   return >> una vez finalizado retorna
-
-
-
-
   }*/
 }

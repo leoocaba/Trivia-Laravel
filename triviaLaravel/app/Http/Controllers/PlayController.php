@@ -25,9 +25,9 @@ class PlayController extends QuestionsController
     if ($this->hayPreguntas($listadoPreguntas)) {
       //$pregunta=$this->preguntaAResponder($listadoPreguntas);
       //$listadoPreguntas = Question::orderByRaw('RAND()')->take(1)->get();
-   $data = ['listadoPreguntas' => $listadoPreguntas,'unosPuntos' =>$unosPuntos];
-      return view('/play' )->with('data', $data );;
-
+//   $data = ['listadoPreguntas' => $listadoPreguntas,'unosPuntos' =>$unosPuntos];
+    //  return view('/play' )->with('data', $data );;
+   return view('/jugar',  $listadoPreguntas );
 
     } else {
       //sin preguntas

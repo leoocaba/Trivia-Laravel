@@ -31,7 +31,7 @@
                     <a class="nav-link active" href="{{ url('/welcome')}}">Inicio<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="__jugar nav-link active text-danger" href="{{ url('/play')}}">Jugar!</a>
+                        <a class="__jugar nav-link active text-danger" href="{{ url('/jugar')}}">Jugar!</a>
                     </li>
                     <li class="__nav-item nav-item">
                         <a class="nav-link active" href="{{ url('/ranking')}}">Ranking</a>

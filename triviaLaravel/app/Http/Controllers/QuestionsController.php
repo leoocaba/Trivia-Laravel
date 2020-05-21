@@ -44,7 +44,7 @@ class QuestionsController extends Controller
             $filename = time() . '.' . $image->getClientOriginalExtension();
             $path = public_path('/images/image/'.$filename);
             Image::make($image->getRealPath())->resize(300, 300)->save($path);
-            
+
         }
 
         $nuevaPregunta = new Question();

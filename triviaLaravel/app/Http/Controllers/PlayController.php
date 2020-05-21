@@ -10,7 +10,8 @@ use App\Http\Controllers\QuestionsController;
 class PlayController extends QuestionsController
 {
   public  function inicializarPuntaje() {
-  //verificar funcion
+  //inicializa el puntaje del juego actual
+
       $unosPuntos = 100;
     return $unosPuntos;
   }
@@ -20,15 +21,18 @@ class PlayController extends QuestionsController
 
 
   public  function jugar() {
+    //inicia el juego
+      //falta manejar lista de preguntas ya que sino no finaliza
     $listadoPreguntas = $this->dameListadoDePreguntas();
+    //ver linea anterior ya que devuelve sólo una pregunta del randon
     $unosPuntos= $this->inicializarPuntaje();
     if ($this->hayPreguntas($listadoPreguntas)) {
 
 
-    //  $pregunta=$this->preguntaAResponder($listadoPreguntas);
+      $pregunta=$this->preguntaAResponder($listadoPreguntas);
       //$listadoPreguntas = Question::orderByRaw('RAND()')->take(1)->get();
   //comentadas
- $data = ['listadoPreguntas' => $listadoPreguntas,'unosPuntos' =>$unosPuntos];
+ $data = ['listadoPreguntas' => $listadoPreguntas,'unosPuntos' =>$unosPuntos,'pregunta' =>$pregunta];
    return view('/jugar' )->with('data', $data );;
 //comentadas
 
@@ -63,19 +67,27 @@ class PlayController extends QuestionsController
 
   public  function verificarRespuesta($unaPreguntas,$unaRespuesta,$unosPuntos) {
   //aca va la lógica, verifica si la respuesta es correcta, actualiza puntajes y continua prox pregunta
-
+  //falta manejar lista de preguntas ya que sino no finaliza
+if ($unaPreguntas.option_1==$unaRespuesta) {
   $unosPuntos = $unosPuntos+ 55;
-  return $unosPuntos;
-    return view('play', $unosPuntos);
- //return ($unaPreguntas.option_1==$unaRespuesta);
+} else {
+$unosPuntos = $unosPuntos- 55;
+}
+$listadoPreguntas = $this->dameListadoDePreguntas();
+$data = ['listadoPreguntas' => $listadoPreguntas,'unosPuntos' =>$unosPuntos,'pregunta' =>$pregunta];
+return view('/jugar' )->with('data', $data );;
 
 
-  //return view('play', $listadoPreguntas);
+
+
+
+
   }
 
 
   public  function preguntaAResponder($listadoPreguntas) {
   //devuelve la siguiente pregunta a responder
+  //modificar para retornar listado
   if ($this->hayPreguntas($listadoPreguntas))  {
     $pregunta=array_pop($listadoPreguntas);
                    return ($pregunta);

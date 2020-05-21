@@ -93,6 +93,6 @@
     </div>
 </div>
 <div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v7.0&appId=2528750544055772&autoLogAppEvents=1"></script> 
 {{-- Script Facebook --}}
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v7.0&appId=2528750544055772&autoLogAppEvents=1"></script>
 @endsection

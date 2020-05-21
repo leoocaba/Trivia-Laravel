@@ -102,10 +102,9 @@ return view('/jugar' )->with('data', $data );;
   //modificar para retornar listado
   if ($this->hayPreguntas($listadoPreguntas))  {
     $pregunta=array_pop($listadoPreguntas);
-                   return ($pregunta);
-       }
-
-   }
+    return ($pregunta);
+    }
+  }
 
 
 

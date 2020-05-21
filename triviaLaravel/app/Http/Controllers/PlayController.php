@@ -66,14 +66,9 @@ class PlayController extends QuestionsController
 
 
   public  function verificarRespuesta($unaPreguntas,$unaRespuesta,$unosPuntos) {
-<<<<<<< HEAD
-  
-
-=======
   //aca va la lógica, verifica si la respuesta es correcta, actualiza puntajes y continua prox pregunta
   //falta manejar lista de preguntas ya que sino no finaliza
 if ($unaPreguntas.option_1==$unaRespuesta) {
->>>>>>> a1fd66dba28d902df4ca957784d5d8282595257d
   $unosPuntos = $unosPuntos+ 55;
 } else {
 $unosPuntos = $unosPuntos- 55;

@@ -38,10 +38,10 @@
 
 
         <div class="col-12 botones mx-auto btn-group-vertical d-block" id="botones">
-          <button type="button" href="/verificar/pregunta/{$pregunta,$pregunta->option_1} "  style="border-radius: 30px; font-size: 14px;" class="__btn btn btn-outline-warning btn-md col-12 mb-4"> </button>
-          <button type="button" href="/verificar/pregunta/{$pregunta,$pregunta->option_2} "  style="border-radius: 30px; font-size: 14px;" class="__btn btn btn-outline-success btn-md col-12 mb-4">  </button>
-          <button type="button" href="/verificar/pregunta/{$pregunta,$pregunta->option_3} "  style="border-radius: 30px; font-size: 14px;" class="__btn btn btn-outline-danger btn-md col-12 mb-4">  </button>
-          <button type="button" href="/verificar/pregunta/{$pregunta,$pregunta->option_4} "  style="border-radius: 30px; font-size: 14px;" class="__btn btn btn-outline-primary btn-md col-12 mb-4">   </button>
+          <button type="button" href="/verificar/pregunta/{{$pregunta,$pregunta->option_1}} "  style="border-radius: 30px; font-size: 14px;" class="__btn btn btn-outline-warning btn-md col-12 mb-4"> </button>
+          <button type="button" href="/verificar/pregunta/{{$pregunta,$pregunta->option_2}} "  style="border-radius: 30px; font-size: 14px;" class="__btn btn btn-outline-success btn-md col-12 mb-4">  </button>
+          <button type="button" href="/verificar/pregunta/{{$pregunta,$pregunta->option_3}} "  style="border-radius: 30px; font-size: 14px;" class="__btn btn btn-outline-danger btn-md col-12 mb-4">  </button>
+          <button type="button" href="/verificar/pregunta/{{$pregunta,$pregunta->option_4}} "  style="border-radius: 30px; font-size: 14px;" class="__btn btn btn-outline-primary btn-md col-12 mb-4">   </button>
         </div>
       </div>
     </div>

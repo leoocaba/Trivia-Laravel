@@ -19,3 +19,29 @@
 .botones {
     overflow: hidden;
 }
+
+.__div-img {
+    width: 80%;
+    height: 45%;
+    box-sizing: border-box;
+    border: 3px solid white;
+    border-radius: 20%;
+}
+
+.div-img .__img {
+    box-sizing: border-box;
+    border: 3px solid white;
+}
+
+.__div-img .__img {
+    width: 100%;
+    height: auto;
+}
+
+@supports(object-fit: cover) {
+    .__div-img .__img {
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+    }
+}

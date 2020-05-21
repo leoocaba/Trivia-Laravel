@@ -43,7 +43,7 @@ class QuestionsController extends Controller
             $image = $request->file('image');
             $filename = time() . '.' . $image->getClientOriginalExtension();
             $path = public_path('/images/image/'.$filename);
-            Image::make($image->getRealPath())->resize(300, 300)->save($path);
+            Image::make($image->getRealPath())->save($path);
             
         }
 
@@ -109,7 +109,7 @@ class QuestionsController extends Controller
 
         $this->validate($request, $reglas, $mensajes);
 
-        $pregunta = Question::find($id)->random(1);
+        $pregunta = Question::find($id);
         $pregunta->question = $request['question'];
         $pregunta->option_1 = $request['option_1'];
         $pregunta->option_2 = $request['option_2'];

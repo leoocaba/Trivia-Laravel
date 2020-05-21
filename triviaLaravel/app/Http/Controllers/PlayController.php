@@ -62,7 +62,7 @@ class PlayController extends QuestionsController
 
 
   public  function verificarRespuesta($unaPreguntas,$unaRespuesta,$unosPuntos) {
-  //aca va la lógica, verifica si la respuesta es correcta, actualiza puntajes y continua prox pregunta
+  
 
   $unosPuntos = $unosPuntos+ 55;
   return $unosPuntos;
@@ -78,10 +78,9 @@ class PlayController extends QuestionsController
   //devuelve la siguiente pregunta a responder
   if ($this->hayPreguntas($listadoPreguntas))  {
     $pregunta=array_pop($listadoPreguntas);
-                   return ($pregunta);
-       }
-
-   }
+    return ($pregunta);
+    }
+  }
 
 
 

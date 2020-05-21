@@ -39,6 +39,10 @@ Route::group(['middleware' => 'auth'], function() {
   Route::get('/editar/perfil', 'UserController@editProfile');
   Route::post('/editar/perfil', 'UserController@updateProfile');
   Route::get('/perfil', 'UserController@profile');
+  Route::post('/verificarPregunta/{pregunta}/{respuesta}', [
+    'as' => 'verificarPregunta', 
+    'uses' => 'playController@verificarRespuesta',
+  ]);
 
 });
 

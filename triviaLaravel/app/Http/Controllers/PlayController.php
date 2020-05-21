@@ -73,16 +73,28 @@ if ($unaPreguntas.option_1==$unaRespuesta) {
 } else {
 $unosPuntos = $unosPuntos- 55;
 }
+
+
 $listadoPreguntas = $this->dameListadoDePreguntas();
 $data = ['listadoPreguntas' => $listadoPreguntas,'unosPuntos' =>$unosPuntos,'pregunta' =>$pregunta];
 return view('/jugar' )->with('data', $data );;
-
-
-
-
-
-
   }
+
+
+
+  public  function verificarRe() {
+  $listadoPreguntas = $this->dameListadoDePreguntas();
+  $unosPuntos= 120;
+  $pregunta=$this->preguntaAResponder($listadoPreguntas);
+
+  $data = ['listadoPreguntas' => $listadoPreguntas,'unosPuntos' =>$unosPuntos,'pregunta' =>$pregunta];
+  return view('/jugar' )->with('data', $data );;
+  }
+
+
+
+
+
 
 
   public  function preguntaAResponder($listadoPreguntas) {

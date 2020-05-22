@@ -11,17 +11,16 @@ $puntos=0
 
                       <?php
                    $listadoPreguntas=last($data['listadoPreguntas']);
-                  
+
                       ?>
 
-                       @foreach ($listadoPreguntas as $pregunta)
-                        <h2 class="col-12 question text-center my-2" style="color:#fff!important; font-family: ZCOOL KuaiLe;"> <strong class="text-wrap">{{ $pregunta->categories->name }}</strong></h2>
-                        <div class="__div-img col-12 p-1 my-2 d-flex justify-content-center mx-auto">
-                           <img class="__img border border-dark" src="{{ url('/images/image/' . $pregunta->image) }}"  alt="" style=" border-radius: 20%; border: 5px solid white;">
-                        </div>
-                      <h3 class="col-12 question text-center text-wrap" style="color:#fff!important; font-size: 18px;"> {{ $pregunta->question }}</h3>
-                      @endforeach
-
+                      @foreach ($listadoPreguntas as $pregunta)
+                    <h2 class="col-12 question text-center my-2" style="color:#fff!important; font-family: ZCOOL KuaiLe;"> <strong class="text-wrap">{{ $pregunta->categories->name }}</strong></h2>
+                    <div class="__div-img col-12 p-1 my-2 d-flex justify-content-center mx-auto">
+                       <img class="__img border border-dark" src="{{ url('/images/image/' . $pregunta->image) }}"  alt="" style=" border-radius: 20%; border: 5px solid white;">
+                    </div>
+                  <h3 class="col-12 question text-center text-wrap" style="color:#fff!important; font-size: 18px;"> {{ $pregunta->question }}</h3>
+                  @endforeach
                         <div class="my-3 mx-3 progress">
                             <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
                         </div>

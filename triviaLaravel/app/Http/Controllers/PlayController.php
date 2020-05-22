@@ -61,6 +61,7 @@ class PlayController extends QuestionsController
     //obtiene el listado de todas las preguntas de la tabla
 
     $listadoPreguntas = $this->listQuestion2();
+
     return  $listadoPreguntas;
   }
 
@@ -108,8 +109,9 @@ class PlayController extends QuestionsController
     //devuelve la siguiente pregunta a responder
     //modificar para retornar listado
 
+
     if ($this->hayPreguntas($listadoPreguntas)) {
-      $pregunta = last($listadoPreguntas);
+      $pregunta =array_pop($listadoPreguntas);
 
       return ($pregunta);
     }

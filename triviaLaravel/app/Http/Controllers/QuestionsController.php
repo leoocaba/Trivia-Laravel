@@ -62,8 +62,8 @@ class QuestionsController extends Controller
 //modificando listadoPreguntas
     public  function listQuestion2() {
         //Lista las preguntas con sus categorías
-        $listadoPreguntas = Question::paginate(2);
-        //$listadoPreguntas = Question::orderByRaw('RAND()')->take(1)->get();
+        $listadoPreguntas = Question::All();
+        $listadoPreguntas = Question::orderByRaw('RAND()')->take(1)->get();
 
         $vac = compact('listadoPreguntas');
         return  $vac;

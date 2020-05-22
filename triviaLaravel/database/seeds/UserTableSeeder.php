@@ -23,6 +23,8 @@ class UserTableSeeder extends Seeder
                 "email" => "admin@admin.com",
                 "image" => "image-default.png",
                 "puntos" => "0",
+                "aciertos" => "0",
+                "fallos" => "0",
                 "password" => bcrypt('soyadmin')
             ],
         ]);

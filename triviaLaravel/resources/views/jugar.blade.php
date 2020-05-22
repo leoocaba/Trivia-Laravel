@@ -44,7 +44,7 @@ $puntos=0
                         ?>
                         {{-- ***************************************************** --}}
                         <div class="col-12 botones mx-auto btn-group-vertical d-block" id="botones">
-                            <a    href="{{url('verificarRespuesta',['unaPregunta' => $pregunta->id, 'unaRespuesta' => $pregunta->$numC, 'unosPuntos' => $puntos])}}" type="button" id="option_1" style="border-radius: 30px; font-size: 14px;"
+                            <a href="{{url('verificarRespuesta',['unaPregunta' => $pregunta->id, 'unaRespuesta' => $pregunta->$numC, 'unosPuntos' => $puntos])}}" type="button" id="option_1" style="border-radius: 30px; font-size: 14px;"
                             class="__btn btn btn-outline-warning text-wrap btn-md col-12 mb-4">{{ $pregunta->$numC }}</a>
 
                             <a href="{{url('verificarRespuesta',['unaPregunta' => $pregunta->id, 'unaRespuesta' => $pregunta->$numD, 'unosPuntos' => $puntos])}}" style="border-radius: 30px; font-size: 14px;"
@@ -57,9 +57,17 @@ $puntos=0
                             class="__btn btn btn-outline-primary text-wrap btn-md col-12 mb-4">{{ $pregunta->$numB}}</a>
 
                         </div>
-                        <p class="col-12 question text-center" style="color:#fff!important; font-size: 14px; font-family: 'Press Start 2P';">
-                          Mis Puntos: {{ Auth::user()->puntos}}
-                        </p>
+                        <div class="col-12 d-flex justify-content-center">
+                          <p class="col-4 question text-center text-wrap text-success" style="font-size: 10px; font-family: 'Press Start 2P';">
+                            Aciertos: <?php echo($data['aciertos'])?>
+                          </p>
+                          <p class="col-4 question text-center text-wrap" style="color:#fff!important; font-size: 12px; font-family: 'Press Start 2P';">
+                            Puntos: <?php echo($data['unosPuntos'])?>
+                          </p>
+                          <p class="col-4 question text-center text-wrap text-danger" style=" font-size: 10px; font-family: 'Press Start 2P';">
+                            Fallos: <?php echo($data['fallos'])?>
+                          </p>
+                        </div>
                     </div>
                 </div>
             </div>

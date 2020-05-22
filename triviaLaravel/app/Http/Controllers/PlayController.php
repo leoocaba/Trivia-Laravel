@@ -71,16 +71,26 @@ class PlayController extends QuestionsController
 
       $usuario = User::find(Auth::User()->id);
       $usuario->puntos = ($usuario->puntos + $puntos);
+      $usuario->aciertos = ($usuario->aciertos + 1);
       $usuario->save();
     } else {
 
       $usuario = User::find(Auth::User()->id);
       $usuario->puntos = ($usuario->puntos - $puntos);
+      $usuario->fallos = ($usuario->fallos + 1);
       $usuario->save();
+<<<<<<< HEAD
 
+=======
+>>>>>>> 500ce871de4fbe91e9531cd543fc1d8ec66cddaa
     }
+    $usuario = User::find(Auth::User()->id);
+    $unosPuntos = $usuario->puntos;
+    $aciertos = $usuario->aciertos;
+    $fallos = $usuarios->fallos;
     $listadoPreguntas = $this->dameListadoDePreguntas();
-    $data = ['listadoPreguntas' => $listadoPreguntas, 'unosPuntos' => $unosPuntos, 'pregunta' => $unaPregunta];
+    $data = ['listadoPreguntas' => $listadoPreguntas, 'unosPuntos' => $unosPuntos, 'pregunta' => $unaPregunta, 
+    'aciertos' => $aciertos, 'fallos' => $fallos];
     return view('/jugar')->with('data', $data);
   }
 

@@ -12,6 +12,7 @@
 */
 
 use App\Http\Controllers\QuestionsController;
+use App\Http\Controllers\PlayController;
 
 Route::get('/', function () {return view('index');});
 
@@ -24,6 +25,10 @@ Route::get('/crear/pregunta', function () { return view('crearPregunta');});
 Route::get('contact-us', 'ContactController@getContact');
 
 Route::post('contact-us', 'ContactController@saveContact');
+
+Route::get('/verificarRespuesta/{unaPregunta}/{unaRespuesta}/{unosPuntos}', [
+    'as' => 'verificarPregunta', 
+    'uses' => 'PlayController@verificarRespuesta']);
 
 Route::group(['middleware' => 'auth'], function() {
 
@@ -39,10 +44,6 @@ Route::group(['middleware' => 'auth'], function() {
   Route::get('/editar/perfil', 'UserController@editProfile');
   Route::post('/editar/perfil', 'UserController@updateProfile');
   Route::get('/perfil', 'UserController@profile');
-  Route::post('/verificarPregunta/{pregunta}/{respuesta}', [
-    'as' => 'verificarPregunta', 
-    'uses' => 'playController@verificarRespuesta',
-  ]);
 
 });
 

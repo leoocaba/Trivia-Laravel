@@ -58,7 +58,7 @@ $puntos=0
 
                         </div>
                         <p class="col-12 question text-center" style="color:#fff!important; font-size: 14px; font-family: 'Press Start 2P';">
-                          Mis Puntos: {{ Auth::user()->puntos}}
+                          Mis Puntos  <?php echo($data['unosPuntos'])?>
                         </p>
                     </div>
                 </div>

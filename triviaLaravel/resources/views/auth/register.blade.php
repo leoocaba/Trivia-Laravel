@@ -16,7 +16,7 @@
                 </div>
                 <div class="card-header m-1"><h3 class="text-center">{{ __('Registrarme') }}</h3></div>
                 <div class="card-body">
-                    <form class="justify-content-center" method="POST" action="{{ route('register') }}">
+                    <form class="justify-content-center" id="formulario" method="POST" action="{{ route('register') }}">
                         @csrf
                     <div class="col-12 mx-0 row">
                         <div class="form-group col-12 col-md-6">
@@ -98,7 +98,7 @@
                             <label for="password-confirm" class="col-form-label">{{ __('Confirmar contraseña') }}</label>
 
                             <div class="">
-                                <input style="border-radius: 30px;" id="password-confirm" type="password" class="form-control" 
+                                <input style="border-radius: 30px;" id="repassword" type="password" class="form-control" 
                                 name="password_confirmation" placeholder="Repita su contraseña" required autocomplete="new-password">
                             </div>
                         </div>
@@ -119,14 +119,78 @@
     </div>
 </div>
 <script>
-// Validación email
-let email = document.getElementById("email");
-email.addEventListener("input", function (event) {
-  if (email.validity.typeMismatch) {
-    email.setCustomValidity("Por favor, ingresa un correo electrónico!");
-  } else {
-    email.setCustomValidity("");
-  }
-});
+// Validacion de formulario
+    window.addEventListener("load", function(event) {
+    // Seleccion de validaciones
+    var campoNombre = document.querySelector("input[name=name]");
+    var campoApellido = document.querySelector("input[name=surname]");
+    var campoAlias = document.querySelector("input[name=alias]");
+    let email = document.getElementById("email");
+    var campoPassword = document.querySelector("input[name=password");
+    var campoRePassword = document.querySelector("input[name=repassword]");
+    var elForm = document.getElementById("formulario");
+    var elementosDelForm = elForm.elements;
+
+    // Validación email
+    email.addEventListener("input", function (event) {
+    if (email.validity.typeMismatch) {
+     email.setCustomValidity("Por favor, ingresa un correo electrónico.");
+    } else {
+     email.setCustomValidity("");
+     }
+    });
+
+    campoNombre.onblur = function () {
+        if(this.value.trim() == '') {
+            alert('El campo nombre esta vacío.');
+        } else if (this.value.length < 2) {
+            alert('El nombre debe superar las 2 letras');
+        } 
+    }
+
+    campoApellido.onblur = function () {
+        if(this.value.trim() == '') {
+            alert('El campo apellido esta vacío.');
+        } else if (this.value.length < 2) {
+            alert('El apellido debe superar las 2 letras');
+        } 
+    }
+
+    campoAlias.onblur = function () {
+        if(this.value.trim() == '') {
+            alert('El campo alias esta vacío.');
+        } else if (this.value.length < 3) {
+            alert('El alias debe superar las 3 letras');
+        } 
+    }
+
+   /* Validacion con regEx, toma todos los resultados como erróneos.
+    const regexMail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}-$/;
+    campoEmail.onblur = function () {
+        if(this.value.trim() == '') {
+            alert('El campo email no puede estar vacío.');
+        } else if (!regexMail.test(this.value)) {
+            alert('El formato del campo email es inválido.');
+        } 
+    }  */
+
+    campoPassword.onblur =  function () {
+        if(this.value.trim() == '') {
+            alert('El campo contraseña esta vacío.');
+        } else if (this.value.length < 7) {
+            alert('La contraseña debe contener al menos 8 caracteres.');
+        } 
+    }
+
+    campoRePassword.onblur = function () {
+        if (this.value !== campoPassword) {
+        alert("Las passwords deben ser iguales.");
+        return false;
+        }    else {
+        alert("Las contraseñas coinciden.");
+        return true; 
+        }
+    }
+    });
     </script>
 @endsection

@@ -29,11 +29,23 @@ class PlayController extends QuestionsController
     if ($this->hayPreguntas($listadoPreguntas)) {
 
 
-      $pregunta = $this->preguntaAResponder($listadoPreguntas);
+      $unaPregunta = $this->preguntaAResponder($listadoPreguntas);
       //$listadoPreguntas = Question::orderByRaw('RAND()')->take(1)->get();
       //comentadas
-      $data = ['listadoPreguntas' => $listadoPreguntas, 'unosPuntos' => $unosPuntos, 'pregunta' => $pregunta];
-      return view('/jugar')->with('data', $data);;
+    //  $data = ['listadoPreguntas' => $listadoPreguntas, 'unosPuntos' => $unosPuntos, 'pregunta' => $pregunta];
+    //  return view('/jugar')->with('data', $data);;
+
+    $usuario = User::find(Auth::User()->id);
+    $unosPuntos = $usuario->puntos;
+    $aciertos = $usuario->aciertos;
+    $fallos = $usuario->fallos;
+    $listadoPreguntas = $this->dameListadoDePreguntas();
+    $data = ['listadoPreguntas' => $listadoPreguntas, 'unosPuntos' => $unosPuntos, 'pregunta' => $unaPregunta,
+    'aciertos' => $aciertos, 'fallos' => $fallos];
+    return view('/jugar')->with('data', $data);
+
+
+
       //comentadas
 
       //return view('/jugar',  $listadoPreguntas );
@@ -85,8 +97,7 @@ class PlayController extends QuestionsController
     $aciertos = $usuario->aciertos;
     $fallos = $usuario->fallos;
     $listadoPreguntas = $this->dameListadoDePreguntas();
-    $data = ['listadoPreguntas' => $listadoPreguntas, 
-    'unosPuntos' => $unosPuntos, 'pregunta' => $unaPregunta, 
+    $data = ['listadoPreguntas' => $listadoPreguntas, 'unosPuntos' => $unosPuntos, 'pregunta' => $unaPregunta,
     'aciertos' => $aciertos, 'fallos' => $fallos];
     return view('/jugar')->with('data', $data);
   }
@@ -96,8 +107,10 @@ class PlayController extends QuestionsController
   {
     //devuelve la siguiente pregunta a responder
     //modificar para retornar listado
+
     if ($this->hayPreguntas($listadoPreguntas)) {
-      $pregunta = array_pop($listadoPreguntas);
+      $pregunta = last($listadoPreguntas);
+
       return ($pregunta);
     }
   }

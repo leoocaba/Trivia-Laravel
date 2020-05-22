@@ -44,7 +44,7 @@ class QuestionsController extends Controller
             $filename = time() . '.' . $image->getClientOriginalExtension();
             $path = public_path('/images/image/'.$filename);
             Image::make($image->getRealPath())->save($path);
-            
+
         }
 
         $nuevaPregunta = new Question();
@@ -63,7 +63,7 @@ class QuestionsController extends Controller
     public  function listQuestion2() {
         //Lista las preguntas con sus categorías
         $listadoPreguntas = Question::paginate(2);
-        $listadoPreguntas = Question::orderByRaw('RAND()')->take(1)->get();
+        //$listadoPreguntas = Question::orderByRaw('RAND()')->take(1)->get();
 
         $vac = compact('listadoPreguntas');
         return  $vac;

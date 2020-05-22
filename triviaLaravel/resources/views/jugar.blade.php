@@ -11,6 +11,7 @@ $puntos=0
 
                       <?php
                    $listadoPreguntas=last($data['listadoPreguntas']);
+                  
                       ?>
 
                        @foreach ($listadoPreguntas as $pregunta)

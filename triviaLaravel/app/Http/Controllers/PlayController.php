@@ -97,12 +97,7 @@ class PlayController extends QuestionsController
     $aciertos = $usuario->aciertos;
     $fallos = $usuario->fallos;
     $listadoPreguntas = $this->dameListadoDePreguntas();
-<<<<<<< HEAD
     $data = ['listadoPreguntas' => $listadoPreguntas, 'unosPuntos' => $unosPuntos, 'pregunta' => $unaPregunta,
-=======
-    $data = ['listadoPreguntas' => $listadoPreguntas, 
-    'unosPuntos' => $unosPuntos, 'pregunta' => $unaPregunta, 
->>>>>>> f1bf62b6dc36ef0751158af2adc1e3c26b1f777d
     'aciertos' => $aciertos, 'fallos' => $fallos];
     return view('/jugar')->with('data', $data);
   }

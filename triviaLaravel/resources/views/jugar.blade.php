@@ -45,7 +45,7 @@ $puntos=0
                         ?>
                         {{-- ***************************************************** --}}
                         <div class="col-12 botones mx-auto btn-group-vertical d-block" id="botones">
-                            <a href="{{url('verificarRespuesta',['unaPregunta' => $pregunta->id, 'unaRespuesta' => $pregunta->$numC, 'unosPuntos' => $puntos])}}" type="button" id="option_1" style="border-radius: 30px; font-size: 14px;"
+                            <a    href="{{url('verificarRespuesta',['unaPregunta' => $pregunta->id, 'unaRespuesta' => $pregunta->$numC, 'unosPuntos' => $puntos])}}" type="button" id="option_1" style="border-radius: 30px; font-size: 14px;"
                             class="__btn btn btn-outline-warning text-wrap btn-md col-12 mb-4">{{ $pregunta->$numC }}</a>
 
                             <a href="{{url('verificarRespuesta',['unaPregunta' => $pregunta->id, 'unaRespuesta' => $pregunta->$numD, 'unosPuntos' => $puntos])}}" style="border-radius: 30px; font-size: 14px;"

@@ -11,29 +11,20 @@ use App\Http\Controllers\QuestionsController;
 
 class PlayController extends QuestionsController
 {
-  public function inicializarPuntaje()
-  {
-    //inicializa el puntaje del juego actual
-
-    $unosPuntos = 100;
-    return $unosPuntos;
-  }
-
   public function jugar()
   {
     //inicia el juego
     //falta manejar lista de preguntas ya que sino no finaliza
     $listadoPreguntas = $this->dameListadoDePreguntas();
     //ver linea anterior ya que devuelve sólo una pregunta del randon
-    $unosPuntos = $this->inicializarPuntaje();
     if ($this->hayPreguntas($listadoPreguntas)) {
 
 
       $unaPregunta = $this->preguntaAResponder($listadoPreguntas);
       //$listadoPreguntas = Question::orderByRaw('RAND()')->take(1)->get();
       //comentadas
-    //  $data = ['listadoPreguntas' => $listadoPreguntas, 'unosPuntos' => $unosPuntos, 'pregunta' => $pregunta];
-    //  return view('/jugar')->with('data', $data);;
+      //$data = ['listadoPreguntas' => $listadoPreguntas, 'unosPuntos' => $unosPuntos, 'pregunta' => $pregunta];
+      //return view('/jugar')->with('data', $data);;
 
     $usuario = User::find(Auth::User()->id);
     $unosPuntos = $usuario->puntos;

@@ -12,7 +12,7 @@ $puntos=0
                       <?php
                    $listadoPreguntas=last($data['listadoPreguntas']);
                       ?>
-                      
+
                        @foreach ($listadoPreguntas as $pregunta)
                         <h2 class="col-12 question text-center my-2" style="color:#fff!important; font-family: ZCOOL KuaiLe;"> <strong class="text-wrap">{{ $pregunta->categories->name }}</strong></h2>
                         <div class="__div-img col-12 p-1 my-2 d-flex justify-content-center mx-auto">

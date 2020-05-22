@@ -68,17 +68,21 @@ class PlayController extends QuestionsController
     //falta manejar lista de preguntas ya que sino no finaliza
     $puntos = 10;
     if ($respuestaCorrecta->option_1 == $unaRespuesta) {
-      
+
       $usuario = User::find(Auth::User()->id);
       $usuario->puntos = ($usuario->puntos + $puntos);
       $usuario->aciertos = ($usuario->aciertos + 1);
       $usuario->save();
     } else {
-      
+
       $usuario = User::find(Auth::User()->id);
       $usuario->puntos = ($usuario->puntos - $puntos);
       $usuario->fallos = ($usuario->fallos + 1);
       $usuario->save();
+<<<<<<< HEAD
+
+=======
+>>>>>>> 500ce871de4fbe91e9531cd543fc1d8ec66cddaa
     }
     $usuario = User::find(Auth::User()->id);
     $unosPuntos = $usuario->puntos;

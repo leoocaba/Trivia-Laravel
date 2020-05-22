@@ -79,10 +79,6 @@ class PlayController extends QuestionsController
       $usuario->puntos = ($usuario->puntos - $puntos);
       $usuario->fallos = ($usuario->fallos + 1);
       $usuario->save();
-<<<<<<< HEAD
-
-=======
->>>>>>> 500ce871de4fbe91e9531cd543fc1d8ec66cddaa
     }
     $usuario = User::find(Auth::User()->id);
     $unosPuntos = $usuario->puntos;

@@ -59,13 +59,13 @@ $puntos=0
                         </div>
                         <div class="col-12 d-flex justify-content-center">
                           <p class="col-4 question text-center text-wrap text-success" style="font-size: 10px; font-family: 'Press Start 2P';">
-                            Aciertos: <?php echo($data['aciertos'])?>
+                            Aciertos: {{($data['aciertos'])}}
                           </p>
                           <p class="col-4 question text-center text-wrap" style="color:#fff!important; font-size: 12px; font-family: 'Press Start 2P';">
-                            Puntos: <?php echo($data['unosPuntos'])?>
+                            Puntos: {{($data['unosPuntos'])}}
                           </p>
                           <p class="col-4 question text-center text-wrap text-danger" style=" font-size: 10px; font-family: 'Press Start 2P';">
-                            Fallos: <?php echo($data['fallos'])?>
+                            Fallos: {{($data['fallos'])}}
                           </p>
                         </div>
                     </div>

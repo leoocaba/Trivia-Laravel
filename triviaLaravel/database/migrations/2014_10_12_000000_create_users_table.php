@@ -21,6 +21,8 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->string('image')->default('image-default.png');
             $table->bigInteger('puntos')->default(0);
+            $table->bigInteger('aciertos')->default(0);
+            $table->bigInteger('fallos')->default(0);
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();

@@ -2,13 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Question;
+use App\User;
+
 use App\Http\Controllers\QuestionsController;
 
 class PlayController extends QuestionsController
 {
-  public  function inicializarPuntaje()
+  public function inicializarPuntaje()
   {
     //inicializa el puntaje del juego actual
 
@@ -16,7 +19,7 @@ class PlayController extends QuestionsController
     return $unosPuntos;
   }
 
-  public  function jugar()
+  public function jugar()
   {
     //inicia el juego
     //falta manejar lista de preguntas ya que sino no finaliza
@@ -41,7 +44,7 @@ class PlayController extends QuestionsController
     }
   }
 
-  public  function dameListadoDePreguntas()
+  public function dameListadoDePreguntas()
   {
     //obtiene el listado de todas las preguntas de la tabla
 
@@ -49,7 +52,7 @@ class PlayController extends QuestionsController
     return  $listadoPreguntas;
   }
 
-  public  function hayPreguntas($listadoPreguntas)
+  public function hayPreguntas($listadoPreguntas)
   {
     //verificar si hay preguntas en $listadoPreguntas
 
@@ -57,15 +60,24 @@ class PlayController extends QuestionsController
   }
 
 
-  public  function verificarRespuesta($unaPregunta, $unaRespuesta, $unosPuntos)
+  public function verificarRespuesta($unaPregunta, $unaRespuesta, $unosPuntos)
   {
+
+    $respuestaCorrecta = Question::find($unaPregunta);
     //aca va la lógica, verifica si la respuesta es correcta, actualiza puntajes y continua prox pregunta
     //falta manejar lista de preguntas ya que sino no finaliza
-    if ($unaPregunta == $unaRespuesta) {
-
-      $unosPuntos = ($unosPuntos + 10);
+    $puntos = 10;
+    if ($respuestaCorrecta->option_1 == $unaRespuesta) {
+      
+      $usuario = User::find(Auth::User()->id);
+      $usuario->puntos = ($usuario->puntos + $puntos);
+      $usuario->save();
     } else {
-      $unosPuntos = ($unosPuntos - 10);
+      
+      $usuario = User::find(Auth::User()->id);
+      $usuario->puntos = ($usuario->puntos - $puntos);
+      $usuario->save();
+    
     }
     $listadoPreguntas = $this->dameListadoDePreguntas();
     $data = ['listadoPreguntas' => $listadoPreguntas, 'unosPuntos' => $unosPuntos, 'pregunta' => $unaPregunta];
@@ -73,7 +85,7 @@ class PlayController extends QuestionsController
   }
 
 
-  public  function preguntaAResponder($listadoPreguntas)
+  public function preguntaAResponder($listadoPreguntas)
   {
     //devuelve la siguiente pregunta a responder
     //modificar para retornar listado

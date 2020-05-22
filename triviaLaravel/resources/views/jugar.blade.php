@@ -44,21 +44,21 @@ $puntos=0
                         ?>
                         {{-- ***************************************************** --}}
                         <div class="col-12 botones mx-auto btn-group-vertical d-block" id="botones">
-                            <a    href="{{url('verificarRespuesta',['unaPregunta' => $pregunta->option_1, 'unaRespuesta' => $pregunta->$numC, 'unosPuntos' => $puntos])}}" type="button" id="option_1" style="border-radius: 30px; font-size: 14px;"
+                            <a    href="{{url('verificarRespuesta',['unaPregunta' => $pregunta->id, 'unaRespuesta' => $pregunta->$numC, 'unosPuntos' => $puntos])}}" type="button" id="option_1" style="border-radius: 30px; font-size: 14px;"
                             class="__btn btn btn-outline-warning text-wrap btn-md col-12 mb-4">{{ $pregunta->$numC }}</a>
 
-                            <a href="{{url('verificarRespuesta',['unaPregunta' => $pregunta, 'unaRespuesta' => $pregunta->$numD, 'unosPuntos' => $puntos])}}" style="border-radius: 30px; font-size: 14px;"
+                            <a href="{{url('verificarRespuesta',['unaPregunta' => $pregunta->id, 'unaRespuesta' => $pregunta->$numD, 'unosPuntos' => $puntos])}}" style="border-radius: 30px; font-size: 14px;"
                             class="__btn btn btn-outline-success text-wrap btn-md col-12 mb-4">{{ $pregunta->$numD}}</a>
 
-                            <a href="{{url('verificarRespuesta',['unaPregunta' => $pregunta, 'unaRespuesta' => $pregunta->$numA, 'unosPuntos' => $puntos])}}" id="option_3" style="border-radius: 30px; font-size: 14px;"
+                            <a href="{{url('verificarRespuesta',['unaPregunta' => $pregunta->id, 'unaRespuesta' => $pregunta->$numA, 'unosPuntos' => $puntos])}}" id="option_3" style="border-radius: 30px; font-size: 14px;"
                             class="__btn btn btn-outline-danger  text-wrapbtn-md col-12 mb-4">{{ $pregunta->$numA}}</a>
 
-                            <a href="{{url('verificarRespuesta',['unaPregunta' => $pregunta, 'unaRespuesta' => $pregunta->$numB, 'unosPuntos' => $puntos])}}" id="option_4" style="border-radius: 30px; font-size: 14px;"
+                            <a href="{{url('verificarRespuesta',['unaPregunta' => $pregunta->id, 'unaRespuesta' => $pregunta->$numB, 'unosPuntos' => $puntos])}}" id="option_4" style="border-radius: 30px; font-size: 14px;"
                             class="__btn btn btn-outline-primary text-wrap btn-md col-12 mb-4">{{ $pregunta->$numB}}</a>
 
                         </div>
                         <p class="col-12 question text-center" style="color:#fff!important; font-size: 14px; font-family: 'Press Start 2P';">
-                          Mis Puntos  <?php echo($data['unosPuntos'])?>
+                          Mis Puntos: {{ Auth::user()->puntos}}
                         </p>
                     </div>
                 </div>
